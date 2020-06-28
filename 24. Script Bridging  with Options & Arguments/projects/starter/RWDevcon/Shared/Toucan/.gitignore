@@ -1,0 +1,6 @@
+*.xcuserstate
+xcuserdata
+*.xccheckout
+build
+.idea
+docs

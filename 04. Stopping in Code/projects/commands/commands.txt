@@ -1,0 +1,82 @@
+LLDB Commands
+******************************
+
+(lldb) image lookup -n "-[UIViewController viewDidLoad]"
+===
+(lldb) image lookup -rn test
+===
+(lldb) image lookup -n "-[TestClass name]"
+===
+(lldb) image lookup -n "-[TestClass setName:]"
+===
+(lldb) image lookup -rn Signals.SwiftTestClass.name.setter
+===
+(lldb) b Signals.SwiftTestClass.name.setter : Swift.Optional<Swift.String>
+===
+(lldb) image lookup -rn Signals.SwiftTestClass.name
+===
+(lldb) b -[UIViewController viewDidLoad]
+===
+(lldb) b Signals.SwiftTestClass.name.setter : Swift.Optional<Swift.String>
+===
+(lldb) rb SwiftTestClass.name.setter
+===
+(lldb) rb name\.setter
+===
+(lldb) rb '\-\[UIViewController\ ' 
+===
+(lldb) breakpoint delete
+===
+(lldb) rb '\-\[UIViewController(\(\w+\))?\ '
+===
+(lldb) rb . -f DetailViewController.swift
+===
+(lldb) rb . 
+===
+(lldb) rb . -s Commons 
+===
+(lldb) rb . -s UIKitCore
+===
+(lldb) breakpoint delete 
+(lldb) rb . -s UIKitCore -o 1
+===
+(lldb) breakpoint set -L swift -r . -s Commons
+===
+(lldb) breakpoint set -A -p "if let" 
+===
+(lldb) breakpoint set -p "if let" -f MasterViewController.swift -f DetailViewController.swift
+===
+(lldb) breakpoint set -p "if let" -s Signals -A
+===
+(lldb) breakpoint delete
+===
+(lldb) breakpoint set -n "-[UIViewController viewDidLoad]" -C "po $arg1" -G1 
+===
+(lldb) breakpoint write -f /tmp/br.json
+===
+(lldb) platform shell cat /tmp/br.json
+===
+(lldb) breakpoint delete
+===
+(lldb) breakpoint read -f /tmp/br.json
+===
+(lldb) b main
+===
+(lldb) breakpoint list 1
+===
+(lldb) breakpoint list 1 -b 
+===
+(lldb) breakpoint list 
+===
+(lldb) breakpoint list 1 3 
+(lldb) breakpoint list 1-3
+===
+(lldb) breakpoint delete 1
+===
+(lldb) breakpoint delete 1.1 
+===
+
+
+
+Shell Commands
+******************************

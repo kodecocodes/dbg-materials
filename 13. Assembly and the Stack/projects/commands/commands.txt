@@ -1,0 +1,42 @@
+LLDB Commands
+******************************
+
+(lldb) command alias dumpreg register read rsp rbp rdi rdx
+===
+(lldb) dumpreg
+===
+(lldb) si
+===
+(lldb) x/gx $rsp 
+===
+(lldb) x/gx $rsp 
+===
+(lldb) p/x $rbp
+===
+(lldb) p (BOOL)($rbp == $rsp)
+===
+(lldb) p/x $rsp 
+===
+(lldb) x/gx $rsp 
+===
+(lldb) image dump symfile Registers
+===
+(lldb) po one
+===
+(lldb) si
+===
+(lldb) po one
+===
+(lldb) f 0 
+===
+(lldb) p uintptr_t $Previous_RBP = *(uintptr_t *)$rsp
+===
+(lldb) x/gx '$Previous_RBP + 0x8'
+===
+(lldb) f 2
+===
+
+
+
+Shell Commands
+******************************

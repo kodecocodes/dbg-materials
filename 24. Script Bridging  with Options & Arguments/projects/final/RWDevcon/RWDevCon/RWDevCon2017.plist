@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>lastUpdated</key>
+		<date>2017-02-17T00:00:00Z</date>
+	</dict>
+	<key>sessions</key>
+	<dict>
+		<key>lunch0</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T16:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>4</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Lunch</string>
+			<key>sessionDescription</key>
+			<string>Grab a bite to eat and get ready for the second half of your workshop.</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>10</integer>
+			<key>tweetBody</key>
+			<string>Om nom nom nom, taking a lunch break during Workshop Day at #RWDevCon</string>
+		</dict>
+		<key>ws1p1</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T13:00:00Z</date>
+			<key>duration</key>
+			<integer>180</integer>
+			<key>trackId</key>
+			<integer>5</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>WS1</string>
+			<key>title</key>
+			<string>Advanced Debugging  &amp; Reverse Engineering</string>
+			<key>sessionDescription</key>
+			<string>Learn to wield the power of LLDB and other debugging tools while exploring code you do(n\’t)? have source for. Create powerful, custom debugging scripts to quickly hunt down any item that piques your interest.</string>
+			<key>presenters</key>
+			<array>
+				<string>derek</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Learning witchcraft at the Advanced Debugging &amp; Reverse Engineering workshop {with}. #RWDevCon</string>
+		</dict>
+		<key>ws1p2</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T17:30:00Z</date>
+			<key>duration</key>
+			<integer>210</integer>
+			<key>trackId</key>
+			<integer>5</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>WS1</string>
+			<key>title</key>
+			<string>Advanced Debugging  &amp; Reverse Engineering</string>
+			<key>sessionDescription</key>
+			<string>Learn to wield the power of LLDB and other debugging tools while exploring code you do(n\’t)? have source for. Create powerful, custom debugging scripts to quickly hunt down any item that piques your interest.</string>
+			<key>presenters</key>
+			<array>
+				<string>derek</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Learning witchcraft at the Advanced Debugging &amp; Reverse Engineering workshop {with}. #RWDevCon</string>
+		</dict>
+		<key>ws2p1</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T13:00:00Z</date>
+			<key>duration</key>
+			<integer>180</integer>
+			<key>trackId</key>
+			<integer>5</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>WS2</string>
+			<key>title</key>
+			<string>Advanced App Architecture</string>
+			<key>sessionDescription</key>
+			<string>Thoughtful design of the boundaries between your apps subsystems is the foundation of a stable codebase. In this workshop, we cover how to create a well designed boundary between subsystems, dependency injection, use case driven development, creating injectable subsystems, and using state management to result in a clean architecture for your apps.</string>
+			<key>presenters</key>
+			<array>
+				<string>josh</string>
+				<string>rene</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>At the Advanced App Architecture workshop {with} #RWDevCon</string>
+		</dict>
+		<key>ws2p2</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T17:30:00Z</date>
+			<key>duration</key>
+			<integer>210</integer>
+			<key>trackId</key>
+			<integer>5</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>WS2</string>
+			<key>title</key>
+			<string>Advanced App Architecture</string>
+			<key>sessionDescription</key>
+			<string>Thoughtful design of the boundaries between your apps subsystems is the foundation of a stable codebase. In this workshop, we cover how to create a well designed boundary between subsystems, dependency injection, use case driven development, creating injectable subsystems, and using state management to result in a clean architecture for your apps.</string>
+			<key>presenters</key>
+			<array>
+				<string>josh</string>
+				<string>rene</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>At the Advanced App Architecture workshop {with} #RWDevCon</string>
+		</dict>
+		<key>reception</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-30T22:00:00Z</date>
+			<key>duration</key>
+			<integer>120</integer>
+			<key>trackId</key>
+			<integer>3</integer>
+			<key>column</key>
+			<integer>0</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Opening Reception (optional)</string>
+			<key>sessionDescription</key>
+			<string>Everyone’s invited! Come meet the team and get to know your fellow conference attendees.</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>0</integer>
+			<key>tweetBody</key>
+			<string>At the #RWDevCon opening receiption, let&apos;s get this conference started!</string>
+		</dict>
+		<key>party</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T22:00:00Z</date>
+			<key>duration</key>
+			<integer>240</integer>
+			<key>trackId</key>
+			<integer>3</integer>
+			<key>column</key>
+			<integer>0</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Party!</string>
+			<key>sessionDescription</key>
+			<string>Join us at the Carlyle Club, an old-school supper club right across the street from the hotel. There will be delicious food, an open bar, and an awesome stage perfect for the ultimate RWDevCon show: The James Dempsey Game Show! Must be 21 or over.</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>8</integer>
+			<key>tweetBody</key>
+			<string>Party time at #RWDevCon! 🎉 🍔 🍺 🍸</string>
+		</dict>
+		<key>keynote</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T12:00:00Z</date>
+			<key>duration</key>
+			<integer>45</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>0</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Opening Remarks</string>
+			<key>sessionDescription</key>
+			<string>Ray and Vicki will kick things off and talk about what we&apos;re all doing here.</string>
+			<key>presenters</key>
+			<array>
+				<string>ray</string>
+				<string>vicki</string>
+			</array>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>Kicking off #RWDevCon {with}! SO EXCITED!!</string>
+		</dict>
+		<key>lunch1</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T16:15:00Z</date>
+			<key>duration</key>
+			<integer>60</integer>
+			<key>trackId</key>
+			<integer>4</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Lunch &amp; Board Games</string>
+			<key>sessionDescription</key>
+			<string>Grab a bite to eat and get ready for the afternoon sessions.</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>Om nom nom. Lunch time at #RWDevCon.</string>
+		</dict>
+		<key>lunch2</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T15:30:00Z</date>
+			<key>duration</key>
+			<integer>60</integer>
+			<key>trackId</key>
+			<integer>4</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Lunch &amp; Board Games</string>
+			<key>sessionDescription</key>
+			<string>Grab a bite to eat and get ready for the afternoon sessions.</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>Om nom nom. Lunch time at #RWDevCon.</string>
+		</dict>
+		<key>closing</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T21:30:00Z</date>
+			<key>duration</key>
+			<integer>30</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>0</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Closing Remarks</string>
+			<key>sessionDescription</key>
+			<string>RWDevCon has a special event at the end of the conference you won’t want to miss, so make sure you stay till the end... or don’t cry to us later! :P</string>
+			<key>presenters</key>
+			<array>
+				<string>ray</string>
+			</array>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>The end has come at #RWDevCon, I am so sad that it is over. Until next year!</string>
+		</dict>
+		<key>closing-reception</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T22:00:00Z</date>
+			<key>duration</key>
+			<integer>60</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>0</integer>
+			<key>sessionNumber</key>
+			<string></string>
+			<key>title</key>
+			<string>Closing Reception</string>
+			<key>sessionDescription</key>
+			<string>It’s so hard to say goodbye. We ease the pain with one last hour to mix and mingle with the speakers and the new friends you’ve met!</string>
+			<key>presenters</key>
+			<array/>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>One last party at #RWDevCon, I am so sad that it is over. Until next year!</string>
+		</dict>
+		<key>1</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T13:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>1</string>
+			<key>title</key>
+			<string>Advanced Core Data</string>
+			<key>sessionDescription</key>
+			<string>Core Data has many advanced features which can make development of complex apps easier while increasing performance. During this talk Matt will show how to take advantage of some of the advanced features of Core Data such as background fetching and child contexts.</string>
+			<key>presenters</key>
+			<array>
+				<string>matt</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Learning about advanced Core Data features {with} at #RWDevCon!</string>
+		</dict>
+		<key>1lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 1</string>
+			<key>title</key>
+			<string>Lab: Advanced Core Data</string>
+			<key>sessionDescription</key>
+			<string>Core Data has many advanced features which can make development of complex apps easier while increasing performance. During this talk Matt will show how to take advantage of some of the advanced features of Core Data such as background fetching and child contexts.</string>
+			<key>presenters</key>
+			<array>
+				<string>matt</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>Learning about advanced Core Data features {with} at #RWDevCon!</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T13:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>2</string>
+			<key>title</key>
+			<string>Advanced Auto Layout</string>
+			<key>sessionDescription</key>
+			<string>Learn how you can use some of Auto Layout’s more advanced features to your advantage while designing complex, dynamic views.</string>
+			<key>presenters</key>
+			<array>
+				<string>scott</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>Learning about advanced Auto Layout features {with} at #RWDevCon!</string>
+		</dict>
+		<key>2lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 2</string>
+			<key>title</key>
+			<string>Lab: Advanced Auto Layout</string>
+			<key>sessionDescription</key>
+			<string>Learn how you can use some of Auto Layout’s more advanced features to your advantage while designing complex, dynamic views.</string>
+			<key>presenters</key>
+			<array>
+				<string>scott</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>Learning about advanced Auto Layout features {with} at #RWDevCon!</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T13:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>3</string>
+			<key>title</key>
+			<string>Machine Learning on iOS</string>
+			<key>sessionDescription</key>
+			<string>Machine Learning. Convolutional Neural Networks. Deep Learning Neural Networks. What is all the hype about? What are these technologies, what are they good for, and can we use them for anything useful right now? This session requires no background in any of these areas, and will introduce you to machine learning on iOS with a worked example.</string>
+			<key>presenters</key>
+			<array>
+				<string>alexis</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Not sure if I am learning, or my computer is learning, but it&apos;s Machine Learning time {with} at #RWDevCon!</string>
+		</dict>
+		<key>3lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 3</string>
+			<key>title</key>
+			<string>Lab: Machine Learning on iOS</string>
+			<key>sessionDescription</key>
+			<string>Machine Learning. Convolutional Neural Networks. Deep Learning Neural Networks. What is all the hype about? What are these technologies, what are they good for, and can we use them for anything useful right now? This session requires no background in any of these areas, and will introduce you to machine learning on iOS with a worked example.</string>
+			<key>presenters</key>
+			<array>
+				<string>alexis</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>Not sure if I am learning, or my computer is learning, but it&apos;s Machine Learning time {with} at #RWDevCon!</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>4</string>
+			<key>title</key>
+			<string>iOS Concurrency</string>
+			<key>sessionDescription</key>
+			<string>Learn how to add concurrency to your apps with GCD &amp; Operations. Keep your app’s UI responsive to give your users a great user experience, and learn how to avoid common concurrency problems, like race condition and deadlock.</string>
+			<key>presenters</key>
+			<array>
+				<string>audrey</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Wish I could use GCD to Tweet in the foreground and Learn in the background! iOS Concurrency time {with} at #RWDevCon!</string>
+		</dict>
+		<key>4lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 4</string>
+			<key>title</key>
+			<string>Lab: iOS Concurrency</string>
+			<key>sessionDescription</key>
+			<string>Learn how to add concurrency to your apps with GCD &amp; Operations. Keep your app’s UI responsive to give your users a great user experience, and learn how to avoid common concurrency problems, like race condition and deadlock.</string>
+			<key>presenters</key>
+			<array>
+				<string>audrey</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>Wish I could use GCD to Tweet in the foreground and Learn in the background! iOS Concurrency time {with} at #RWDevCon!</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>5</string>
+			<key>title</key>
+			<string>Reconstructing Popular iOS Animations</string>
+			<key>sessionDescription</key>
+			<string>In this session Caroline will examine two high profile apps with gorgeous fluid, tactile interfaces and reconstruct them.</string>
+			<key>presenters</key>
+			<array>
+				<string>caroline</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>Much animation. So 60FPS. Wow! Rebuilding popular iOS animations {with} at #RWDevCon!</string>
+		</dict>
+		<key>5lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 5</string>
+			<key>title</key>
+			<string>Lab: Reconstructing Popular iOS Animations</string>
+			<key>sessionDescription</key>
+			<string>In this session Caroline will examine two high profile apps with gorgeous fluid, tactile interfaces and reconstruct them.</string>
+			<key>presenters</key>
+			<array>
+				<string>caroline</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>Much animation. So 60FPS. Wow! Rebuilding popular iOS animations {with} at #RWDevCon!</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T14:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>6</string>
+			<key>title</key>
+			<string>Mastering Git</string>
+			<key>sessionDescription</key>
+			<string>In this session you’ll learn some of git’s more advanced topics, such as rebasing, hooks and history mutation. You’ll also gain a better understanding of how git works under the covers and gain some experience with realistic day-to-day scenarios.</string>
+			<key>presenters</key>
+			<array>
+				<string>sam</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Gitty about gitting my git learn on {with} at #RWDevCon!</string>
+		</dict>
+		<key>6lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 6</string>
+			<key>title</key>
+			<string>Lab: Mastering Git</string>
+			<key>sessionDescription</key>
+			<string>In this session you’ll learn some of git’s more advanced topics, such as rebasing, hooks and history mutation. You’ll also gain a better understanding of how git works under the covers and gain some experience with realistic day-to-day scenarios.</string>
+			<key>presenters</key>
+			<array>
+				<string>sam</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>Gitty about gitting my git learn on {with} at #RWDevCon!</string>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>7</string>
+			<key>title</key>
+			<string>Building Reusable Frameworks</string>
+			<key>sessionDescription</key>
+			<string>Using shared code from the community has become a major benefit for developers. Why not pay it back and share the awesome things you’ve written with the world? In this session, you’ll learn how to create a framework from your code that’s compatible with all three of the main dependency manager players: Cocoapods, Carthage, and the Swift Package Manager.</string>
+			<key>presenters</key>
+			<array>
+				<string>eric</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>pod install MoneyMaker &amp; UnicornDust -- Building reusable frameworks {with} at #RWDevCon!</string>
+		</dict>
+		<key>7lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 7</string>
+			<key>title</key>
+			<string>Lab: Building Reusable Frameworks</string>
+			<key>sessionDescription</key>
+			<string>Using shared code from the community has become a major benefit for developers. Why not pay it back and share the awesome things you’ve written with the world? In this session, you’ll learn how to create a framework from your code that’s compatible with all three of the main dependency manager players: Cocoapods, Carthage, and the Swift Package Manager.</string>
+			<key>presenters</key>
+			<array>
+				<string>eric</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>pod install MoneyMaker &amp; UnicornDust -- Building reusable frameworks {with} at #RWDevCon!</string>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>8</string>
+			<key>title</key>
+			<string>Swift Memory Management</string>
+			<key>sessionDescription</key>
+			<string>While the design of Swift and the compiler relieve you from much of the drudgery associated with reference counting, it is critical that you understand what the system is doing for you, so that you can create higher performance, bug free apps. Learn how to think about objects and closures and how to use the latest Xcode tools to analyze and debug your code.</string>
+			<key>presenters</key>
+			<array>
+				<string>ray-f</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>References, Stacks, and Heaps OH MY! Learning about Swift Memory Management {with} at #RWDevCon!</string>
+		</dict>
+		<key>8lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 8</string>
+			<key>title</key>
+			<string>Lab: Swift Memory Management</string>
+			<key>sessionDescription</key>
+			<string>While the design of Swift and the compiler relieve you from much of the drudgery associated with reference counting, it is critical that you understand what the system is doing for you, so that you can create higher performance, bug free apps. Learn how to think about objects and closures and how to use the latest Xcode tools to analyze and debug your code.</string>
+			<key>presenters</key>
+			<array>
+				<string>ray-f</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>References, Stacks, and Heaps OH MY! Learning about Swift Memory Management {with} at #RWDevCon!</string>
+		</dict>
+		<key>9</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T17:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>9</string>
+			<key>title</key>
+			<string>Cross-Platform React Native</string>
+			<key>sessionDescription</key>
+			<string>React Native is a framework for building native apps with React. It’s been used by many developers who are drawn to it’s learn once, write anywhere paradigm and fast development cycle. In this session you’ll learn how to create a cross- platform (iOS and Android) app, learning how to create an app from scratch and how to integrate React Native into an existing native app.</string>
+			<key>presenters</key>
+			<array>
+				<string>christine</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Learning once {with} to write everywhere using React Native at #RWDevCon!</string>
+		</dict>
+		<key>9lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 9</string>
+			<key>title</key>
+			<string>Lab: Cross-Platform React Native</string>
+			<key>sessionDescription</key>
+			<string>React Native is a framework for building native apps with React. It’s been used by many developers who are drawn to it’s learn once, write anywhere paradigm and fast development cycle. In this session you’ll learn how to create a cross- platform (iOS and Android) app, learning how to create an app from scratch and how to integrate React Native into an existing native app.</string>
+			<key>presenters</key>
+			<array>
+				<string>christine</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>Learning once {with} to write everywhere using React Native at #RWDevCon!</string>
+		</dict>
+		<key>10</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>10</string>
+			<key>title</key>
+			<string>Fastlane</string>
+			<key>sessionDescription</key>
+			<string>Fastlane is a suite of tools to help automate building and release iOS (and Android!) apps. From creating screenshots to handling provisioning to submitting your application, Fastlane can help with it all. In this session, you’ll learn how to use these tools to help automate the mundane tasks we all dread doing in iTunes Connect.</string>
+			<key>presenters</key>
+			<array>
+				<string>kishin</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>$ fastlane learn {with} at #RWDevCon!</string>
+		</dict>
+		<key>10lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T20:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 10</string>
+			<key>title</key>
+			<string>Lab: Fastlane</string>
+			<key>sessionDescription</key>
+			<string>Fastlane is a suite of tools to help automate building and release iOS (and Android!) apps. From creating screenshots to handling provisioning to submitting your application, Fastlane can help with it all. In this session, you’ll learn how to use these tools to help automate the mundane tasks we all dread doing in iTunes Connect.</string>
+			<key>presenters</key>
+			<array>
+				<string>kishin</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>$ fastlane learn {with} at #RWDevCon!</string>
+		</dict>
+		<key>11</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>11</string>
+			<key>title</key>
+			<string>RxSwift in Practice</string>
+			<key>sessionDescription</key>
+			<string>RxSwift, and its companion framework RxCocoa, allow you to create reactive apps for iOS and macOS. Glancing upon some Rx code might be intimidating without a proper introduction but in this session we will start in Playgrounds, learn the core concepts, and then move on to building a real iOS application in Xcode. Just beware - you might like programming with RxSwift too much :]
+
+Note: The lab for this session takes place during the first set of labs on Saturday morning.</string>
+			<key>presenters</key>
+			<array>
+				<string>marin</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>marinsKnowledge.bindTo(myBrain) Learning about RxSwift {with} at #RWDevCon!</string>
+		</dict>
+		<key>11lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 11</string>
+			<key>title</key>
+			<string>Lab: RxSwift in Practice</string>
+			<key>sessionDescription</key>
+			<string>RxSwift, and its companion framework RxCocoa, allow you to create reactive apps for iOS and macOS. Glancing upon some Rx code might be intimidating without a proper introduction but in this session we will start in Playgrounds, learn the core concepts, and then move on to building a real iOS application in Xcode. Just beware - you might like programming with RxSwift too much :]</string>
+			<key>presenters</key>
+			<array>
+				<string>marin</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>marinsKnowledge.bindTo(myBrain) Learning about RxSwift {with} at #RWDevCon!</string>
+		</dict>
+		<key>12</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T19:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>12</string>
+			<key>title</key>
+			<string>How to Make a Platformer Game in Unity</string>
+			<key>sessionDescription</key>
+			<string>Unity is used by thousands of indie development studios, hobbyist game developers, and even AAA game studios. In this session you’ll power through creating a platformer game like Super Meat Boy, and learn first hand how easy it is to start becoming productive with this powerful and versatile multi-platform game engine.</string>
+			<key>presenters</key>
+			<array>
+				<string>sean</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>↑↑↓↓←→←→BA making games with Unity is like using cheat codes! Learning {with} at #RWDevCon!</string>
+		</dict>
+		<key>12lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T20:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 12</string>
+			<key>title</key>
+			<string>Lab: How to Make a Platformer Game in Unity</string>
+			<key>sessionDescription</key>
+			<string>Unity is used by thousands of indie development studios, hobbyist game developers, and even AAA game studios. In this session you’ll power through creating a platformer game like Super Meat Boy, and learn first hand how easy it is to start becoming productive with this powerful and versatile multi-platform game engine.</string>
+			<key>presenters</key>
+			<array>
+				<string>sean</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>↑↑↓↓←→←→BA making games with Unity is like using cheat codes! Learning {with} at #RWDevCon!</string>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T12:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>13</string>
+			<key>title</key>
+			<string>iMessage Apps</string>
+			<key>sessionDescription</key>
+			<string>The Messages framework in iOS 10 allows developers to extend their apps to iMessages to further their app’s reach. In this session, you’ll learn how to extend an existing app by adding a Messages extension.</string>
+			<key>presenters</key>
+			<array>
+				<string>ryan</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Blue bubble friends are the best. Learning about iMessage Apps {with} at #RWDevCon!</string>
+		</dict>
+		<key>13lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 13</string>
+			<key>title</key>
+			<string>Lab: iMessage Apps</string>
+			<key>sessionDescription</key>
+			<string>The Messages framework in iOS 10 allows developers to extend their apps to iMessages to further their app’s reach. In this session, you’ll learn how to extend an existing app by adding a Messages extension.</string>
+			<key>presenters</key>
+			<array>
+				<string>ryan</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>Blue bubble friends are the best. Learning about iMessage Apps {with} at #RWDevCon!</string>
+		</dict>
+		<key>14</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T12:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>14</string>
+			<key>title</key>
+			<string>Practical Unit Testing I</string>
+			<key>sessionDescription</key>
+			<string>Unit tests allow you to develop without fear and ship with confidence. They can even serve as documentation for your code and make everything easier to understand. But you already know this, don’t you? In this session you will explore ways to add at least one more unit test to your app.</string>
+			<key>presenters</key>
+			<array>
+				<string>jack</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>XCTAssertTrue(projectHasUnitTests) Practical Unit Testing Part 1 {with} at #RWDevCon!</string>
+		</dict>
+		<key>14lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 14</string>
+			<key>sessionDescription</key>
+			<string>Unit tests allow you to develop without fear and ship with confidence. They can even serve as documentation for your code and make everything easier to understand. But you already know this, don’t you? In this session you will explore ways to add at least one more unit test to your app.</string>
+			<key>title</key>
+			<string>Lab: Practical Unit Testing I</string>
+			<key>presenters</key>
+			<array>
+				<string>jack</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>XCTAssertTrue(projectHasUnitTests) Practical Unit Testing Part 1 {with} at #RWDevCon!</string>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T12:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>15</string>
+			<key>title</key>
+			<string>Server Side Swift with Perfect</string>
+			<key>sessionDescription</key>
+			<string>Perfect is an open source server side Swift framework that allows you to create web apps, or web APIs, purely in Swift. In this session, you’ll learn how to create your REST web app in Swift from scratch, including templating, persistence, and authentication.</string>
+			<key>presenters</key>
+			<array>
+				<string>ray</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>In a Perfect world we would write Swift everywhere. Server Side Swift using Perfect {with} at #RWDevCon!</string>
+		</dict>
+		<key>15lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 15</string>
+			<key>title</key>
+			<string>Lab: Server Side Swift with Perfect</string>
+			<key>sessionDescription</key>
+			<string>Perfect is an open source server side Swift framework that allows you to create web apps, or web APIs, purely in Swift. In this session, you’ll learn how to create your REST web app in Swift from scratch, including templating, persistence, and authentication.</string>
+			<key>presenters</key>
+			<array>
+				<string>ray</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>In a Perfect world we would write Swift everywhere. Server Side Swift using Perfect {with} at #RWDevCon!</string>
+		</dict>
+		<key>16</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>16</string>
+			<key>title</key>
+			<string>Swift Playgrounds in Depth</string>
+			<key>sessionDescription</key>
+			<string>Swift playgrounds have come a long way since their initial release in 2014 alongside the Swift language. This session covers a broad range of topics, a few of which are interactive playgrounds, how to use external frameworks, prototyping animations and much more. Along the way you’ll also learn a few practical tips and tricks to take your playground-fu to the next level.</string>
+			<key>presenters</key>
+			<array>
+				<string>jawwad</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>Digging to the bottom of the Sandbox in Swift Playgrounds {with} at #RWDevCon!</string>
+		</dict>
+		<key>16lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 16</string>
+			<key>title</key>
+			<string>Lab: Swift Playgrounds in Depth</string>
+			<key>sessionDescription</key>
+			<string>Swift playgrounds have come a long way since their initial release in 2014 alongside the Swift language. This session covers a broad range of topics, a few of which are interactive playgrounds, how to use external frameworks, prototyping animations and much more. Along the way you’ll also learn a few practical tips and tricks to take your playground-fu to the next level.</string>
+			<key>presenters</key>
+			<array>
+				<string>jawwad</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>Digging to the bottom of the Sandbox in Swift Playgrounds {with} at #RWDevCon!</string>
+		</dict>
+		<key>17</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>17</string>
+			<key>title</key>
+			<string>Practical Unit Testing II</string>
+			<key>sessionDescription</key>
+			<string>Continuous Integration (CI) is the art of automatically translating your code into a build that can be easily accessed by project stakeholders. In the first half of this session, Gemma will talk through di erent aspects of CI setup design, followed by a review of fundamentals that can be applied to any CI solution. In the latter half, she’ll demo CI setup for a project created in Practical Unit Testing I.</string>
+			<key>presenters</key>
+			<array>
+				<string>gemma</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>XCTAssertTrue(unitTestsRunOnEveryCommit) Practical Unit Testing Part 2 {with} at #RWDevCon!</string>
+		</dict>
+		<key>17lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 17</string>
+			<key>title</key>
+			<string>Lab: Practical Unit Testing II</string>
+			<key>sessionDescription</key>
+			<string>Continuous Integration (CI) is the art of automatically translating your code into a build that can be easily accessed by project stakeholders. In the first half of this session, Gemma will talk through di erent aspects of CI setup design, followed by a review of fundamentals that can be applied to any CI solution. In the latter half, she’ll demo CI setup for a project created in Practical Unit Testing I.</string>
+			<key>presenters</key>
+			<array>
+				<string>gemma</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>XCTAssertTrue(unitTestsRunOnEveryCommit) Practical Unit Testing Part 2 {with} at #RWDevCon!</string>
+		</dict>
+		<key>18</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T13:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>18</string>
+			<key>title</key>
+			<string>Cocoa Bindings</string>
+			<key>sessionDescription</key>
+			<string>In this session, Jake will cover the basic of bindings, how to set them up in Interface Builder, some common debugging pitfalls, and some binding related tools (like value transformers and number formatters.)</string>
+			<key>presenters</key>
+			<array>
+				<string>jake</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Binding all the things {with} at #RWDevCon!</string>
+		</dict>
+		<key>18lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 18</string>
+			<key>title</key>
+			<string>Lab: Cocoa Bindings</string>
+			<key>sessionDescription</key>
+			<string>In this session, Jake will cover the basic of bindings, how to set them up in Interface Builder, some common debugging pitfalls, and some binding related tools (like value transformers and number formatters.)</string>
+			<key>presenters</key>
+			<array>
+				<string>jake</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>Binding all the things {with} at #RWDevCon!</string>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>19</string>
+			<key>title</key>
+			<string>Engaging On-Boarding</string>
+			<key>sessionDescription</key>
+			<string>Users abandon apps when they can’t figure out how to use it fast enough. To lower the abandonment rate for your app, create an on-boarding experience that keeps the user engaged, informed and delighted the first time they open your app. In this session we’ll talk about the pros and cons on on-boarding, when to use it, and best practices. Finally, we will brainstorm and implement our own on-boarding experience!</string>
+			<key>presenters</key>
+			<array>
+				<string>lea</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>ARE YOU NOT ENGAGED?! Learning how to keep users in your app {with} at #RWDevCon!</string>
+		</dict>
+		<key>19lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 19</string>
+			<key>title</key>
+			<string>Lab: Engaging On-Boarding</string>
+			<key>sessionDescription</key>
+			<string>Users abandon apps when they can’t figure out how to use it fast enough. To lower the abandonment rate for your app, create an on-boarding experience that keeps the user engaged, informed and delighted the first time they open your app. In this session we’ll talk about the pros and cons on on-boarding, when to use it, and best practices. Finally, we will brainstorm and implement our own on-boarding experience!</string>
+			<key>presenters</key>
+			<array>
+				<string>lea</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>ARE YOU NOT ENGAGED?! Learning how to keep users in your app {with} at #RWDevCon!</string>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>20</string>
+			<key>title</key>
+			<string>Advanced iOS Design Patterns</string>
+			<key>sessionDescription</key>
+			<string>In this “Advanced iOS Design Patterns” talk, you’ll learn design patterns for solving common iOS development problems, including: authentication and auto re-login; networking and domain model management; and data persistence and cache management.</string>
+			<key>presenters</key>
+			<array>
+				<string>joshua</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>Learning some Advanced iOS Design Patterns {with} at #RWDevCon!</string>
+		</dict>
+		<key>20lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 20</string>
+			<key>title</key>
+			<string>Lab: Advanced iOS Design Patterns</string>
+			<key>sessionDescription</key>
+			<string>In this “Advanced iOS Design Patterns” talk, you’ll learn design patterns for solving common iOS development problems, including: authentication and auto re-login; networking and domain model management; and data persistence and cache management.</string>
+			<key>presenters</key>
+			<array>
+				<string>joshua</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>Learning some Advanced iOS Design Patterns {with} at #RWDevCon!</string>
+		</dict>
+		<key>21</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T16:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>21</string>
+			<key>title</key>
+			<string>Android for iOS Developers</string>
+			<key>sessionDescription</key>
+			<string>Learn how to make a simple, professional Android app using Material Design, Realm, and Retrofit 2.</string>
+			<key>presenters</key>
+			<array>
+				<string>ellen</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Defecting {with} at #RWDevCon by learning about Android development!</string>
+		</dict>
+		<key>21lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 21</string>
+			<key>title</key>
+			<string>Lab: Android for iOS Developers</string>
+			<key>sessionDescription</key>
+			<string>Learn how to make a simple, professional Android app using Material Design, Realm, and Retrofit 2.</string>
+			<key>presenters</key>
+			<array>
+				<string>ellen</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>Defecting {with} at #RWDevCon by learning about Android development!</string>
+		</dict>
+		<key>22</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>22</string>
+			<key>title</key>
+			<string>Deploying Server-Side Swift Apps with Docker</string>
+			<key>sessionDescription</key>
+			<string>Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. In this session you&apos;ll learn how to package up your server-side Swift app as a custom Docker image, and leverage Docker Compose to take that image and create a container that can be used for both local development and in production. You&apos;ll also learn about multiple containers, and how to set up dependencies between them.</string>
+			<key>presenters</key>
+			<array>
+				<string>mic</string>
+			</array>
+			<key>roomId</key>
+			<integer>4</integer>
+			<key>tweetBody</key>
+			<string>You cannot contain how excited I am to learn about Docker {with} at #RWDevCon!</string>
+		</dict>
+		<key>22lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>4</integer>
+			<key>sessionNumber</key>
+			<string>Lab 22</string>
+			<key>title</key>
+			<string>Lab: Deploying Server-Side Swift Apps with Docker</string>
+			<key>sessionDescription</key>
+			<string>Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. In this session you&apos;ll learn how to package up your server-side Swift app as a custom Docker image, and leverage Docker Compose to take that image and create a container that can be used for both local development and in production. You&apos;ll also learn about multiple containers, and how to set up dependencies between them.</string>
+			<key>presenters</key>
+			<array>
+				<string>mic</string>
+			</array>
+			<key>roomId</key>
+			<integer>9</integer>
+			<key>tweetBody</key>
+			<string>You cannot contain how excited I am to learn about Docker {with} at #RWDevCon!</string>
+		</dict>
+		<key>23</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>2</integer>
+			<key>sessionNumber</key>
+			<string>23</string>
+			<key>title</key>
+			<string>Swift Error Handling</string>
+			<key>sessionDescription</key>
+			<string>The best apps delight their users by remaining responsive and stable in the face of errors. In this session, you’ll learn how to write code that responds to and recovers from errors, and even anticipates them.</string>
+			<key>presenters</key>
+			<array>
+				<string>michael</string>
+			</array>
+			<key>roomId</key>
+			<integer>5</integer>
+			<key>tweetBody</key>
+			<string>do { try hardThings() } catch { // ¯\_(ツ)_/¯ } Learning to properly handle errors {with} at #RWDevCon!</string>
+		</dict>
+		<key>23lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>5</integer>
+			<key>sessionNumber</key>
+			<string>Lab 23</string>
+			<key>title</key>
+			<string>Lab: Swift Error Handling</string>
+			<key>sessionDescription</key>
+			<string>The best apps delight their users by remaining responsive and stable in the face of errors. In this session, you’ll learn how to write code that responds to and recovers from errors, and even anticipates them.</string>
+			<key>presenters</key>
+			<array>
+				<string>michael</string>
+			</array>
+			<key>roomId</key>
+			<integer>1</integer>
+			<key>tweetBody</key>
+			<string>do { try hardThings() } catch { // ¯\_(ツ)_/¯ } Learning to properly handle errors {with} at #RWDevCon!</string>
+		</dict>
+		<key>24</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T18:15:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>24</string>
+			<key>title</key>
+			<string>Game AI with GameplayKit</string>
+			<key>sessionDescription</key>
+			<string>GameplayKit is an independent Apple framework that game developers may use to help them create better games, with less effort. In this session, the focus and emphasis will be placed on using GameplayKit to add artificial intelligence (AI) to your games.</string>
+			<key>presenters</key>
+			<array>
+				<string>tammy</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>I, for one, welcome our new robot overlords. Learning about AI in GameplayKit {with} at #RWDevCon!</string>
+		</dict>
+		<key>24lab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:00:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab 24</string>
+			<key>title</key>
+			<string>Lab: Game AI with GameplayKit</string>
+			<key>sessionDescription</key>
+			<string>GameplayKit is an independent Apple framework that game developers may use to help them create better games, with less effort. In this session, the focus and emphasis will be placed on using GameplayKit to add artificial intelligence (AI) to your games.</string>
+			<key>presenters</key>
+			<array>
+				<string>tammy</string>
+			</array>
+			<key>roomId</key>
+			<integer>2</integer>
+			<key>tweetBody</key>
+			<string>I, for one, welcome our new robot overlords. Learning about AI in GameplayKit {with} at #RWDevCon!</string>
+		</dict>
+		<key>25</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:00:00Z</date>
+			<key>duration</key>
+			<integer>75</integer>
+			<key>trackId</key>
+			<integer>0</integer>
+			<key>column</key>
+			<integer>3</integer>
+			<key>sessionNumber</key>
+			<string>25</string>
+			<key>title</key>
+			<string>Swift Algorithm Club Workshop</string>
+			<key>sessionDescription</key>
+			<string>Are you a problem solver? Think you can handle the questions we give you? Come join us at the Swift Algorithm Workshop, where you get together, meet awesome people, and solve a few of problems. The SAC workshop will be a fun collaborative technical interview. Attendees will pair up and tackle questions together.</string>
+			<key>presenters</key>
+			<array>
+				<string>kelvin</string>
+				<string>vincent</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>Sorting out how to recursively attend #RWDevCon every year {with} in the Swift Algorithm Club Workshop!</string>
+		</dict>
+		<key>firebaseLab</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T20:45:00Z</date>
+			<key>duration</key>
+			<integer>90</integer>
+			<key>trackId</key>
+			<integer>2</integer>
+			<key>column</key>
+			<integer>6</integer>
+			<key>sessionNumber</key>
+			<string>Lab FB</string>
+			<key>title</key>
+			<string>Building a real-time chat application with Firebase</string>
+			<key>sessionDescription</key>
+			<string>In this instructor-led codelab, attendees will be guided through the steps necessary to create a functional chat application using Firebase.
+
+Learn how to authenticate users, store messages, stream data in real-time, track usage, reporting crashes, and monetize your app. All without the need for a backend server.
+
+Prerequisites: a basic understanding of Xcode, Swift/Objective-C, and a Mac OS device with an up to date version of Xcode and cocoapods
+
+https://codelabs.developers.google.com/codelabs/firebase-ios-swift</string>
+			<key>presenters</key>
+			<array>
+				<string>jamesdaniels</string>
+			</array>
+			<key>roomId</key>
+			<integer>6</integer>
+			<key>tweetBody</key>
+			<string>In the Firebase Lab at #RWDevCon!</string>
+		</dict>
+		<key>inspiration1</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T20:45:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS1</string>
+			<key>title</key>
+			<string>Building Compassionate Software</string>
+			<key>sessionDescription</key>
+			<string>Business success depends on team performance, and building high-performing teams is a well-understood problem. Come hear Ash Furrow discuss the science and mechanics of software team dynamics with useful tips and best practices to help improve any team environment.</string>
+			<key>presenters</key>
+			<array>
+				<string>ash</string>
+			</array>
+			<key>roomId</key>
+			<integer>10</integer>
+			<key>tweetBody</key>
+			<string>Being inspired to build compassionate software {with} at #RWDevCon!</string>
+		</dict>
+		<key>inspiration2</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T21:10:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS2</string>
+			<key>title</key>
+			<string>I’m an Idiot.</string>
+			<key>sessionDescription</key>
+			<string>Do you ever feel like a fraud, or that you’re bluffing it as a professional developer? You’re not alone.
+
+Rich is a professional idiot. If he remembers to turn up, he’ll be talking about how to leverage your inner idiot to make you a better coder, writer and communicator.</string>
+			<key>presenters</key>
+			<array>
+				<string>rich</string>
+			</array>
+			<key>roomId</key>
+			<integer>10</integer>
+			<key>tweetBody</key>
+			<string>Some idiot named @richturton at #RWDevCon is trying to tell me I am actually not a fraud.</string>
+		</dict>
+		<key>inspiration3</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-03-31T21:35:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS3</string>
+			<key>title</key>
+			<string>Finding Freedom through Freelancing</string>
+			<key>sessionDescription</key>
+			<string>Have you ever dreamed of pursuing all of your interests? Victoria’s Secret and Calvin Klein model, Lyndsey Scott, shares how she’s made room in her life for acting, modeling, and iOS development contracts.</string>
+			<key>presenters</key>
+			<array>
+				<string>lyndsey</string>
+			</array>
+			<key>roomId</key>
+			<integer>10</integer>
+			<key>tweetBody</key>
+			<string>Inspired to quit my job and get into freelancing {with} at #RWDevCon!</string>
+		</dict>
+		<key>inspiration4</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:00:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS4</string>
+			<key>title</key>
+			<string>Creating Community</string>
+			<key>sessionDescription</key>
+			<string>As Director of Women Who Code Twin Cities, Sarah Olson has spent the past two years creating a safe space for marginalized developers to connect and learn. In this process, she’s learned many things about building a community. What makes a community thrive? How do we make it as inclusive and welcoming as possible?</string>
+			<key>presenters</key>
+			<array>
+				<string>sarah</string>
+			</array>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>Inspiring talk {with} at #RWDevCon to create communities!</string>
+		</dict>
+		<key>inspiration5</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:25:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS5</string>
+			<key>title</key>
+			<string>Silver Bullets and Hype</string>
+			<key>sessionDescription</key>
+			<string>As developers, we aim to live in the future and we tend to get super excited by the latest and greatest. This often leads to a quixotic search for a “silver bullet” that will solve all of our problems. In this talk, I will share some experiences and missteps with hyped iOS technologies and we will look at how to critically evaluate “cool new things” and make better choices.</string>
+			<key>presenters</key>
+			<array>
+				<string>roy</string>
+			</array>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>I am so hyped and excited {with} inspiring me at #RWDevCon!</string>
+		</dict>
+		<key>inspiration6</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>date</key>
+			<date>2017-04-01T20:50:00Z</date>
+			<key>duration</key>
+			<integer>25</integer>
+			<key>trackId</key>
+			<integer>1</integer>
+			<key>column</key>
+			<integer>1</integer>
+			<key>sessionNumber</key>
+			<string>INS6</string>
+			<key>title</key>
+			<string>New Tricks</string>
+			<key>sessionDescription</key>
+			<string>This year marks James Dempsey’s 20th year writing code for the Apple ecosystem. In this talk, James explores how he thinks about and works through the many major changes encountered along the way - like transitioning to Swift. You’ll see that no matter where you are in your career, a young pup or an old dog, you can still learn new tricks!</string>
+			<key>presenters</key>
+			<array>
+				<string>james</string>
+			</array>
+			<key>roomId</key>
+			<integer>7</integer>
+			<key>tweetBody</key>
+			<string>Being inspired to learn new tricks {with} at #RWDevCon!</string>
+		</dict>
+	</dict>
+	<key>people</key>
+	<dict>
+		<key>adrian</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Adrian</string>
+			<key>last</key>
+			<string>Strahan</string>
+			<key>twitter</key>
+			<string>adrianstrahan</string>
+			<key>bio</key>
+			<string>Adrian is a freelance iOS developer and Project Manager living in the South West of England. He&apos;s worked on iPhone and iPad apps since 2010 (iOS3) and specializes in mobile- and web-based application development.</string>
+		</dict>
+		<key>alexis</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Alexis</string>
+			<key>last</key>
+			<string>Gallagher</string>
+			<key>twitter</key>
+			<string>alexisgallagher</string>
+			<key>bio</key>
+			<string>Alexis Gallagher has been failing to tear himself away from computers for over a dozen years, including tours in e-commerce firms in New York, in scientific research in Oxford, in front-office trading systems in London, and now via iOS in a pocket or corporate briefing room near you. After years breathing the thin airs of abstraction, he is a sucker for beauty and loves how iOS lets you work on ideas you can touch.</string>
+		</dict>
+		<key>ash</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Ash</string>
+			<key>last</key>
+			<string>Furrow</string>
+			<key>twitter</key>
+			<string>ashfurrow</string>
+			<key>bio</key>
+			<string>Ash Furrow is a Canadian iOS developer and author, currently working at Artsy. He has published books, built many apps, and is a contributor to the open source community. On his blog, he writes about a range of topics, from interesting programming to explorations of analogue film photography.</string>
+		</dict>
+		<key>audrey</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Audrey</string>
+			<key>last</key>
+			<string>Tam</string>
+			<key>twitter</key>
+			<string>mataharimau</string>
+			<key>bio</key>
+			<string>Audrey Tam retired at the end of 2012 from a 25-year career as a computer science academic. Her teaching included Pascal, C/C++, Java, Java web services, web app development in php and mysql, user interface design and evaluation, and iOS programming. Before moving to Australia, she worked on Fortran and PL/1 simulation software at IBM&apos;s development lab in Silicon Valley.
+        
+Audrey now teaches short courses in iOS app development to non-programmers, and organizes venues for Melbourne Cocoaheads monthly meetings.</string>
+		</dict>
+		<key>caroline</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Caroline</string>
+			<key>last</key>
+			<string>Begbie</string>
+			<key>twitter</key>
+			<string>carolinebegbie</string>
+			<key>bio</key>
+			<string>I’m an indie iOS developer. When I’m not developing, I’m playing around with 2D and 3D animation software, or learning Arduino and electronics. In my past I’ve taught the elderly how to use their computers, done marionette shows for pre-schools, and created accounting and stock control systems for mining companies.</string>
+		</dict>
+		<key>christine</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Christine</string>
+			<key>last</key>
+			<string>Abernathy</string>
+			<key>twitter</key>
+			<string>abernathyca</string>
+			<key>bio</key>
+			<string>Christine is an Engineer on the Developer Advocacy team at Facebook. In this role, she is focused on helping grow the mobile developer ecosystem with emphasis on Android, iOS, and the mobile web. Prior to Facebook, Christine headed up engineering at Mshift, a mobile banking software provider, delivering iPhone apps and mobile browser-based products.</string>
+		</dict>
+		<key>derek</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Derek</string>
+			<key>last</key>
+			<string>Selander</string>
+			<key>twitter</key>
+			<string>lolgrep</string>
+			<key>bio</key>
+			<string>Derek is an iOS developer currently working at GoDaddy. In his free time, he enjoys surfing, playing classical guitar, and consuming bacon.</string>
+		</dict>
+		<key>ellen</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Ellen</string>
+			<key>last</key>
+			<string>Shapiro</string>
+			<key>twitter</key>
+			<string>designatednerd</string>
+			<key>bio</key>
+			<string>Ellen Shapiro is a mobile developer in Chicago, Illinois who builds iOS and Android apps for Vokal Interactive, and is working in her spare time to help bring Hum to life. She’s also developed several independent applications through her personal company, Designated Nerd Software.</string>
+		</dict>
+		<key>eric</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Eric</string>
+			<key>last</key>
+			<string>Cerney</string>
+			<key>twitter</key>
+			<string>ecerney</string>
+			<key>bio</key>
+			<string>Eric is an iOS Software Engineer in San Francisco. After being acquired by Capital One, he likes to spend his days at work hanging out with Samuel L. Jackson and asking everyone &quot;What&apos;s in your wallet?&quot;. Lately his main focus has been with Swift and gaining a deeper knowledge of programming languages at the core.
+        
+Outside iOS, his interests are tinkering with hardware (Raspberry Pi and Arduino), gaming, exploring San Francisco, and regretting endless Netflix marathons.</string>
+		</dict>
+		<key>erik</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Erik</string>
+			<key>last</key>
+			<string>Kerber</string>
+			<key>twitter</key>
+			<string>erikkerber</string>
+			<key>bio</key>
+			<string>Erik is an iOS guy from Minneapolis. Currently a Lead iOS developer at Target, and an independent consultant at Distilled Bits.
+        
+Outside of coding, he enjoys cramming as much outdoor activity into summer as he can (running, cycling, rowing, fishing, cabin-ing). In the winter, he patiently waits for summer.</string>
+		</dict>
+		<key>gemma</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Gemma</string>
+			<key>last</key>
+			<string>Barlow</string>
+			<key>twitter</key>
+			<string>gemmakbarlow</string>
+			<key>bio</key>
+			<string>Gemma has been an iOS Developer since 2009 and loves travel, coffee, wine and code, not necessarily in that order. Originally from Melbourne, Australia, she currently calls New York home. </string>
+		</dict>
+		<key>jack</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Jack</string>
+			<key>last</key>
+			<string>Wu</string>
+			<key>twitter</key>
+			<string>JackTripleU</string>
+			<key>bio</key>
+			<string>Jack is the lead mobile developer at ModiFace. He has built dozens of iOS apps and enjoys it very much. Outside of work, Jack enjoys coding on the beach, coding by the pool, and sometimes just having a quick code in the park.</string>
+		</dict>
+		<key>jake</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Jake</string>
+			<key>last</key>
+			<string>Gunderson</string>
+			<key>twitter</key>
+			<string>fattjake</string>
+			<key>bio</key>
+			<string>Jacob is an indie game developer and runs the Indie Ambitions blog. Check out his latest app - Factor Samurai! </string>
+		</dict>
+		<key>james</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>James</string>
+			<key>last</key>
+			<string>Dempsey</string>
+			<key>twitter</key>
+			<string>jamesdempsey</string>
+			<key>bio</key>
+			<string></string>
+		</dict>
+		<key>jamesdaniels</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>James</string>
+			<key>last</key>
+			<string>Daniels</string>
+			<key>twitter</key>
+			<string>jamesuriah</string>
+			<key>bio</key>
+			<string>Hacker • Startup Junkie • New Englander • Developer Relations @Google @Firebase • President @AppBlade • @TechStars ’09—prone to rants</string>
+		</dict>
+		<key>jawwad</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Jawwad</string>
+			<key>last</key>
+			<string>Ahmad</string>
+			<key>twitter</key>
+			<string>jawwadahmad</string>
+			<key>bio</key>
+			<string>Jawwad is a freelance iOS Developer that dove into Swift head first and has not looked back. He enjoys mentoring and teaching and was the founder of the of the NYC iOS Study Group and later on the Atlanta iOS Study Group. He&apos;s worked for companies as large as The New York Times, and as small as GateGuru, a 6 person startup.</string>
+		</dict>
+		<key>josh</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Josh</string>
+			<key>last</key>
+			<string>Berlin</string>
+			<key>twitter</key>
+			<string>jab2109</string>
+			<key>bio</key>
+			<string>Josh is a freelance iOS engineer who loves building thoughtful user experiences on mobile. He&apos;s built apps for the iPhone and iPad since 2008.
+
+Josh recently finished culinary school in Austin, TX. When he&apos;s not coding, he&apos;s probably cooking or dreaming of food.</string>
+		</dict>
+		<key>joshua</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Joshua</string>
+			<key>last</key>
+			<string>Greene</string>
+			<key>twitter</key>
+			<string>jrg_developer</string>
+			<key>bio</key>
+			<string>Joshua Greene is a senior iOS developer and advocate for clean code. When he&apos;s not slinging code, he enjoys martial arts, Netflix, and spending time with his wonderful wife and daughter.</string>
+		</dict>
+		<key>kishin</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Kishin</string>
+			<key>last</key>
+			<string>Manglani</string>
+			<key>twitter</key>
+			<string>kishinmanglani</string>
+			<key>bio</key>
+			<string>Kishin has extensive experience building apps. He works as a freelance developer. Some of the more notable clients he&apos;s worked with are Cover, Venmo, Bustle, and Hatch Labs, which made Tinder. Kishin also teaches all things iOS at General Assembly in New York.</string>
+		</dict>
+		<key>kelvin</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Kelvin</string>
+			<key>last</key>
+			<string>Lau</string>
+			<key>twitter</key>
+			<string>KelvinlauKL</string>
+			<key>bio</key>
+			<string>Kelvin is a physicist turned Swift iOS Developer. He&apos;s also one of the two maintainers for the Swift Algorithm Club. While he&apos;s currently entrenched with iOS development, he often reminisces of his aspirations to be part of the efforts in space exploration. 
+
+Outside of programming work, he&apos;s an aspiring entrepreneur and musician.</string>
+		</dict>
+		<key>lea</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Lea</string>
+			<key>last</key>
+			<string>Marolt Sonnenschein</string>
+			<key>twitter</key>
+			<string>hellosunschein</string>
+			<key>bio</key>
+			<string>Lea is an iOS Developer and Designer at Rent the Runway. She writes about iOS, UX and UI, teaches iOS classes at GA and volunteers for Girls Who Code. In her free time she plays piano, and tries to use code and technology to make art. Or she just doodles and listens to MIKA.</string>
+		</dict>
+		<key>lyndsey</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Lyndsey</string>
+			<key>last</key>
+			<string>Scott</string>
+			<key>twitter</key>
+			<string>Lyndsey360</string>
+			<key>bio</key>
+			<string>Actress, Model, App Developer -- www.LyndseyScott.com</string>
+		</dict>
+		<key>marin</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Marin</string>
+			<key>last</key>
+			<string>Todorov</string>
+			<key>twitter</key>
+			<string>icanzilb</string>
+			<key>bio</key>
+			<string>Part of: Realm and raywenderlich.com. Author of books and apps. </string>
+		</dict>
+		<key>matt</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Matt</string>
+			<key>last</key>
+			<string>Morey</string>
+			<key>twitter</key>
+			<string>xzolian</string>
+			<key>bio</key>
+			<string>Matthew Morey is an engineer, developer, hacker, creator, and tinkerer. As an active member of the iOS community and Director of Mobile Engineering at MJD Interactive he has led numerous successful mobile projects worldwide. He’s the creator of Buoy Explorer, a marine conditions app for water sports enthusiast, and Wrist Presenter, an app that lets you control presentations wirelessly with your smart watch. When not developing apps he enjoys traveling, snowboarding, and surfing. He blogs about technology and business at matthewmorey.com.</string>
+		</dict>
+		<key>mic</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Mic</string>
+			<key>last</key>
+			<string>Pringle</string>
+			<key>twitter</key>
+			<string>micpringle</string>
+			<key>bio</key>
+			<string>Mic Pringle is a developer by trade, but regularly turns his hand to book and tutorial editing, video tutorial making, and hosting the official raywenderlich.com podcast. Mic is 1/6th of Razeware, the team behind raywenderlich.com. An iOS developer by trade, Mic has recently found himself dabbling in Ruby, PHP, and JavaScript.
+        
+When not knee-deep in code, Mic enjoys spending time with his wife Lucy and their daughter Evie, watching his beloved Fulham FC, and weather permitting, tearing up the English countryside on his Harley Davidson.</string>
+		</dict>
+		<key>michael</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Michael</string>
+			<key>last</key>
+			<string>Katz</string>
+			<key>twitter</key>
+			<string>TheMikeKatz</string>
+			<key>bio</key>
+			<string>Michael Katz envisions a world where mobile apps always work, respect users’ privacy, and integrate well with their users’ life. When not coding, he can be found with his family playing board games, brewing, gardening, and watching the Yankees.</string>
+		</dict>
+		<key>ray-f</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Ray</string>
+			<key>last</key>
+			<string>Fix</string>
+			<key>twitter</key>
+			<string>rayfix</string>
+			<key>bio</key>
+			<string>Ray Fix is using Swift to help create Revolve--the next generation in research microscopy at Echo Laboratories. In addition to his role as Swift Team Lead for Ray Wenderlich, he organizes several iOS/Swift meetups around Southern California. Ray is mostly-fluent in spoken and written Japanese and stays healthy by walking, jogging, and playing ultimate frisbee. When he is not doing one of those things, he is writing and dreaming of code in Swift. よろしくお願い致します。</string>
+		</dict>
+		<key>ray</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Ray</string>
+			<key>last</key>
+			<string>Wenderlich</string>
+			<key>twitter</key>
+			<string>rwenderlich</string>
+			<key>bio</key>
+			<string>Ray is an indie software developer currently focusing on iPhone and iPad development, and the administrator of this site. He’s the founder of a small iPhone development studio called Razeware, and is passionate both about making apps and teaching others the techniques to make them.</string>
+		</dict>
+		<key>rene</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>René</string>
+			<key>last</key>
+			<string>Cacheaux</string>
+			<key>twitter</key>
+			<string>RCachATX</string>
+			<key>bio</key>
+			<string>René, is an iOS Client Architect at Atlassian, where he is known for his expertise in user interface engineering with UIKit, Core Animation, and Core Graphics. He has been engineering iOS apps since 2009.
+        
+When he&apos;s not coding, René loves to snow ski, ocean kayak, and root for the Texas Longhorns.</string>
+		</dict>
+		<key>rich</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Richard</string>
+			<key>last</key>
+			<string>Turton</string>
+			<key>twitter</key>
+			<string>richturton</string>
+			<key>bio</key>
+			<string>Richard is an iOS developer for MartianCraft, prolific Stack Overflow participant and author of a development blog, Command Shift. When he&apos;s not in front of a computer he is usually building Lego horse-powered spaceships (don&apos;t ask!) with his daughter.</string>
+		</dict>
+		<key>roy</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Roy</string>
+			<key>last</key>
+			<string>Marmelstein</string>
+			<key>twitter</key>
+			<string>marmelroy</string>
+			<key>bio</key>
+			<string>Roy does iOS @ Spotify. He is the creator of too many Swift frameworks - including PhoneNumberKit, Interpolate and Zip.</string>
+		</dict>
+		<key>ryan</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Ryan</string>
+			<key>last</key>
+			<string>Ackermann</string>
+			<key>twitter</key>
+			<string>naturaln0va</string>
+			<key>bio</key>
+			<string>Ryan Ackermann is an iOS developer on The Bible App. Developing iOS apps and games is his passion. Four of his apps are published on the App Store and more are coming. He has been dancing with Swift since it was announced back in June 2014. When he&apos;s not programming or designing something in Sketch or Photoshop he spends time with his darling wife Jamie.</string>
+		</dict>
+		<key>sam</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Sam</string>
+			<key>last</key>
+			<string>Davies</string>
+			<key>twitter</key>
+			<string>iwantmyrealname</string>
+			<key>bio</key>
+			<string>Sam is a strange mashup of developer, writer and trainer. By day you&apos;ll find him recording videos for Razeware, writing tutorials, attending conferences and generally being a good guy. By night he&apos;s likely to be out entertaining people, armed with his trombone and killer dance moves.</string>
+		</dict>
+		<key>sarah</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Sarah</string>
+			<key>last</key>
+			<string>Olson</string>
+			<key>twitter</key>
+			<string>saraheolson</string>
+			<key>bio</key>
+			<string>Sarah Olson is an iOS developer at Trello. She has over eighteen years of development experience in a variety of technologies, including Java, WordPress, iOS and Android development. As Director of Women Who Code Twin Cities, she leads a variety of initiatives and events around diversity and inclusion in tech.</string>
+		</dict>
+		<key>sean</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Sean</string>
+			<key>last</key>
+			<string>Duffy</string>
+			<key>twitter</key>
+			<string>shogan85</string>
+			<key>bio</key>
+			<string>Sean is a software engineer by day, and hobbyist game and tools developer by night. He loves working with Unity, and is also a Unity Asset Store developer with a special focus on 2D tools to help other game developers. Some of Sean&apos;s more popular Unity Assets include his 2D Shooter Bullet and Weapon System and 2D Homing Missiles assets.</string>
+		</dict>
+		<key>scott</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Scott</string>
+			<key>last</key>
+			<string>Berrevoets</string>
+			<key>twitter</key>
+			<string>ScottBerrevoets</string>
+			<key>bio</key>
+			<string>Scott is an iOS developer at Lyft and an avid open source contributor. With libraries like SDCAlertView and SDCAutoLayout, he tries to improve those parts where the iOS SDK falls short. He occasionally blogs at ScottBerrevoets.com and is also active on GitHub and Twitter.</string>
+		</dict>
+		<key>tammy</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Tammy</string>
+			<key>last</key>
+			<string>Coron</string>
+			<key>twitter</key>
+			<string>paradox927</string>
+			<key>bio</key>
+			<string>Tammy Coron is an artist, a writer, a musician, and a developer. Not too many people get an opportunity to do what they love. She considers herself to be one of the lucky ones! Check out her blog at www.justwritecode.net.</string>
+		</dict>
+		<key>vicki</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Vicki</string>
+			<key>last</key>
+			<string>Wenderlich</string>
+			<key>twitter</key>
+			<string>vwenderlich</string>
+			<key>bio</key>
+			<string>Vicki Wenderlich discovered a love of digital art in 2009, and has been making app art and digital illustrations ever since. She is passionate about helping people pursue their dreams, and makes free app art for developers available on her website, www.gameartguppy.com.</string>
+		</dict>
+		<key>vincent</key>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>first</key>
+			<string>Vincent</string>
+			<key>last</key>
+			<string>Ngo</string>
+			<key>twitter</key>
+			<string>vincentngo2</string>
+			<key>bio</key>
+			<string>Vincent is a writer, guitarist, and developer. He currently works at Capital One as an iOS developer attempting to make banking insanely great. 
+
+When Vincent is not working he enjoys coding for fun, playing video games, enjoying time with family and friends and golfing. With hard work and dedication he hopes to one day become a golfer to play in small tournaments.</string>
+		</dict>
+	</dict>
+	<key>rooms</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Edison Foyer</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Whitney</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Banneker</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Wright</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Edison A/B/C</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Edison D</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Edison E/F/G</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Edison A/B/C/D/E/F/G</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Carlyle Club</string>
+			<key>roomDescription</key>
+			<string>2050 Ballenger Avenue</string>
+			<key>mapAddress</key>
+			<string>2050 Ballenger Avenue, Alexandria, VA 22314</string>
+			<key>mapLatitude</key>
+			<real>38.8023769</real>
+			<key>mapLongitude</key>
+			<real>-77.0628226</real>
+			<key>image</key>
+			<string>carlyle-club</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bell</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Edison A/B/C/D</string>
+		</dict>
+	</array>
+	<key>tracks</key>
+	<array>
+		<string>Session</string>
+		<string>Inspiration</string>
+		<string>Lab</string>
+		<string>Fun</string>
+		<string>Food</string>
+		<string>Workshop</string>
+	</array>
+</dict>
+</plist>

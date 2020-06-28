@@ -1,0 +1,76 @@
+LLDB Commands
+******************************
+
+(lldb) command script import lldb.macosx.heap
+===
+(lldb) script import sys
+(lldb) script print (sys.version)
+===
+(lldb) command script import ~/lldb/helloworld.py
+===
+(lldb) script import helloworld
+===
+(lldb) script dir(helloworld)
+===
+(lldb) command script add -f helloworld.your_first_command yay
+===
+(lldb) yay
+===
+(lldb) script help(lldb.SBDebugger.HandleCommand)
+===
+(lldb) yay
+===
+
+
+
+Shell Commands
+******************************
+
+lldb
+===
+python --version 
+===
+python
+===
+python2.7
+===
+>>> import sys
+>>> print (sys.version)
+===
+python
+===
+>>> h = "hello world"
+>>> h
+===
+>>> h.split(" ")
+['hello', 'world']
+===
+>>> h.split(" ").__class__ 
+<type 'list'>
+===
+>>> h.__class__
+<type 'str'>
+===
+>>> help (str)
+===
+>>> help (str.split)
+===
+>>> h.split(" ", 0)
+===
+>>> def test(a):
+...
+===
+...   print(a + " world!")
+===
+>>> test("hello")
+===
+mkdir ~/lldb
+===
+nano ~/lldb/helloworld.py
+===
+lldb
+===
+command script import ~/lldb/helloworld.py
+===
+lldb
+===

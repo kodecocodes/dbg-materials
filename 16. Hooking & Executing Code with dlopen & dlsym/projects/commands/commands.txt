@@ -1,0 +1,16 @@
+LLDB Commands
+******************************
+
+(lldb) image lookup -s getenv
+===
+(lldb) image lookup -rn HookingSwift.*originalImage 
+===
+(lldb) image dump symtab -m HookingSwift
+===
+(lldb) b 0x0000000103105770
+===
+
+
+
+Shell Commands
+******************************

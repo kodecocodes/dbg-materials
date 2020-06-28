@@ -1,0 +1,83 @@
+LLDB Commands
+******************************
+
+(lldb) image list 
+===
+(lldb) image list Foundation
+===
+(lldb) image dump symtab UIKitCore -s address
+===
+(lldb) image lookup -n "-[UIViewController viewDidLoad]"
+===
+(lldb) image lookup -rn UIViewController
+===
+(lldb) image lookup -rn '\[UIViewController\ '
+===
+(lldb) image lookup -rn \[UIViewController\s
+===
+(lldb) image lookup -rn '\[UIViewController\(\w+\)\ '
+===
+(lldb) frame info
+===
+(lldb) image lookup -rn _block_invoke
+===
+(lldb) image lookup -rn _block_invoke Signals
+===
+(lldb) image lookup -rn _block_invoke Commons
+===
+(lldb) rb appendSignal.*_block_invoke -s Commons
+===
+(lldb) frame variable
+===
+(lldb) image lookup -t  __block_literal_5
+===
+(lldb) frame variable
+===
+(lldb) po ((__block_literal_5 *)0x0000618000070200)
+===
+(lldb) p/x ((__block_literal_5 *)0x0000618000070200)->__FuncPtr
+===
+(lldb) image lookup -a 0x000000010756d8a0
+===
+(lldb) po ((__block_literal_5 *)0x0000618000070200)->sig
+===
+(lldb) p *(__block_literal_5 *)0x0000618000070200
+===
+(lldb) image lookup -rn __NSMallocBlock__
+===
+(lldb) po [__NSMallocBlock__ superclass]
+===
+(lldb) image lookup -rn __NSMallocBlock
+===
+(lldb) po [__NSMallocBlock superclass]
+===
+(lldb) image lookup -rn 'NSBlock\ '
+===
+(lldb) po id $block = (id)0x0000618000070200
+(lldb) po [$block retain]
+(lldb) po [$block invoke]
+===
+(lldb) image lookup -rn (?i)\ _\w+description\]
+===
+(lldb) image lookup -rn NSObject\(IvarDescription\)
+===
+(lldb) po [[UIApplication sharedApplication] _ivarDescription]
+===
+(lldb) image lookup -rn '\[UIStatusBar\ set'
+===
+(lldb) po (BOOL)[[UIStatusBar class] isSubclassOfClass:[UIView class]]
+===
+(lldb) po [[UIApplication sharedApplication] statusBar]
+===
+(lldb) po [0x7fdcf3c0f090 setBackgroundColor:[UIColor purpleColor]]
+===
+(lldb) breakpoint delete
+===
+
+
+
+Shell Commands
+******************************
+
+pkill -SIGIO Signals
+===

@@ -1,0 +1,55 @@
+LLDB Commands
+******************************
+
+(lldb) script lldb.debugger
+===
+(lldb) script lldb.target
+===
+(lldb) script print lldb.target
+===
+(lldb) script print lldb.process
+===
+(lldb) script print lldb.thread
+===
+(lldb) script print lldb.frame
+===
+(lldb) script help(lldb.target)
+===
+(lldb) script help(lldb.SBTarget)
+===
+(lldb) gdocumentation SBTarget
+===
+(lldb) reload_script
+===
+(lldb) bar UIViewController test -a -b
+===
+(lldb) script help(lldb.SBBreakpoint)
+===
+(lldb) gdocumentation SBBreakpoint
+===
+(lldb) reload_script
+===
+(lldb) bar somereallylongmethodthatapplehopefullydidntwritesomewhere
+===
+(lldb) bar NSObject.init\]
+===
+(lldb) finish
+===
+(lldb) po $rax
+===
+(lldb) br del
+About to delete all breakpoints, do you want to do that?: [Y/n] Y
+All breakpoints removed. (1 breakpoint)
+===
+(lldb) bar NSObject.init\]
+===
+(lldb) bar NSURL(\(\w+\))?\ init
+===
+
+
+
+Shell Commands
+******************************
+
+mdfind SBProcess -onlyin ~/websites/lldb
+===

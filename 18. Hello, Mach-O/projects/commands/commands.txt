@@ -1,0 +1,27 @@
+LLDB Commands
+******************************
+
+(lldb) run
+Process 946 launched: ’/usr/bin/plutil’ (x86_64)
+No files specified.
+plutil: [command_option] [other_options] file...
+... etc ...
+===
+(lldb) image list -h CoreFoundation
+[  0] 0x00007fff33cf6000
+===
+(lldb) x/8wx 0x00007fff33cf6000
+0x7fff33cf6000: 0xfeedfacf 0x01000007 0x00000008 0x00000006
+0x7fff33cf6010: 0x00000013 0x00001100 0xc2100085 0x00000000
+===
+(lldb) image dump sections SpringBoard
+===
+(lldb) image dump objfile SpringBoard
+===
+(lldb) x/8wx 0x00007fff33cf6000
+===
+
+
+
+Shell Commands
+******************************

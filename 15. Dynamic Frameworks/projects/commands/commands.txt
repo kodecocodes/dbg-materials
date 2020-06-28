@@ -1,0 +1,101 @@
+LLDB Commands
+******************************
+
+(lldb) image list CallKit
+===
+(lldb) image list CallKit
+===
+(lldb) image list NotificationCenter
+===
+(lldb) command source ~/.lldbinit
+===
+(lldb) image list -d UIKit
+===
+(lldb) ls /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk//System/Library/Frameworks/
+===
+(lldb) process load /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk//System/Library/Frameworks/Speech.framework/Speech
+===
+(lldb) process load MessageUI.framework/MessageUI
+===
+(lldb) dump_stuff CoreBluetooth
+===
+(lldb) process load PhotosUI.framework/PhotosUI
+===
+(lldb) dump_stuff PhotosUI
+===
+(lldb) ivars [PUScrubberSettings sharedInstance] 
+<PUScrubberSettings: 0x7ffb12818fb0>:
+in PUScrubberSettings:
+  _usePreviewScrubberMargins (BOOL): NO
+  _useTrianglePositionIndicator (BOOL): NO
+  _useSmoothingAnimation (BOOL): NO
+  _dynamicSeekTolerance (BOOL): YES
+  _previewInteractiveLoupeBehavior (unsigned long): 2
+  _interactiveLoupeBehavior (unsigned long): 0
+  _tapAnimationDuration (double): 0.5
+...
+===
+<PUScrubberSettings: 0x11f80fc48>:
+in PUScrubberSettings:
+  Class Methods:
+===
+===
+(lldb) ls /
+===
+(lldb) ls /System/Library/
+===
+
+
+
+Shell Commands
+******************************
+
+otool -L 
+===
+otool -L /Users/derekselander/Library/Developer/Xcode/DerivedData/DeleteMe-fqycokvgjilklcejwonxhuyxqlej/Build/Products/Debug-iphonesimulator/DeleteMe.app/DeleteMe
+===
+/System/Library/Frameworks/CallKit.framework/CallKit (compatibility version 1.0.0, current version 1.0.0)
+
+/System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth (compatibility version 1.0.0, current version 1.0.0)
+
+/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 1556.0.0)
+
+/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+
+/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 61000.0.0)
+===
+otool -l /Users/derekselander/Library/Developer/Xcode/DerivedData/DeleteMe-fqycokvgjilklcejwonxhuyxqlej/Build/Products/Debug-iphonesimulator/DeleteMe.app/DeleteMe
+===
+Load command 12
+          cmd LC_LOAD_WEAK_DYLIB
+      cmdsize 80
+         name /System/Library/Frameworks/CallKit.framework/CallKit (offset 24)
+   time stamp 2 Wed Dec 31 17:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+===
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 96
+         name /System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth (offset 24)
+   time stamp 2 Wed Dec 31 17:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+===
+pgrep -fl DeleteMe
+===
+61175 /Users/derekselander/Library/Developer/CoreSimulator/Devices/D0576CB9-42E1-494B-B626-B4DB75411700/data/Containers/Bundle/Application/474C8786-CC4F-4615-8BB0-8447DC9F82CA/DeleteMe.app/DeleteMe
+===
+app=/Users/derekselander/Library/Developer/CoreSimulator/Devices/D0576CB9-42E1-494B-B626-B4DB75411700/data/Containers/Bundle/Application/474C8786-CC4F-4615-8BB0-8447DC9F82CA/DeleteMe.app/DeleteMe
+===
+CK=/System/Library/Frameworks/CallKit.framework/CallKit
+NC=/System/Library/Frameworks/NotificationCenter.framework/NotificationCenter
+===
+install_name_tool -change "$CK" "$NC" "$app"
+===
+otool -L "$app"
+===
+lldb -n DeleteMe
+===

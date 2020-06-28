@@ -1,0 +1,78 @@
+LLDB Commands
+******************************
+
+
+
+
+Shell Commands
+******************************
+
+sudo dtrace -n 'objc$target:*ViewController::entry' -p `pgrep SpringBoard`
+===
+===
+===
+===
+sudo dtrace -n 'objc$target:::entry { @[probemod] = count() }' -p `pgrep SpringBoard`
+===
+dtrace -n 'objc$target:NSObject:-description:entry / arg0 = 0 / { @[probemod] = count(): }' -p `pgrep SpringBoard`
+===
+DTrace “one-liners” can comprise multiple clauses which can monitor different items with the probe description, check for different conditions in the predicate and execute different logic with different actions.
+
+So, with the example:
+
+```bash
+===
+You have a probe description of `objc$target:NSView:-init*:entry`, which includes `NSView` as the module, `-init*` as the function, and `entry` as the name with no predicate and no action. DTrace produces a default output for tracing (which you can silence with the **-q** option). This default output only displays the `function` and `name`.  For example, if you were tracing `-[NSObject init]` without silencing the default DTrace action, your DTrace output would look like the following:
+
+```bash
+===
+From the output, the `-[NSObject init]` got hit 4 times while the process was being traced. You can tell DTrace to use a different formatted output by combining the `-q` option with one of the `print` functions to display alernative formatting for output.
+
+What does that **-n** argument mean again? The `-n` argument specifies the DTrace **name** which can come in the form `provider:module:function:name`, `module:function:name` or `function:name`. In addition, the name option can take an optional probe `clause`, which is why you surround all your one-liner script content in single quotes to pass to the `-n` argument.
+
+Got it? No? You’ll repeat the above terminology steps with a useful DTrace option to emphasize what you’ve learned.
+
+## Learning while listing probes
+
+Included in the DTrace command options is a nice little option, **-l**, which will list all the probes you’ve matched against in your probe description. When you have the **-l** option, DTrace will only list the probes and not execute any actions, regardless of whether you supply them or not.
+
+This makes the `-l` option a nice tool to learn what will and *will not* work.
+
+You will look at a probe description one more time while building up a DTrace script and systematically limiting its scope. Consider the following, Do NOT execute this:
+
+```bash
+===
+This will create a probe description on every Objective-C every class, method, and assembly instruction within the **Finder** application. This is a *very bad* idea for a DTrace script and will likely not run on your computer because of the hit count you’ll get. 
+
+> **Note**: I’ve supplied the `-x` option to `pgrep` because I could get multiple PIDs for a `pgrep` query, which will screw up the placeholder, `$target`. The `-x` option says only give me the PID(s) that match **exactly** for the name, Finder. If there are multiple instances of a process. You can get the oldest one or newest one in `pgrep` with the `-o` or `-n` option. If this sounds confusing, play around with the `pgrep` command in Terminal without DTrace to understand how it works.
+
+Don’t execute the above script because it will take too long. However, execute the rest of these scripts so you understand what’s happening.
+
+Let’s filter this down a bit. In Terminal, type the following:
+
+```bash
+===
+Press enter, then enter your password.
+
+This will list a probe on every single method implemented by `NSView` for all of its methods and every assembly instruction within each of those methods. Still a horrible idea, but at least this one will actually print out after a second. 
+
+How many probes is this? You can get that answer by piping your output to the **wc** command:
+
+```bash
+===
+On my macOS machine in 10.14 (at the time of writing), I get ~42k Objective-C DTrace probes for any code pertaining to `NSView` within the Finder process. Wow!
+
+Filter the probe description down some more:
+
+```bash
+===
+This will filter the probe description down to every assembly instruction that’s executed within `-[NSView initWithFrame:]` in addition to the **entry** and **return** probes. Notice the use of a `?` instead of a colon to specify the Objective-C selector (which takes a parameter). If a colon was used, then DTrace will incorrectly parse the input thinking the `function` part was complete and have moved onto specifying the `name` within the DTrace probe. There’s also the `-` at the begining of the `function` description to indicate this is an instance Objective-C method.
+
+This is still too much output, you only want to execute a probe that will monitor the beginning of the `-[NSView initWithFrame:]` method and no other parts.
+
+```bash
+===
+Your clipboard’s contents have been modified. Jump over to your Terminal, then paste in the contents of your clipboard. Here’s mine, but yours will of course be different:
+
+```bash
+===

@@ -1,0 +1,78 @@
+LLDB Commands
+******************************
+
+(lldb) po self 
+===
+(lldb) po self
+===
+(lldb) image lookup -rn '\ debugDescription\]'
+===
+(lldb) po self.view!.layer.description
+===
+(lldb) po self.view!.layer
+===
+(lldb) p self
+===
+(lldb) p $R2
+===
+(lldb) type summary add Signals.MasterViewController --summary-string "Wahoo!"
+===
+(lldb) p self 
+===
+(lldb) (Signals.MasterViewController) $R3 = 0x00007fb71fd04080 Wahoo!
+===
+(lldb) type summary clear
+===
+(lldb) po [UIApplication sharedApplication]
+===
+(lldb) expression -l objc -O -- [UIApplication sharedApplication] 
+===
+(lldb) po UIApplication.shared
+===
+(lldb) po UIApplication.shared
+===
+(lldb) po id test = [NSObject new]
+===
+(lldb) po test 
+===
+(lldb) po id $test = [NSObject new] 
+(lldb) po $test 
+<NSObject: 0x60000001d190>
+===
+(lldb) expression -l swift -O -- $test 
+===
+(lldb) expression -l swift -O -- $test.description
+===
+(lldb) p self 
+===
+(lldb) po $R0.title
+===
+(lldb) expression -l swift -- $R0.title
+===
+(lldb) expression -l swift -- $R0.title = "💩💩💩💩💩"
+===
+(lldb) expression -l swift -O -- $R0.viewDidLoad()
+===
+(lldb) expression -l swift -O -i 0 -- $R0.viewDidLoad()
+===
+(lldb) expression -G x -- 10
+===
+(lldb) p/x 10
+===
+(lldb) p/t 10
+===
+(lldb) p/t -10
+===
+(lldb) p/t 10.0
+===
+(lldb) p/d 'D'
+===
+(lldb) p/c 1430672467
+===
+(lldb) expression -f Y -- 1430672467
+===
+
+
+
+Shell Commands
+******************************

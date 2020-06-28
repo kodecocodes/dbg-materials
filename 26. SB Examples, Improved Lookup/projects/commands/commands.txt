@@ -1,0 +1,51 @@
+LLDB Commands
+******************************
+
+(lldb) reload_script
+===
+(lldb) __generate_script lookup
+===
+(lldb) lookup
+===
+(lldb) script help(lldb.SBTarget.FindGlobalFunctions)
+===
+(lldb) reload_script
+===
+(lldb) script k = lldb.target.FindGlobalFunctions('DSObjectiveCObject', 0, lldb.eMatchTypeRegex)
+===
+(lldb) gdocumentation SBSymbolContextList
+===
+(lldb) script dir(lldb.SBSymbolContextList)
+===
+(lldb) script k[0]
+===
+(lldb) script print k[0]
+===
+(lldb) script print k[0].symbol.name
+===
+(lldb) reload_script
+===
+(lldb) lookup DSObjectiveCObject
+===
+(lldb) reload_script
+===
+(lldb) lookup DSObjectiveCObject
+===
+(lldb) lookup initWith(\w+\:){2,2}\]
+===
+(lldb) reload_script
+===
+(lldb) lookup -l DSObjectiveCObject
+===
+(lldb) b 0x0001099d2c00
+Breakpoint 3: where = Allocator`-[DSObjectiveCObject setLastName:] at DSObjectiveCObject.h:33, address = 0x00000001099d2c00
+===
+(lldb) reload_script
+===
+(lldb) lookup -s viewWillAppear
+===
+
+
+
+Shell Commands
+******************************

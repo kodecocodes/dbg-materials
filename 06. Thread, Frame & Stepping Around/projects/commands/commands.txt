@@ -1,0 +1,32 @@
+LLDB Commands
+******************************
+
+(lldb) thread backtrace
+===
+(lldb) frame info
+===
+(lldb) frame select 1
+===
+(lldb) run
+===
+(lldb) next
+===
+(lldb) run
+===
+(lldb) step
+===
+(lldb) settings show target.process.thread.step-in-avoid-nodebug
+===
+(lldb) step -a0 
+===
+(lldb) finish
+===
+(lldb) frame variable
+===
+(lldb) frame variable -F self 
+===
+
+
+
+Shell Commands
+******************************

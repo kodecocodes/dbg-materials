@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gjB-Q4-8bM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Yay! Ray!-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Finding_Ray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ray.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-UE-9rg">
+                                <rect key="frame" x="-19.666666666666657" y="-40.666666666666686" width="413.33333333333326" height="893.33333333333348"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-8U-LJs">
+                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="375.33333333333326" height="812"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oAE-m8-1F7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375.33333333333326" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2Y-YP-4WH" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                <rect key="frame" x="27" y="246" width="320" height="320"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gZ-XI-NNS" userLabel="Left Eye Container" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_eye" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-Hq-Ke9" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="motionAmount">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rBW-Hq-Ke9" firstAttribute="centerX" secondItem="5gZ-XI-NNS" secondAttribute="centerX" id="1Ab-Xd-iju"/>
+                                            <constraint firstItem="rBW-Hq-Ke9" firstAttribute="width" secondItem="5gZ-XI-NNS" secondAttribute="width" id="K4k-US-C8y"/>
+                                            <constraint firstItem="rBW-Hq-Ke9" firstAttribute="centerY" secondItem="5gZ-XI-NNS" secondAttribute="centerY" id="MZ2-la-jou"/>
+                                            <constraint firstItem="rBW-Hq-Ke9" firstAttribute="height" secondItem="5gZ-XI-NNS" secondAttribute="height" id="qXP-Hg-oob"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskName" value="left_eye_mask"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="motionAmount">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAf-Pj-reE" userLabel="Right Eye Container" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_eye" translatesAutoresizingMaskIntoConstraints="NO" id="g5l-q1-YD8" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="motionAmount">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="g5l-q1-YD8" firstAttribute="height" secondItem="ZAf-Pj-reE" secondAttribute="height" id="4oG-UK-vZj"/>
+                                            <constraint firstItem="g5l-q1-YD8" firstAttribute="width" secondItem="ZAf-Pj-reE" secondAttribute="width" id="I6Y-FR-7oR"/>
+                                            <constraint firstItem="g5l-q1-YD8" firstAttribute="centerY" secondItem="ZAf-Pj-reE" secondAttribute="centerY" id="OL8-6w-A4x"/>
+                                            <constraint firstItem="g5l-q1-YD8" firstAttribute="centerX" secondItem="ZAf-Pj-reE" secondAttribute="centerX" id="RAy-r0-nIE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskName" value="right_eye_mask.png"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="motionAmount">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ray_main" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-zy-DhB" customClass="MotionView" customModule="Finding_Ray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                                <real key="value" value="1000"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="motionAmount">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5gZ-XI-NNS" firstAttribute="height" secondItem="R2Y-YP-4WH" secondAttribute="height" id="8fv-Tx-wO7"/>
+                                    <constraint firstItem="Cmw-zy-DhB" firstAttribute="height" secondItem="R2Y-YP-4WH" secondAttribute="height" id="9bI-3r-ND5"/>
+                                    <constraint firstItem="ZAf-Pj-reE" firstAttribute="centerX" secondItem="Cmw-zy-DhB" secondAttribute="centerX" id="HM9-3m-I7q"/>
+                                    <constraint firstItem="Cmw-zy-DhB" firstAttribute="centerY" secondItem="R2Y-YP-4WH" secondAttribute="centerY" id="KAa-1z-BZp"/>
+                                    <constraint firstItem="ZAf-Pj-reE" firstAttribute="height" secondItem="Cmw-zy-DhB" secondAttribute="height" id="Kpm-QT-ecJ"/>
+                                    <constraint firstItem="5gZ-XI-NNS" firstAttribute="centerX" secondItem="R2Y-YP-4WH" secondAttribute="centerX" id="bK9-9j-Exb"/>
+                                    <constraint firstItem="5gZ-XI-NNS" firstAttribute="centerY" secondItem="R2Y-YP-4WH" secondAttribute="centerY" id="gb6-0d-Pf5"/>
+                                    <constraint firstItem="ZAf-Pj-reE" firstAttribute="centerY" secondItem="Cmw-zy-DhB" secondAttribute="centerY" id="hUv-RV-K2A"/>
+                                    <constraint firstAttribute="width" constant="320" id="hfP-5X-KgG"/>
+                                    <constraint firstAttribute="height" constant="320" id="mMI-2L-9VL"/>
+                                    <constraint firstItem="Cmw-zy-DhB" firstAttribute="width" secondItem="R2Y-YP-4WH" secondAttribute="width" id="p1a-9J-AGx"/>
+                                    <constraint firstItem="5gZ-XI-NNS" firstAttribute="width" secondItem="R2Y-YP-4WH" secondAttribute="width" id="trk-rp-2bl"/>
+                                    <constraint firstItem="Cmw-zy-DhB" firstAttribute="centerX" secondItem="R2Y-YP-4WH" secondAttribute="centerX" id="wps-y8-gOz"/>
+                                    <constraint firstItem="ZAf-Pj-reE" firstAttribute="width" secondItem="Cmw-zy-DhB" secondAttribute="width" id="zOD-ta-XoI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                        <real key="value" value="1000"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="inspectorHackImage" value="background"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowSize">
+                                        <size key="value" width="10" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="transformAmount">
+                                        <real key="value" value="0.14999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="UmF-UE-9rg" firstAttribute="centerX" secondItem="QaE-Nc-8io" secondAttribute="centerX" id="G1J-Qf-Sjk"/>
+                            <constraint firstItem="XqK-8U-LJs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G6R-vl-qKl"/>
+                            <constraint firstItem="R2Y-YP-4WH" firstAttribute="centerX" secondItem="QaE-Nc-8io" secondAttribute="centerX" id="PbH-Ub-xFY"/>
+                            <constraint firstItem="XqK-8U-LJs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="W9Z-Gu-0b9"/>
+                            <constraint firstItem="R2Y-YP-4WH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3s-uP-tFR"/>
+                            <constraint firstItem="UmF-UE-9rg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.1" id="bSb-lX-2MH"/>
+                            <constraint firstItem="UmF-UE-9rg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hmI-45-UIX"/>
+                            <constraint firstItem="XqK-8U-LJs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pYC-LC-6Dl"/>
+                            <constraint firstItem="UmF-UE-9rg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.1" id="wDz-ZU-5Ne"/>
+                            <constraint firstItem="XqK-8U-LJs" firstAttribute="centerX" secondItem="QaE-Nc-8io" secondAttribute="centerX" id="xsm-XO-7iF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QaE-Nc-8io"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yay! Ray!" id="Bl5-wp-J4F">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="Efs-2Z-3DX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="resetViewsTapped:" destination="BYZ-38-t0r" id="zyk-44-SSc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="bwu-0m-fyI">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tweetAtAndAnnoyRayWenderlichButtonTapped:" destination="BYZ-38-t0r" id="4oU-aj-rlz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="R2Y-YP-4WH" id="oVj-tc-8he"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="183.95802098950526"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LYx-A4-vrC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gjB-Q4-8bM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="AvM-pK-VPu">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hGF-CS-AVW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maU-Xl-99r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431.19999999999999" y="837.93103448275872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ray.png" width="400" height="400"/>
+        <image name="left_eye" width="400" height="400"/>
+        <image name="ray_main" width="400" height="400"/>
+        <image name="right_eye" width="400" height="400"/>
+    </resources>
+</document>

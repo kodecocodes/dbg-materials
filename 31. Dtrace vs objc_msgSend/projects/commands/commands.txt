@@ -1,0 +1,106 @@
+LLDB Commands
+******************************
+
+(lldb) lookup SwiftViewController
+===
+(lldb) lookup ObjCViewController
+===
+(lldb) lookup VCTransitions
+===
+(lldb) p/x [UIView class]
+===
+(lldb) po class_getName(0x0000000109d4ce60)
+===
+(lldb) po (char *)class_getName(0x0000000109d4ce60)
+===
+(lldb) po (char *)class_getName(0x0000000109d4ce60)
+===
+(lldb) b objc_class::demangledName(bool)
+===
+(lldb) exp -i0 -O -- class_getName([UIView class])
+===
+(lldb) po $rdi
+===
+(lldb) po $rsi
+===
+(lldb) p/x [UIView class]
+(Class) $1 = 0x000000010c09ce60 UIView
+===
+(lldb) x/gx '0x000000010c09ce60 + 0x20'
+===
+(lldb) p/x 0x7ffffffffff8 & 0x0000608000064b80
+===
+(lldb) x/gx '0x0000608000064b80 + 0x38'
+===
+(lldb) po (char *)0x000000010bce319f
+===
+(lldb) getcls [UIView new]
+===
+(lldb) getcls [UIAlertController new]
+===
+(lldb) po [UIAlertController class]
+===
+(lldb) getcls [UIAlertController new]
+===
+(lldb) image dump sections VCTransitions
+===
+(lldb) p/x (void *)NSClassFromString(@"ObjCViewController")
+===
+(lldb) image lookup -a 0x000000010db34080
+===
+(lldb) script path = lldb.target.executable.fullpath
+===
+(lldb) script path
+===
+(lldb) script print lldb.target.module[path]
+===
+(lldb) script print lldb.target.module[path].section[0]
+===
+(lldb) script print lldb.target.module[path].section['__PAGEZERO']
+===
+(lldb) script print lldb.target.module[path].section['__DATA']
+===
+(lldb) script section = lldb.target.module[path].section['__DATA']
+===
+(lldb) script section.GetLoadAddress(lldb.target)
+===
+(lldb) script section.size
+===
+(lldb) snoopie
+===
+
+
+
+Shell Commands
+******************************
+
+sudo dtrace -n 'objc$target:ObjCViewController::entry' -p `pgrep VCTransitions`
+===
+sudo dtrace -ln 'objc$target::*cool*Test*:entry' -p `pgrep VCTransitions`
+===
+sudo dtrace -n 'pid$target::*cool*Test*:entry' -p `pgrep VCTransitions` 
+===
+sudo dtrace -n 'pid$target:::entry' -p `pgrep VCTransitions`
+===
+:~ sudo dtrace -n 'pid$target:::entry' -p `pgrep VCTransitions`
+Password:
+dtrace: description 'pid$target:::entry' matched 901911 probes
+CPU     ID                    FUNCTION:NAME
+  6 1405417              class_getName:entry 
+  6 1405416 objc_class::demangledName(bool):entry 
+  6 566986        _NSPrintForDebugger:entry 
+  6 1405847               objc_msgSend:entry 
+===
+    br set -M objc_class::demangledName(bool) -R 61
+    ```
+```bash
+cat ./msgsendsnoop.d
+===
+sudo ./msgsendsnoop.d -p `pgrep VCTransitions`
+===
+sudo ./msgsendsnoop.d -p `pgrep VCTransitions`
+===
+sudo ./msgsendsnoop.d -p `pgrep VCTransitions` | grep invalid
+===
+sudo ./msgsendsnoop.d -p `pgrep VCTransitions`
+===

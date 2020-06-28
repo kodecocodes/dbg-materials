@@ -1,0 +1,62 @@
+LLDB Commands
+******************************
+
+(lldb) file /Applications/Xcode.app/Contents/MacOS/Xcode
+===
+(lldb) process launch -e /dev/ttys027 --
+===
+(lldb) sys echo "$(dclass -t swift)" | grep -v _ | grep "\." | cut -d. -f1 | uniq | wc -l
+===
+(lldb) b -[NSView hitTest:]
+Breakpoint 1: where = AppKit`-[NSView hitTest:], address = 0x000000010338277b
+===
+(lldb) continue
+===
+(lldb) po $rdi
+===
+(lldb) continue
+===
+(lldb) breakpoint delete
+===
+(lldb) breakpoint set -n  "-[NSView hitTest:]" -C "po $rdi" -G1
+===
+(lldb) continue
+===
+(lldb) breakpoint modify -c '(BOOL)[NSStringFromClass((id)[$rdi class]) containsString:@"IDESourceEditorView"]' -G0
+===
+(lldb) po $rdi
+===
+(lldb) p/x $rdi
+===
+(lldb) po 0x0000000110a42600
+===
+===
+(lldb) po [$rdi string]
+===
+(lldb) ex -l swift -- import Foundation
+(lldb) ex -l swift -- import AppKit
+===
+(lldb) ex -l swift -o -- unsafeBitCast(0x0110a42600, to: NSView.self)
+===
+(lldb) ex -l swift -o -- unsafeBitCast(0x0110a42600, to: NSView.self).insertText("Yay! Swift!")
+===
+
+
+
+Shell Commands
+******************************
+
+lldb -n Finder
+===
+csrutil disable && reboot
+===
+csrutil status
+===
+lldb -n Finder
+===
+lldb
+===
+tty
+===
+echo "hello debugger" 1>/dev/ttys027
+===

@@ -1,0 +1,67 @@
+LLDB Commands
+******************************
+
+(lldb) po [UIDebuggingInformationOverlay prepareDebuggingOverlay]
+(lldb) po [[UIDebuggingInformationOverlay overlay] toggleVisibility]
+===
+(lldb) lldb -n MobileSlideShow
+===
+(lldb) image lookup -rn UIDebuggingInformationOverlay
+===
+(lldb) methods UIDebuggingInformationOverlay
+===
+(lldb) exp -lobjc -O -- [UIDebuggingInformationOverlay _shortMethodDescription]
+===
+(lldb) disassemble -n "-[UIDebuggingInformationOverlay init]"
+===
+(lldb) po [UIDebuggingInformationOverlay new]
+===
+(lldb) disassemble -n "-[UIDebuggingInformationOverlay init]" -c10
+===
+(lldb) image lookup -vs UIDebuggingOverlayIsEnabled.__overlayIsEnabled
+===
+(lldb) image lookup -a 0x000000010e1fb0d8
+===
+(lldb) x/gx 0x000000010e1fb0d8
+===
+(lldb) mem write 0x000000010e1fb0d8 0xffffffffffffffff -s 8
+===
+(lldb) po *(long *)0x000000010e1fb0d0 = -1
+===
+(lldb) x/gx 0x000000010e1fb0d8
+===
+(lldb) disassemble -n "-[UIDebuggingInformationOverlay init]" -c10
+===
+(lldb) po [UIDebuggingInformationOverlay new]
+===
+(lldb) po [UIDebuggingInformationOverlay overlay]
+===
+(lldb) po [[UIDebuggingInformationOverlay overlay] toggleVisibility]
+===
+(lldb) continue
+===
+(lldb) b _UIGetDebuggingOverlayEnabled
+===
+(lldb) exp -i0 -O -- [UIDebuggingInformationOverlay prepareDebuggingOverlay]
+===
+(lldb) finish
+===
+(lldb) p/x $al
+===
+(lldb) po $al = 0xff
+===
+(lldb) si
+===
+(lldb) si
+===
+(lldb) continue
+===
+(lldb) image lookup -vs UIDebuggingOverlayIsEnabled.onceToken
+===
+(lldb) po *(long *)0x000000010e1fb0d0 = -1
+===
+
+
+
+Shell Commands
+******************************

@@ -1,0 +1,21 @@
+LLDB Commands
+******************************
+
+(lldb) Yay_Autolayout
+===
+(lldb) help Yay_Autolayout
+===
+(lldb) po self
+===
+(lldb) po 0x7fc8295071a0
+===
+(lldb) cpo 0x7fc8295071a0
+===
+
+
+
+Shell Commands
+******************************
+
+nano ~/.lldbinit
+===

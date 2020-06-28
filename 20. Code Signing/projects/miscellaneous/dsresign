@@ -1,0 +1,188 @@
+#!/bin/bash
+
+# MIT License
+# 
+# Copyright (c) 2018 Derek Selander (@LOLgrep)
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+set -e 
+
+DS_USAGE="""[Usage]: $(/usr/bin/basename $0) /path/to/Application.app /path/to/provisioning/profile [NewAppName]
+Resigns the iOS Application and attempts to install it on iOS device that's plugged in over USB
+"""
+
+RED='\033[0;31m'
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Make sure the arguments are good
+if [  "$#" -lt 2 ]; then 
+   /usr/bin/printf "$DS_USAGE"
+   exit 1
+fi 
+if [  "$#" -gt 3 ]; then 
+   /usr/bin/printf "$DS_USAGE"
+   exit 1
+fi 
+
+
+# Does this look like a valid .app directory? 
+if [ ! -d "$1" ]; then 
+    /usr/bin/printf "${CYAN}\"$1\" ${RED}Needs to be an .app directory, exiting...\n${NC}"
+    exit 1
+fi
+
+if [ ! -d "$1/_CodeSignature" ]; then 
+    /usr/bin/printf "${RED}$(/usr/bin/basename "$1") doesn't seem to be an iOS app? exiting...\n${NC}"
+    exit 1
+fi 
+if [ ! -e "$1/Info.plist" ]; then 
+    /usr/bin/printf "${RED}$(/usr/bin/basename "$1") doesn't seem to be an iOS app? exiting...\n${NC}"
+    exit 1
+fi 
+
+# Make sure the provisioning profile looks good
+if [ ! -e "$2" ]; then 
+    /bin/echo "${CYAN}\"$2\" ${RED}needs to be a provisioning profile (usually containing the extension .mobileprovisioning), exiting...\n${NC}"
+    exit 1
+fi
+# Provisioning profiles seem to begin with 0x3082, check for that at beginning of $2
+if [[ $(/usr/bin/xxd -l 2  "$2" | cut -d" " -f2) != "3082" ]]; then 
+    /usr/bin/printf "${CYAN}\"${2}\" ${RED}doesn't really look like a provisioning profile, exiting...\n${NC}"
+    exit 1
+fi 
+
+# Make sure mobdevim is installed
+if [ !  $(/usr/bin/which mobdevim) ]; then
+   /usr/bin/printf "${RED}Couldn't find the mobdevim command in PATH\nInstall mobdevim command from ${CYAN}https://github.com/DerekSelander/mobdevim\n${NC}"
+   exit 1
+fi
+
+# aaaaaaaaalllllllllll the declarations
+DEVICE_UDID=$(mobdevim  -f  | /usr/bin/grep UDID | /usr/bin/cut -d$'\t' -f2)
+APP_BASENAME=$(/usr/bin/basename "$1")
+TMP_START_DIR=/tmp/DSResigner
+TMP_ENT="${TMP_START_DIR}/ds_entitlements.xml"
+APP_FILE="${TMP_START_DIR}/${APP_BASENAME}"
+PP_PATH="$2"
+CERTIFCATE_PATH="${TMP_START_DIR}/signing_identity.cer.PEM"
+EXTRACTED_ENT="${TMP_START_DIR}/extracted_ent"
+ENT_DICT="${TMP_START_DIR}/ent_dict"
+CS_IDENTITIES=$(/usr/bin/security find-identity -p codesigning -v | /usr/bin/cut -d "\"" -f2 | /usr/bin/sed -e '$ d' )
+IDENT_ARRAY=""
+while read -r line; do
+    IDENT_ARRAY+=("$line")
+done < <(/bin/echo "$CS_IDENTITIES")
+
+###################################################################
+# Let's get this party started!
+###################################################################
+
+/usr/bin/printf "
+${CYAN}Select the signing identity you want to use to sign ${NC}${GREEN}${APP_BASENAME}${NC}:
+$(/bin/echo "$CS_IDENTITIES" | /usr/bin/nl)
+[ENTER NUMERIC VALUE] : " 
+read input_value
+
+if [ \( -z $input_value \) -o \( $input_value -eq $input_value 2>/dev/null \) ]; then
+    if [ \( $input_value -ge ${#IDENT_ARRAY[@]} \) -o \( $input_value -lt 1 \) ]; then 
+        /usr/bin/printf "${RED}Input needs to be between 1 and $((${#IDENT_ARRAY[@]} - 1)), exiting...${NC}\n"
+        exit 1
+    fi 
+else
+    /usr/bin/printf "${RED}Provide a numeric value, exiting...${NC}\n"
+    exit 1 
+fi
+SIGNATURE="${IDENT_ARRAY[${input_value}]}"
+
+
+# Cleanup the starting directory
+/bin/rm -rf "$TMP_START_DIR"
+/bin/mkdir "$TMP_START_DIR"
+/bin/cp -R "$1" "$APP_FILE"
+
+# Check if the signing identity is found in the provisioning profile
+/usr/bin/security cms -D -i "$PP_PATH" > "$EXTRACTED_ENT"
+/usr/bin/security find-certificate -c "$SIGNATURE" -p > "$CERTIFCATE_PATH"
+PUBLIC_CERT=$(/usr/bin/openssl x509 -in "$CERTIFCATE_PATH" -inform PEM -outform DER | /usr/bin/base64)
+if ! /usr/bin/grep -q "$PUBLIC_CERT" "$EXTRACTED_ENT" ; then
+    /usr/bin/printf "${RED}Can't find identity ${CYAN}${SIGNATURE}${RED} in ${CYAN}$(/usr/bin/basename "$PP_PATH")${RED}, exiting...${NC}\n"
+    exit 1
+fi 
+
+# Check if the provisioning profile given has expired
+EXPIRATION_DATE=$(/usr/bin/xpath "$EXTRACTED_ENT" '//*[text() = "ExpirationDate"]/following-sibling::date/text()' 2>/dev/null )
+if [ $(/bin/date +"%s") -gt $(/bin/date -jf "%Y-%m-%dT%H:%M:%SZ" "$EXPIRATION_DATE" +"%s") ]; then 
+    /usr/bin/printf "${RED}Provisioning profile has expired! Exiting...${NC}\n"
+    exit 1
+fi 
+
+# Pull out APP ID and if AD_HOC, make sure it's AD_HOC or iOS UDID is in PP if not AD_HC
+APP_IDENTIFIER=$(/usr/bin/xpath "$EXTRACTED_ENT" '//*[text() = "application-identifier"]/following-sibling::string[1]/text()' 2>/dev/null |  cut -d. -f 2-80 ) 
+echo "app id is : $APP_IDENTIFIER"
+IS_AD_HOC=$(/usr/bin/xpath "$EXTRACTED_ENT" '//*[text() = "ProvisionsAllDevices"]/following-sibling::*[1]' 2>/dev/null || : | /usr/bin/grep -i true) 
+if [  -z IS_AD_HOC ]; then 
+     /bin/echo "Looks like \"$(/usr/bin/basename "$2")\" is an Ad-Hoc provisioning profile, you'll need to go to settings to allow ${APP_BASENAME} to run"
+elif  ! $(/usr/bin/grep -q "$DEVICE_UDID" "$EXTRACTED_ENT") ; then
+    /usr/bin/printf "${RED}It looks like the provisioning profile ${CYAN}$(/usr/bin/basename "$2") ${RED}doesn't contain the UDID (${CYAN}${DEVICE_UDID}${RED}) for the iOS device that's currently plugged into your computer, exiting...\n${NC}"
+    exit 1
+fi 
+
+#########################################################
+# Ok, looking good from here on out, lets sign this thing
+#########################################################
+/usr/bin/printf "${CYAN}Signing ${GREEN}\"$APP_BASENAME\"${CYAN} with identity: ${GREEN}\"$SIGNATURE\"${NC}\n"
+
+# Extract the entitlements from PP_PATH and place them in TMP_ENT
+/bin/echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">' > "$TMP_ENT"
+/usr/bin/xpath "$EXTRACTED_ENT" '//*[text() = "Entitlements"]/following-sibling::dict' 2>/dev/null | grep -v -e '^$' | sed -e $'s/\t<\/dict>/<\/dict>/g' | sed -e $'s/\t\t/\t/g' | sed -e "s| /|/|g" > "$ENT_DICT" 
+/bin/cat  "$ENT_DICT"  >> "$TMP_ENT" 
+/bin/echo "</plist>" >> "$TMP_ENT"
+
+# Copy provisioning profile, replace application identifier in Info.plist
+/bin/cp -f "$PP_PATH" "$APP_FILE/embedded.mobileprovision"
+/usr/bin/plutil -replace CFBundleIdentifier -string "$APP_IDENTIFIER" "$APP_FILE/Info.plist"
+if [ ! -z "$3" ]; then
+    /usr/bin/printf "\n${CYAN}Resigning app to have bundle display name: ${GREEN}$3${NC}\n"
+    /usr/bin/plutil -replace CFBundleDisplayName -string "$3" "$APP_FILE/Info.plist"
+fi
+if [ -d "$APP_FILE/PlugIns" ]; then 
+    /usr/bin/printf "******************************************\nRemoving plugins in ${APP_BASENAME}/PlugIns\n******************************************\n"
+    /usr/bin/printf "This is due to the fact that PlugIns contain embedded applications each with their own provisioning profile and identity... I am too lazy for dealing with that :]\n\n"
+    /bin/rm -rf "$APP_FILE/PlugIns" 
+fi 
+
+
+/usr/bin/printf "${CYAN}Signing executables in ${GREEN}${APP_BASENAME}/Frameworks/*${NC}\n"
+
+# Sign the Frameworks first, then the main executable
+/usr/bin/codesign --deep -f -s "$SIGNATURE" "$APP_FILE/Frameworks/"*  2>&1 | /usr/bin/grep --line-buffered -oh "Frameworks/.*:" |  /usr/bin/nl 
+
+# Sign main executable, but this time with the entitlements
+/usr/bin/printf "${CYAN}Signing main executable: ${GREEN}${APP_BASENAME}${NC}\n"
+/usr/bin/xattr -cr "$APP_FILE"
+/usr/bin/codesign --deep -f -s "$SIGNATURE" --entitlements "$TMP_ENT"  "$APP_FILE" 2>/dev/null
+
+# And now try and install this thing!
+/usr/bin/printf "${CYAN}Attempting to install to iOS device ${GREEN}${DEVICE_UDID}${CYAN}...\n${NC}"
+mobdevim -i "$APP_FILE" 

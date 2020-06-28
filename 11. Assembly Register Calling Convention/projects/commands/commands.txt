@@ -1,0 +1,53 @@
+LLDB Commands
+******************************
+
+(lldb) register read
+===
+(lldb) po $rdi 
+===
+(lldb) po $rsi 
+===
+(lldb) po (char *)$rsi 
+===
+(lldb) po (SEL)$rsi
+===
+(lldb) b -[NSResponder mouseUp:]
+(lldb) continue
+===
+(lldb) po $rdi 
+===
+(lldb) po $rdx 
+===
+(lldb) po [$rdx class]
+===
+(lldb) breakpoint delete
+About to delete all breakpoints, do you want to do that?: [Y/n] 
+===
+(lldb) breakpoint set -o true -S "-[NSWindow mouseDown:]"
+(lldb) continue
+===
+(lldb) po [$rdi setBackgroundColor:[NSColor redColor]]
+(lldb) continue 
+===
+(lldb) register read -f d 
+===
+(lldb) finish
+===
+(lldb) re re rax -fd 
+===
+(lldb) p/x @"Yay! Debugging"
+===
+(lldb) br set -n  "-[UILabel setText:]" -C "po $rdx = 0x0000618000644080" -G1
+===
+(lldb) continue
+===
+
+
+
+Shell Commands
+******************************
+
+uname -m 
+===
+lldb -n SpringBoard
+===

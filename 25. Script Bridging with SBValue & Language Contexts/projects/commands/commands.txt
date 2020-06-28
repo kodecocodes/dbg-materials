@@ -1,0 +1,127 @@
+LLDB Commands
+******************************
+
+(lldb) po 0x600000031f80
+===
+(lldb) po *(id *)(0x600000031f80)
+===
+(lldb) x/gx 0x600000031f80
+===
+(lldb) po 0x0000000108b06568
+===
+(lldb) po *(id *)(0x600000031f80 + 0x8)
+===
+(lldb) po sizeof(Class)
+===
+(lldb) po *(id *)(0x600000031f80 + 0x10)
+===
+(lldb) po *(id *)(0x600000031f80 + 0x18)
+===
+(lldb) po 0x61800009d830
+===
+(lldb) po [0x61800009d830 superclass]
+===
+(lldb) po *(id *)0x61800009d830
+===
+(lldb) po *(id *)(0x61800009d830 + 0x8)
+===
+(lldb) po [0x61800009d830 retain]
+===
+(lldb) po *(id *)(0x61800009d830 + 0x8)
+===
+(lldb) po [0x61800009d830 release]
+===
+(lldb) po *(id *)(0x61800009d830 + 0x8)
+===
+(lldb) po *(id *)(0x61800009d830 + 0x10)
+===
+(lldb) x/gt '0x61800009d830 + 0x18'
+===
+(lldb) x/s '0x61800009d830 + 0x20'
+"Derek"
+===
+(lldb) x/gx '0x61800009d830 + 0x18'
+===
+(lldb) po [DSObjectiveCObject new]
+===
+(lldb) script lldb.frame.EvaluateExpression('[DSObjectiveCObject new]')
+===
+(lldb) script print lldb.target.EvaluateExpression('[DSObjectiveCObject new]')
+===
+(lldb) script a = lldb.target.EvaluateExpression('[DSObjectiveCObject new]')
+===
+(lldb) script print a
+===
+(lldb) script print a.description
+===
+(lldb) script print a.value
+===
+(lldb) po 0x0000608000033260
+===
+(lldb) script print a.signed
+===
+(lldb) p/x 106102872289888
+===
+(lldb) script print a.GetNumChildren()
+===
+(lldb) script print a.GetChildAtIndex(0)
+(NSObject) NSObject = {
+  isa = DSObjectiveCObject
+}
+===
+(lldb) script print a.GetChildAtIndex(1)
+(UICachedDeviceRGBColor *) _eyeColor = 0x0000608000070e00
+===
+(lldb) script print a.GetChildAtIndex(2)
+(__NSCFConstantString *) _firstName = 0x000000010db83368 @"Derek"
+===
+(lldb) script print a.GetChildAtIndex(3)
+(__NSCFConstantString *) _lastName = 0x000000010db83388 @"Selander"
+===
+(lldb) script print a.GetChildAtIndex(2).description
+Derek
+===
+(lldb) script a.size
+8
+===
+(lldb) script a.deref.size
+===
+(lldb) script print a.type.name
+===
+(lldb) script print a.deref.type.name
+===
+(lldb) script print a.data
+===
+(lldb) script print a.value
+===
+(lldb) script print a.deref.data
+f0 54 b8 0d 01 00 00 00 00 0e 07 00 80 60 00 00  .T...........`..
+68 33 b8 0d 01 00 00 00 88 33 b8 0d 01 00 00 00  h3.......3......
+===
+(lldb) script options = lldb.SBExpressionOptions()
+===
+(lldb) script options.SetLanguage(lldb.eLanguageTypeSwift)
+===
+(lldb) script options.SetCoerceResultToId()
+===
+(lldb) e -lswift -O -- ASwiftClass()
+===
+(lldb) e -lswift -- import Allocator
+===
+(lldb) e -lswift -O -- ASwiftClass()
+===
+(lldb) script b = lldb.target.EvaluateExpression('ASwiftClass()', options)
+===
+(lldb) script print b.GetValueForExpressionPath('.firstName')
+===
+(lldb) script c = lldb.value(b)
+===
+(lldb) script print c.firstName
+===
+(lldb) script print c.firstName.sbvalue.signed
+===
+
+
+
+Shell Commands
+******************************

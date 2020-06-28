@@ -1,0 +1,74 @@
+LLDB Commands
+******************************
+
+(lldb) help msl
+(lldb) help lookup
+(lldb) help sbt
+(lldb) help search
+===
+(lldb) lookup . -m libsystem_malloc.dylib
+===
+(lldb) lookup (?i)log -m libsystem_malloc.dylib
+===
+(lldb) search RayView -b
+===
+(lldb) search RayView -b
+RayView * [0x00007fa838414330]
+RayView * [0x00007fa8384125f0]
+RayView * [0x00007fa83860c000]
+===
+(lldb) po trace_address(0x00007fa838414330)
+===
+(lldb) image lookup -a 4533269637
+===
+(lldb) script print lldb.SBAddress(4454012240, lldb.target)
+===
+(lldb) e -lobjc++ -O -i0 -- trace_address(0x00007fa838414330)
+===
+(lldb) script print lldb.frame.FindVariable('stackaddress')
+===
+(lldb) script a = lldb.value(lldb.frame.FindVariable('stackaddress'))
+===
+(lldb) script print a
+===
+(lldb) script print a.count
+===
+(lldb) script print a.addresses[0]
+===
+(lldb) script print a.addresses[3]
+===
+(lldb) reload_script
+===
+(lldb) search RayView -b
+===
+(lldb) search UIView -m ShadesOfRay -b
+===
+(lldb) msl 0x00007fa838414330
+===
+(lldb) e -lswift -O -- import SomeSwiftModule
+===
+(lldb) e -lswift -O -- SomeSwiftCode.shared
+===
+(lldb) search SwiftObject
+===
+(lldb) search SwiftObject -b
+===
+(lldb) msl 0x0000600000033640
+===
+(lldb) search RayView -b
+===
+(lldb) msl 0x00007fc23eb00620
+===
+(lldb) po turn_on_stack_logging(1)
+===
+(lldb) msl 0x00007f8250f0a170
+===
+(lldb) reload_script
+===
+(lldb) msl 0x00007f8250f0a170 -r
+===
+
+
+
+Shell Commands
+******************************

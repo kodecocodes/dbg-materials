@@ -1,0 +1,74 @@
+LLDB Commands
+******************************
+
+(lldb) run -AppleLanguages "(es)"
+===
+
+
+
+Shell Commands
+******************************
+
+mobdevim -f
+===
+security find-identity -p codesigning -v
+===
+security find-certificate -c "iPhone Developer: Derek Selander (8AW8QLCX5U)" -p
+===
+security find-certificate  -c "iPhone Developer: Derek Selander (8AW8QLCX5U)"  -p > /tmp/public_cert.cer
+===
+cat /tmp/public_cert.cer 
+===
+openssl x509 -in /tmp/public_cert.cer -inform PEM -text -noout
+===
+codesign -d --entitlements :- /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+===
+ls ~/Library/MobileDevice/Provisioning\ Profiles/
+===
+PP_FILE=$(ls ~/Library/MobileDevice/Provisioning\ Profiles/*mobileprovision | head -1)
+security cms -D -i "$PP_FILE"
+===
+WORDPRESS="/full/path/to/WordPress.app/"
+===
+security cms -D -i "$WORDPRESS/embedded.mobileprovision"
+===
+CERT_DATA=MIIFozCCBIu...
+===
+echo "$CERT_DATA" | base64 -D > /tmp/wordpress_cert.cer
+===
+cat "$WORDPRESS/_CodeSignature/CodeResources"  | head -10
+===
+openssl sha1 -binary "$WORDPRESS/AboutViewController.nib"  | base64
+===
+security find-certificate -c "iPhone Developer: Derek Selander (8AW8QLCX5U)" -p > /tmp/public_cert.PEM
+===
+openssl x509 -in /tmp/public_cert.PEM -inform pem -noout -text | grep OU=
+===
+PP_PATH=~/Downloads/Code_Signing_Example_ProvisProfile_92618.mobileprovision
+===
+cp "$PP_PATH" "$WORDPRESS/embedded.mobileprovision"
+===
+security cms -D -i "$PP_PATH" | grep application-identifier -A1
+===
+plutil -replace CFBundleIdentifier -string H4U46V6494.com.selander.code-signing "$WORDPRESS/Info.plist"
+===
+plutil -replace CFBundleDisplayName -string "Woot" "$WORDPRESS/Info.plist"
+===
+codesign -d --entitlements :/tmp/ent.xml "$WORDPRESS/WordPress"
+===
+cat /tmp/ent.xml
+===
+security cms -D -i "$PP_PATH" > /tmp/scratch
+===
+xpath /tmp/scratch '//*[text() = "Entitlements"]/following-sibling::dict' | pbcopy 
+===
+codesign -f -s "iPhone Developer: Derek Selander (8AW8QLCX5U)" "$WORDPRESS"/Frameworks/*
+===
+codesign --entitlements /tmp/ent.xml -f -s "iPhone Developer: Derek Selander (8AW8QLCX5U)" "$WORDPRESS"
+===
+mobdevim -i "$WORDPRESS"
+===
+mobdevim -d $WORDPRESS
+===
+mobdevim -c | grep installd 
+===

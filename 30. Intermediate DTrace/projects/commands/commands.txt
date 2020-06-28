@@ -1,0 +1,23 @@
+LLDB Commands
+******************************
+
+
+
+
+Shell Commands
+******************************
+
+sudo dtrace -n 'pid$target:Finding?Ray::entry' -p `pgrep "Finding Ray"`
+===
+===
+===
+===
+===
+===
+===
+===
+echo ~/troll.png
+===
+echo ~/troll.png | wc -m
+===
+===

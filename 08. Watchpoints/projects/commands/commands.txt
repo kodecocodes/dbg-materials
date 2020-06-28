@@ -1,0 +1,47 @@
+LLDB Commands
+******************************
+
+(lldb) language objc class-table dump UnixSignalHandler -v 
+===
+(lldb) p/x 0x6000024d0f40 + 32
+(long) $0 = 0x00006000024d0f60
+===
+(lldb) watchpoint set expression -s 1 -w write -- 0x00006000024d0f60
+===
+(lldb) disassemble -F intel -m
+===
+(lldb) p/x $rsi + $rdi
+===
+(lldb) watchpoint list
+===
+(lldb) po $rsi + $rdi - 32
+<UnixSignalHandler: 0x6000024d0f40>
+===
+(lldb) watchpoint delete
+About to delete all watchpoints, do you want to do that?: [Y/n] Y
+All watchpoints removed. (1 watchpoints)
+(lldb) c 
+Process 68247 resuming
+===
+(lldb) watchpoint list  -b
+Number of supported hardware watchpoints: 4
+Current watchpoints:
+Watchpoint 2: addr = 0x60000274ee20 size = 1 state = enabled type = w
+===
+(lldb) watchpoint modify 2 -c '*(BOOL*)0x60000274ee20 == 0' 
+===
+(lldb) watchpoint modify 2
+===
+(lldb) watchpoint command add 2
+Enter your debugger command(s).  Type 'DONE' to end.
+> bt 5
+> continue
+> DONE
+===
+(lldb) watchpoint command delete 2 
+===
+
+
+
+Shell Commands
+******************************

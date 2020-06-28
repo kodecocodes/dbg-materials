@@ -1,0 +1,52 @@
+LLDB Commands
+******************************
+
+(lldb) command regex rlook 's/(.+)/image lookup -rn %1/'
+===
+(lldb) rl viewDidLoad 
+===
+(lldb) rl viewDidLoad Signals
+===
+===
+(lldb) tv [[[UIApp keyWindow] rootViewController] view]
+===
+(lldb) command regex getcls 's/(([0-9]|\$|\@|\[).*)/cpo [%1 class]/'
+===
+(lldb) getcls @"hello world"
+__NSCFString
+
+(lldb) getcls @[@"hello world"]
+__NSSingleObjectArrayI
+
+(lldb) getcls [UIDevice currentDevice]
+UIDevice
+
+(lldb) cpo [UIDevice currentDevice]
+<UIDevice: 0x60800002b520>
+
+(lldb) getcls 0x60800002b520
+UIDevice
+===
+(lldb) getcls self
+===
+(lldb) command regex getcls 's/(([0-9]|\$|\@|\[).*)/cpo [%1 class]/' 's/(.+)/expression -l swift -O -- type(of: %1)/'
+===
+(lldb) getcls self
+===
+(lldb) getcls self .title 
+===
+(lldb) command regex rlook 's/(.+)/image lookup -rn %1/'
+===
+(lldb) ex -l objc -O -- [[UIApplication shared] statusBar]
+===
+(lldb) ex -l swift -O -- UIApplication.shared.perform(NSSelectorFromString("statusBar"))
+===
+(lldb) command regex swiftperfsel 's/(.+)\s+(\w+)/expression -l swift -O -- %1.perform(NSSelectorFromString("%2"))/'
+===
+(lldb) swiftperfsel UIApplication.shared statusBar
+===
+
+
+
+Shell Commands
+******************************

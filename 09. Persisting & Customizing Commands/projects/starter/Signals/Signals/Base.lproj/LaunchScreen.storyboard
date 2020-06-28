@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSq-WT-Yb7" userLabel="Safe area background View">
+                                <rect key="frame" x="0.0" y="778" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.55686274509803924" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4z8-v3-ztu"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_field_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="Xrm-NQ-8TN">
+                                <rect key="frame" x="0.0" y="664" width="375" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xrm-NQ-8TN" secondAttribute="height" multiplier="3125:950" id="qru-yI-gqR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-4X-jnE">
+                                <rect key="frame" x="261.66666666666674" y="730" width="92.333333333333314" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PSq-WT-Yb7" firstAttribute="leading" secondItem="Jg0-HY-SFd" secondAttribute="leading" id="30P-VC-Dh8"/>
+                            <constraint firstItem="mGh-4X-jnE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="4wK-qc-06N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mGh-4X-jnE" secondAttribute="trailing" constant="5" id="7Fo-e5-0sR"/>
+                            <constraint firstItem="Xrm-NQ-8TN" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="8oI-MQ-UvL"/>
+                            <constraint firstItem="Jg0-HY-SFd" firstAttribute="bottom" secondItem="mGh-4X-jnE" secondAttribute="bottom" id="FQz-MZ-gmA"/>
+                            <constraint firstItem="mGh-4X-jnE" firstAttribute="height" secondItem="Xrm-NQ-8TN" secondAttribute="height" multiplier="0.42" id="JhA-HR-30M"/>
+                            <constraint firstItem="Jg0-HY-SFd" firstAttribute="bottom" secondItem="Xrm-NQ-8TN" secondAttribute="bottom" id="Yd6-86-IYW"/>
+                            <constraint firstItem="Jg0-HY-SFd" firstAttribute="trailing" secondItem="PSq-WT-Yb7" secondAttribute="trailing" id="dHn-hk-G4Q"/>
+                            <constraint firstItem="PSq-WT-Yb7" firstAttribute="top" secondItem="Jg0-HY-SFd" secondAttribute="bottom" id="hDA-DB-Qd3"/>
+                            <constraint firstItem="Xrm-NQ-8TN" firstAttribute="centerX" secondItem="Jg0-HY-SFd" secondAttribute="centerX" id="iRs-db-cji"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jg0-HY-SFd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_field_overlay" width="376" height="104"/>
+    </resources>
+</document>

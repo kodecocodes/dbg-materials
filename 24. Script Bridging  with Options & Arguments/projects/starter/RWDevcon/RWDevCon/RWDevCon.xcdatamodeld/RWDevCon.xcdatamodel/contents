@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="active" attributeType="Boolean" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="first" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="last" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="presenters" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="mapLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="roomDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="room" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="active" attributeType="Boolean" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="column" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="sessionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tweetBody" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="presenters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Person" inverseName="sessions" inverseEntity="Person" syncable="YES"/>
+        <relationship name="room" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="sessions" inverseEntity="Room" syncable="YES"/>
+        <relationship name="track" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="sessions" inverseEntity="Track" syncable="YES"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="trackId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="track" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Room" positionX="-18" positionY="54" width="128" height="163"/>
+        <element name="Session" positionX="-54" positionY="27" width="128" height="225"/>
+        <element name="Track" positionX="-36" positionY="45" width="128" height="88"/>
+    </elements>
+</model>

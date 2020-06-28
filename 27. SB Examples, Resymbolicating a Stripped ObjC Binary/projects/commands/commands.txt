@@ -1,0 +1,56 @@
+LLDB Commands
+******************************
+
+(lldb) image lookup -a 4449531728
+===
+(lldb) b NSLog
+===
+(lldb) script print lldb.frame
+===
+(lldb) script print lldb.frame.symbol
+===
+(lldb) script print lldb.frame.symbol.addr.GetLoadAddress(lldb.target)
+===
+(lldb) p/x 4484178832
+===
+(lldb) f 1
+===
+(lldb) script print lldb.frame.FindVariable('retdict')
+===
+(lldb) script print lldb.frame.FindVariable('retdict').deref
+===
+(lldb) script a = lldb.value(lldb.frame.FindVariable('retdict').deref)
+===
+(lldb) script print a[0]
+===
+(lldb) script print a[0].key
+===
+(lldb) script print a[0].value
+===
+(lldb) script print a[0].value.sbvalue.description
+===
+(lldb) script print '\n'.join([x.key.sbvalue.description for x in a])
+===
+(lldb) script print '\n'.join([x.value.sbvalue.description for x in a])
+===
+(lldb) f 0
+===
+(lldb) script lldb.frame.symbol.synthetic
+===
+(lldb) f 1
+===
+(lldb) script lldb.frame.symbol.synthetic
+===
+(lldb) help sbt
+===
+(lldb) sbt bt
+frame #0: 0x1053fe694 UIKit`-[UIView initWithFrame:] 
+frame #1: 0x103cf53ac ShadesOfRay`-[RayView initWithFrame:] + 924
+frame #2: 0x1053fdda2 UIKit`-[UIView init] + 62
+frame #3: 0x103cf45bf ShadesOfRay`-[ViewController generateRayViewTapped:] + 79
+===
+
+
+
+Shell Commands
+******************************

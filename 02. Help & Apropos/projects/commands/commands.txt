@@ -1,0 +1,20 @@
+LLDB Commands
+******************************
+
+(lldb) help 
+===
+(lldb) help breakpoint
+===
+(lldb) help breakpoint name
+===
+(lldb) apropos swift
+===
+(lldb) apropos "reference count"
+The following commands may relate to 'reference count':
+  refcount -- Inspect the reference count data for a Swift object
+===
+
+
+
+Shell Commands
+******************************

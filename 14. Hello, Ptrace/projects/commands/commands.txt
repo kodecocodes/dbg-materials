@@ -1,0 +1,16 @@
+LLDB Commands
+******************************
+
+(lldb) rb ptrace -s libsystem_kernel.dylib
+===
+(lldb) continue
+===
+(lldb) thread return 0
+===
+(lldb) continue
+===
+
+
+
+Shell Commands
+******************************

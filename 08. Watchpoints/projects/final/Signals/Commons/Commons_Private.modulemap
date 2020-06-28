@@ -1,0 +1,6 @@
+module Commons_Private {
+  header "NSValue+siginfo_t.h"
+  header "UnixSignalHandler.h"
+
+//  export *
+}

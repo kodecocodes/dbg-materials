@@ -1,0 +1,63 @@
+LLDB Commands
+******************************
+
+(lldb) p sizeof('A')
+===
+(lldb) p/t 'A'
+===
+(lldb) p/x 'A'
+===
+(lldb) cpx $rip
+===
+(lldb) image lookup -vrn ^Registers.*aGoodMethod
+===
+(lldb) register write rip 0x0000000100003a10
+===
+(lldb) register write rdx 0x0123456789ABCDEF
+===
+(lldb) p/x $rdx 
+===
+(lldb) p/x $edx 
+===
+(lldb) p/x $dx
+===
+===
+(lldb) p/x $dh  
+===
+(lldb) register write $r9 0x0123456789abcdef
+===
+(lldb) p/x $r9
+===
+(lldb) p/x $r9d
+===
+(lldb) p/x $r9w
+===
+(lldb) p/x $r9l
+===
+(lldb) cpx $rip
+===
+(lldb) memory read -fi -c1 0x100007c20
+===
+(lldb) expression -f i -l objc -- 0x55
+===
+(lldb) p/i 0x55
+===
+(lldb) memory read -fi -c4 0x100007c20
+===
+(lldb) x/4i 0x100007c20
+===
+(lldb) p/i 0x4889e5
+===
+(lldb) p/i 0xe58948
+===
+(lldb) memory read -s1 -c20 -fx 0x100003840
+===
+(lldb) memory read -s2 -c10 -fx 0x100003840
+===
+(lldb) memory read -s4 -c5 -fx 0x100003840
+===
+
+
+
+Shell Commands
+******************************

@@ -1,0 +1,58 @@
+LLDB Commands
+******************************
+
+(lldb) image dump sections MachOFun
+===
+(lldb) image lookup -n "-[UIViewController viewDidLoad]"
+===
+(lldb) memory read -r -fC -c 0x00001338 0x0000000109e6a320 
+===
+(lldb) exp -l objc -- (char16_t *)0x0000010a07ead8
+===
+(lldb) image lookup -a 0x000000010256c2f0
+===
+(lldb) x/s 0x000000010256c2f0
+===
+(lldb) image dump sections MachOFun
+===
+(lldb) x/4gx 0x0000010dcae8e0
+0x10dcae8e0: 0x000000010dcb0580 0x000000010dcb0690
+0x10dcae8f0: 0x000000010dcb0758 0x000000010dcb0800
+===
+(lldb) exp -l objc -O -- 0x000000010dcb0580
+MachOFun.CasinoContainerView
+
+(lldb) exp -l objc -O -- 0x000000010dcb0690
+MachOFun.CasinoViewController
+
+(lldb) exp -l objc -O -- 0x000000010dcb0758
+MachOFun.InsecureNetworkRequestsTableViewController
+
+(lldb) exp -l objc -O -- 0x000000010dcb0800
+MachOFun.AppDelegate
+===
+(lldb) exp -l objc -O -- [[NSBundle mainBundle] executablePath]
+===
+(lldb) platform shell objdump -lazy-bind ${APP_PATH} | grep ${RANDON_NUMBER_FUNC}
+===
+(lldb) po (char *)_dyld_get_image_name(1)
+===
+(lldb) p/x (intptr_t)_dyld_get_image_vmaddr_slide(1) + 0x10000F3F8
+===
+(lldb) x/gx 0x000000010f91c3f8
+===
+(lldb) image lookup -a 0x000000011140f027
+===
+===
+(lldb) p/x lolzfunc
+(int (*)()) $14 = 0x000000012d4c7430 (0x000000012d4c7430)
+===
+(lldb) memory write -s8 0x000000010f91c3f8 0x000000012d4c7430
+===
+(lldb) image dump sections lolz.dylib 
+===
+
+
+
+Shell Commands
+******************************

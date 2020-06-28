@@ -1,0 +1,41 @@
+LLDB Commands
+******************************
+
+(lldb) yay woot
+===
+(lldb) command script import ~/lldb/findclass.py
+===
+(lldb) help findclass
+===
+(lldb) findclass
+===
+(lldb) script import pdb
+(lldb) findclass
+(lldb) script pdb.pm()
+===
+(lldb) command script import ~/lldb/findclass.py
+===
+(lldb) findclass
+===
+(lldb) findclass ViewController
+===
+(lldb) command script import ~/lldb/findclass.py
+===
+(lldb) findclass
+===
+(lldb) l
+===
+(lldb) l
+===
+(lldb) gui
+===
+
+
+
+Shell Commands
+******************************
+
+lldb
+===
+lldb -n Photos
+===

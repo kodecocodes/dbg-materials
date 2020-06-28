@@ -1,0 +1,69 @@
+LLDB Commands
+******************************
+
+(lldb) process launch
+===
+(lldb) target create "/bin/ls"
+Current executable set to '/bin/ls' (x86_64).
+===
+(lldb) process launch
+===
+(lldb) process launch -w /Applications
+===
+(lldb) process launch -- /Applications
+===
+(lldb) process launch -- ~/Desktop
+===
+(lldb) process launch -X true -- ~/Desktop
+===
+(lldb) help run
+===
+(lldb) run ~/Desktop
+===
+(lldb) env
+===
+(lldb) process launch -v LSCOLORS=Ab -v CLICOLOR=1  -- /Applications/
+===
+(lldb) process launch -v LSCOLORS=Af -v CLICOLOR=1  -- /Applications/
+===
+(lldb) process launch -o /tmp/ls_output.txt -- /Applications
+===
+(lldb) target delete
+===
+(lldb) target create /usr/bin/wc
+===
+(lldb) process launch -i /tmp/wc_input.txt
+===
+(lldb) run
+===
+(lldb) process launch -n
+===
+
+
+
+Shell Commands
+******************************
+
+pgrep -x Xcode
+===
+lldb -p 89944
+===
+lldb -n Finder -w 
+===
+pkill Finder
+===
+lldb -f /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+===
+lldb -f /bin/ls
+===
+$ cd /Applications
+$ ls
+===
+$ ls /Applications
+===
+cat /tmp/ls_output.txt
+===
+echo "hello world" > /tmp/wc_input.txt
+===
+$ wc < /tmp/wc_input.txt
+===
