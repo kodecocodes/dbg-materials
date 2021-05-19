@@ -1,6 +1,6 @@
 # Advanced Apple Debugging & Reverse Engineering: Materials
 
-This repo contains all the downloadable materials and projects associated with the **[Advanced Apple Debugging & Reverse Engineering](https://store.raywenderlich.com/products/advanced-apple-debugging-and-reverse-engineering)** from [raywenderlich.com](https://www.raywenderlich.com).
+This repo contains all the downloadable materials and projects associated with the **[Advanced Apple Debugging & Reverse Engineering](https://www.raywenderlich.com/books/advanced-apple-debugging-reverse-engineering)** from [raywenderlich.com](https://www.raywenderlich.com).
 
 Each edition has its own branch, named `editions/[EDITION]`. The default branch for this repo is for the most recent edition.
 
