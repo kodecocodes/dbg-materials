@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Commons
 
 class SignalsTableViewCell: UITableViewCell {
 
