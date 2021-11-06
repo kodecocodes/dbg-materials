@@ -28,7 +28,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MainViewController: UITableViewController {
 
   // MARK: - Properties
   var detailViewController: DetailViewController? = nil
@@ -36,15 +36,14 @@ class MasterViewController: UITableViewController {
   override var description: String {
     return "Yay! debugging " + super.description
   }
-
+  
   override var debugDescription: String {
     return "debugDescription: " + super.debugDescription
   }
-
+  
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-
     print("\(self)")
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(handleNotification(notification:)),
@@ -63,7 +62,7 @@ class MasterViewController: UITableViewController {
     self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
     super.viewWillAppear(animated)
 
-    if let bottomInset = (parent as? MasterContainerViewController)?.suggestedBottomContentInset {
+    if let bottomInset = (parent as? MainContainerViewController)?.suggestedBottomContentInset {
       var contentInset = tableView.contentInset
       contentInset.bottom = bottomInset
       tableView.contentInset = contentInset
@@ -85,7 +84,7 @@ class MasterViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension MasterViewController {
+extension MainViewController {
 
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 2
@@ -112,7 +111,7 @@ extension MasterViewController {
 }
 
 // MARK: - IBActions
-extension MasterViewController {
+extension MainViewController {
 
   @IBAction func breakpointButtonItemTapped(_ sender: AnyObject) {
     raise(SIGSTOP)
@@ -134,7 +133,7 @@ extension MasterViewController {
 }
 
 // MARK: - Notifications
-extension MasterViewController {
+extension MainViewController {
 
   @objc func handleNotification(notification: Notification) {
     tableView.reloadSections(IndexSet(integer: 1), with: .fade)

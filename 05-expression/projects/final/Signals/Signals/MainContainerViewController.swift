@@ -28,7 +28,7 @@
 
 import UIKit
 
-class MasterContainerViewController: UIViewController {
+class MainContainerViewController: UIViewController {
   
   // MARK: - Properties
   var suggestedBottomContentInset: CGFloat {
@@ -47,7 +47,7 @@ class MasterContainerViewController: UIViewController {
 }
 
 // MARK: - IBActions
-extension MasterContainerViewController {
+extension MainContainerViewController {
 
   @IBAction func stopButtonTapped(_ sender: UIBarButtonItem) {
     raise(SIGSTOP)

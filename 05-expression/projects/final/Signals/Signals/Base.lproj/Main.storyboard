@@ -29,7 +29,7 @@
         <!--QuarterBack-->
         <scene sceneID="E04-9P-2jO">
             <objects>
-                <viewController id="b6S-9c-spC" customClass="MasterContainerViewController" customModule="Signals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b6S-9c-spC" customClass="MainContainerViewController" customModule="Signals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="44d-pe-JFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,25 +114,25 @@
             <objects>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="Signals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="546"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="0.0" y="455.66666666666669" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="323.33333333333331" width="600" height="36"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signal_large" translatesAutoresizingMaskIntoConstraints="NO" id="Dmq-4W-X5r">
-                                <rect key="frame" x="67.666666666666686" y="207.66666666666663" width="240" height="240"/>
+                                <rect key="frame" x="180" y="75.333333333333314" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dmq-4W-X5r" secondAttribute="height" multiplier="1:1" id="9Qz-Ha-7HD"/>
                                     <constraint firstAttribute="width" constant="240" id="q7s-IF-VRK"/>
                                 </constraints>
                             </imageView>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0O9-WE-GQv">
-                                <rect key="frame" x="180" y="499.66666666666669" width="15.333333333333343" height="1.3333333333333144"/>
+                                <rect key="frame" x="292.66666666666669" y="367.33333333333331" width="15" height="1.3333333333333144"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <color key="textColor" systemColor="darkTextColor"/>
@@ -180,7 +180,7 @@
         <!--Signals-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Signals" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MainViewController" customModule="Signals" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
