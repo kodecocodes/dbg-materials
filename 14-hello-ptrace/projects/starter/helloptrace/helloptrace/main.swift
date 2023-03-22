@@ -32,6 +32,4 @@
 
 import Foundation
 
-ptrace(PT_DENY_ATTACH, 0, nil, 0)
-
 
