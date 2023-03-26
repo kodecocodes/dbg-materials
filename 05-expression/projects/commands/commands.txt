@@ -15,11 +15,9 @@ LLDB Commands
 ===
 (lldb) p $R2
 ===
-(lldb) type summary add Signals.MasterViewController --summary-string "Wahoo!"
+(lldb) type summary add Signals.MainViewController --summary-string "Wahoo!"
 ===
 (lldb) p self 
-===
-(lldb) (Signals.MasterViewController) $R3 = 0x00007fb71fd04080 Wahoo!
 ===
 (lldb) type summary clear
 ===
@@ -37,7 +35,6 @@ LLDB Commands
 ===
 (lldb) po id $test = [NSObject new] 
 (lldb) po $test 
-<NSObject: 0x60000001d190>
 ===
 (lldb) expression -l swift -O -- $test 
 ===
@@ -55,6 +52,11 @@ LLDB Commands
 ===
 (lldb) expression -l swift -O -i 0 -- $R0.viewDidLoad()
 ===
+(lldb) expression -l swift -- func $donothing() -> Int { return 4 }
+(lldb) exp -l swift -- $donothing()
+===
+(lldb) memory region 0x0
+===
 (lldb) expression -G x -- 10
 ===
 (lldb) p/x 10
@@ -67,9 +69,9 @@ LLDB Commands
 ===
 (lldb) p/d 'D'
 ===
-(lldb) p/c 1430672467
+(lldb) p/c 2051829580
 ===
-(lldb) expression -f Y -- 1430672467
+(lldb) expression -f Y -- 2051829580
 ===
 
 

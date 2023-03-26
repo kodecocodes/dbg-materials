@@ -35,9 +35,20 @@ class MainViewController: UITableViewController {
   // MARK: - Properties
   var detailViewController: DetailViewController? = nil
 
+  override var description: String {
+    return "Yay! debugging " + super.description
+  }
+
+  override var debugDescription: String {
+    return "debugDescription: " + super.debugDescription
+  }
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    //print("\(self)")
+    
+    dump(self)
 
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(handleNotification(notification:)),
