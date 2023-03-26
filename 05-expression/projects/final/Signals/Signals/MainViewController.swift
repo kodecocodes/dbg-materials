@@ -1,51 +1,44 @@
-/// Copyright (c) 2018 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
+/**
+ * Copyright (c) 2023 Kodeco LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+ * distribute, sublicense, create a derivative work, and/or sell copies of the
+ * Software in any work that is designed, intended, or marketed for pedagogical or
+ * instructional purposes related to programming, coding, application development,
+ * or information technology.  Permission for such use, copying, modification,
+ * merger, publication, distribution, sublicensing, creation of derivative works,
+ * or sale is expressly withheld.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MainViewController: UITableViewController {
 
   // MARK: - Properties
   var detailViewController: DetailViewController? = nil
-
-  override var description: String {
-    return "Yay! debugging " + super.description
-  }
-
-  override var debugDescription: String {
-    return "debugDescription: " + super.debugDescription
-  }
 
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    print("\(self)")
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(handleNotification(notification:)),
                                            name: NSNotification.Name.signalHandlerCountUpdated,
@@ -63,7 +56,7 @@ class MasterViewController: UITableViewController {
     self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
     super.viewWillAppear(animated)
 
-    if let bottomInset = (parent as? MasterContainerViewController)?.suggestedBottomContentInset {
+    if let bottomInset = (parent as? MainContainerViewController)?.suggestedBottomContentInset {
       var contentInset = tableView.contentInset
       contentInset.bottom = bottomInset
       tableView.contentInset = contentInset
@@ -85,7 +78,7 @@ class MasterViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension MasterViewController {
+extension MainViewController {
 
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 2
@@ -112,7 +105,7 @@ extension MasterViewController {
 }
 
 // MARK: - IBActions
-extension MasterViewController {
+extension MainViewController {
 
   @IBAction func breakpointButtonItemTapped(_ sender: AnyObject) {
     raise(SIGSTOP)
@@ -134,7 +127,7 @@ extension MasterViewController {
 }
 
 // MARK: - Notifications
-extension MasterViewController {
+extension MainViewController {
 
   @objc func handleNotification(notification: Notification) {
     tableView.reloadSections(IndexSet(integer: 1), with: .fade)
