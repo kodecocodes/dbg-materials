@@ -71,7 +71,7 @@ static void sigactionHandler(int sig, siginfo_t *siginfo, void *context)
   dispatch_once(&onceToken, ^{
     sharedSignalHandler = [[UnixSignalHandler alloc] initPrivate];
   });
-
+  
   return sharedSignalHandler;
 }
 

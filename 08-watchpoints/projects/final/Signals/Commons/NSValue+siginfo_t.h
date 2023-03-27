@@ -26,7 +26,7 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSValue (siginfo_t)
 + (instancetype)valuewithSiginfo:(siginfo_t)value;

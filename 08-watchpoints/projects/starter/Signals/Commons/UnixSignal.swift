@@ -28,9 +28,11 @@
 
 import Foundation
 
-@objc public class UnixSignal: NSObject {
+@objcMembers
+public class UnixSignal: NSObject {
 
   // MARK: - Properties
+  private var signal: siginfo_t? = nil
   private var signalNum: Int
   private(set) public var breakpointID: Int
   private(set) public var date: Date
@@ -42,10 +44,12 @@ import Foundation
   private(set) public var sendingProcessName: String?
   
   // MARK: - Initializers
-  @objc public init(signalValue: NSValue?, signum: Int, breakpointID: Int) {
+  public init(signalValue: NSValue?, signum: Int, breakpointID: Int) {
+    self.signal = signalValue?.siginfoValue()
     self.signalNum = signum
     self.breakpointID = breakpointID
     self.date = Date()
     super.init()
   }
+  
 }

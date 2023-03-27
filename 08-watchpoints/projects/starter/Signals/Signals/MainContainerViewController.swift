@@ -26,30 +26,52 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-@objcMembers
-public class UnixSignal: NSObject {
-
+class MainContainerViewController: UIViewController {
+  
   // MARK: - Properties
-  private var signal: siginfo_t? = nil
-  private var signalNum: Int
-  private(set) public var breakpointID: Int
-  private(set) public var date: Date
-
-  public var signalProcessName: String {
-    return signalIntToName(Int32(signalNum))
+  var suggestedBottomContentInset: CGFloat {
+    get { return bottomImageView.bounds.height }
   }
 
-  private(set) public var sendingProcessName: String?
-  
-  // MARK: - Initializers
-  public init(signalValue: NSValue?, signum: Int, breakpointID: Int) {
-    self.signal = signalValue?.siginfoValue()
-    self.signalNum = signum
-    self.breakpointID = breakpointID
-    self.date = Date()
-    super.init()
+  // MARK: - IBOutlets
+  @IBOutlet weak var bottomImageView: UIImageView!
+
+  // MARK: - Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    title = "Quarterback"
   }
-  
+}
+
+// MARK: - IBActions
+extension MainContainerViewController {
+
+  @IBAction func stopButtonTapped(_ sender: UIBarButtonItem) {
+    raise(SIGSTOP)
+  }
+
+  @IBAction func callPlayButtonTapped(_ sender: UIButton) {
+    let alertController = UIAlertController(title: "Signals",
+                                            message: "Select a signal to raise",
+                                            preferredStyle: .actionSheet)
+
+    for signalName in GetAllSignals() where signalName != "SIGSTOP" {
+      let alertAction = UIAlertAction(title: signalName, style: .default) { _ in
+        let signal = signalNameToInt(signalName)
+        raise(signal)
+      }
+      alertController.addAction(alertAction)
+    }
+
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    alertController.addAction(cancelAction)
+
+    alertController.popoverPresentationController?.sourceView = sender
+    alertController.popoverPresentationController?.sourceRect = sender.bounds
+
+    present(alertController, animated: true)
+  }
 }

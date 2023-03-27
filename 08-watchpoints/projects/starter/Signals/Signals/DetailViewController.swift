@@ -27,7 +27,6 @@
 /// THE SOFTWARE.
 
 import UIKit
-import Commons
 
 enum BreakpointError: Error {
   case TestError
@@ -55,9 +54,7 @@ class DetailViewController: UIViewController {
   }
 
   func setupViews() {
-    guard let signal = signal else {
-      return
-    }
+    guard let signal = signal else { return }
 
     signalTitleLabel.text = signal.signalProcessName
     detailDescriptionLabel.text = formattedDate(date: signal.date) + " - QB Pass to RB"

@@ -12,9 +12,10 @@
 		A65493991DE8AD35002A5AC4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493921DE8AD35002A5AC4 /* DetailViewController.swift */; };
 		A654939A1DE8AD35002A5AC4 /* SignalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493931DE8AD35002A5AC4 /* SignalsTableViewCell.swift */; };
 		A654939B1DE8AD35002A5AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65493941DE8AD35002A5AC4 /* Assets.xcassets */; };
-		A654939C1DE8AD35002A5AC4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493951DE8AD35002A5AC4 /* MasterViewController.swift */; };
-		A654939D1DE8AD35002A5AC4 /* MasterContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493961DE8AD35002A5AC4 /* MasterContainerViewController.swift */; };
+		A654939C1DE8AD35002A5AC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493951DE8AD35002A5AC4 /* MainViewController.swift */; };
+		A654939D1DE8AD35002A5AC4 /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493961DE8AD35002A5AC4 /* MainContainerViewController.swift */; };
 		A654939E1DE8AD35002A5AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65493971DE8AD35002A5AC4 /* AppDelegate.swift */; };
+		A6592A1F1F92BBC70040ABA3 /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = A6592A1E1F92BB6B0040ABA3 /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A67E0E891D60234E00756F7F /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E0E821D60234E00756F7F /* Commons.framework */; };
 		A67E0E8A1D60234E00756F7F /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A67E0E821D60234E00756F7F /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A67E0E911D60235E00756F7F /* UnixSignalHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A67E0E8F1D60235E00756F7F /* UnixSignalHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,23 +69,23 @@
 		A65493921DE8AD35002A5AC4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Signals/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		A65493931DE8AD35002A5AC4 /* SignalsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignalsTableViewCell.swift; path = Signals/SignalsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A65493941DE8AD35002A5AC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Signals/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		A65493951DE8AD35002A5AC4 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Signals/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
-		A65493961DE8AD35002A5AC4 /* MasterContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterContainerViewController.swift; path = Signals/MasterContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		A65493951DE8AD35002A5AC4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Signals/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		A65493961DE8AD35002A5AC4 /* MainContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainContainerViewController.swift; path = Signals/MainContainerViewController.swift; sourceTree = SOURCE_ROOT; };
 		A65493971DE8AD35002A5AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Signals/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		A65493981DE8AD35002A5AC4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Signals/Info.plist; sourceTree = SOURCE_ROOT; };
+		A6592A1E1F92BB6B0040ABA3 /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		A67E0E661D60233200756F7F /* Signals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67E0E821D60234E00756F7F /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67E0E851D60234E00756F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A67E0E8F1D60235E00756F7F /* UnixSignalHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnixSignalHandler.h; sourceTree = "<group>"; };
 		A67E0E901D60235E00756F7F /* UnixSignalHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnixSignalHandler.m; sourceTree = "<group>"; };
+		A67E0E931D6029A200756F7F /* Signals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Signals-Bridging-Header.h"; sourceTree = "<group>"; };
 		A67E0E9F1D6041E400756F7F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A68CB4151DE8BEC60030C8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Signals/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		A68CB4171DE8BEC60030C8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Signals/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		A6B833591D6B93E8000ADC8B /* NSValue+siginfo_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+siginfo_t.h"; sourceTree = "<group>"; };
 		A6B8335A1D6B93E8000ADC8B /* NSValue+siginfo_t.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+siginfo_t.m"; sourceTree = "<group>"; };
-		A6C9692E210679FD00B83B7A /* Commons_Private.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Commons_Private.modulemap; sourceTree = "<group>"; };
 		A6FA5B401D6A99A900794FAB /* UnixSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnixSignal.swift; sourceTree = "<group>"; };
-		A6FA5B421D6AA5EA00794FAB /* Commons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Commons-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +152,9 @@
 				A67E0E901D60235E00756F7F /* UnixSignalHandler.m */,
 				A6B833591D6B93E8000ADC8B /* NSValue+siginfo_t.h */,
 				A6B8335A1D6B93E8000ADC8B /* NSValue+siginfo_t.m */,
+				A67E0E931D6029A200756F7F /* Signals-Bridging-Header.h */,
+				A6592A1E1F92BB6B0040ABA3 /* Commons.h */,
 				A67E0E9F1D6041E400756F7F /* Helpers.swift */,
-				A6FA5B421D6AA5EA00794FAB /* Commons-Bridging-Header.h */,
-				A6C9692E210679FD00B83B7A /* Commons_Private.modulemap */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -186,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				A65493921DE8AD35002A5AC4 /* DetailViewController.swift */,
-				A65493951DE8AD35002A5AC4 /* MasterViewController.swift */,
-				A65493961DE8AD35002A5AC4 /* MasterContainerViewController.swift */,
+				A65493951DE8AD35002A5AC4 /* MainViewController.swift */,
+				A65493961DE8AD35002A5AC4 /* MainContainerViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -209,6 +210,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6592A1F1F92BBC70040ABA3 /* Commons.h in Headers */,
 				A67E0E911D60235E00756F7F /* UnixSignalHandler.h in Headers */,
 				A6B8335B1D6B93E8000ADC8B /* NSValue+siginfo_t.h in Headers */,
 			);
@@ -263,24 +265,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
 					A67E0E651D60233200756F7F = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 					};
 					A67E0E811D60234E00756F7F = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = A67E0E611D60233200756F7F /* Build configuration list for PBXProject "Signals" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -339,12 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A654939C1DE8AD35002A5AC4 /* MasterViewController.swift in Sources */,
+				A654939C1DE8AD35002A5AC4 /* MainViewController.swift in Sources */,
 				A65493991DE8AD35002A5AC4 /* DetailViewController.swift in Sources */,
 				A654939A1DE8AD35002A5AC4 /* SignalsTableViewCell.swift in Sources */,
 				A65493891DE5ED1D002A5AC4 /* TestClass.m in Sources */,
 				A654939E1DE8AD35002A5AC4 /* AppDelegate.swift in Sources */,
-				A654939D1DE8AD35002A5AC4 /* MasterContainerViewController.swift in Sources */,
+				A654939D1DE8AD35002A5AC4 /* MainContainerViewController.swift in Sources */,
 				A654938A1DE5ED1D002A5AC4 /* SwiftTestClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -414,6 +417,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -445,6 +449,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -473,6 +479,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -496,6 +503,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -513,9 +521,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Signals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Commons/Signals-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -531,8 +540,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Signals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "Commons/Signals-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -552,14 +562,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/Commons/Commons_Private.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Commons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Commons/Commons-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -582,13 +589,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/Commons/Commons_Private.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Commons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Commons/Commons-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

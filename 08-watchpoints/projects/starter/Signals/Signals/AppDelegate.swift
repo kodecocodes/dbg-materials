@@ -33,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
     // Override point for customization after application launch.
     if let splitViewController = window?.rootViewController as? UISplitViewController,
@@ -44,8 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }
 
-    UINavigationBar.appearance().tintColor =  UIColor(red: 38.0/255.0, green: 133.0/255.0, blue: 206.0/255.0, alpha: 1)
+    UINavigationBar.appearance().tintColor = UIColor(red: 38.0 / 255.0,
+                                                     green: 133.0 / 255.0,
+                                                     blue: 206.0 / 255.0,
+                                                     alpha: 1)
     UINavigationBar.appearance().barTintColor = .white
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 
     return true
   }
@@ -57,7 +62,6 @@ extension AppDelegate: UISplitViewControllerDelegate {
   func splitViewController(_ splitViewController: UISplitViewController,
                            collapseSecondary secondaryViewController: UIViewController,
                            onto primaryViewController: UIViewController) -> Bool {
-
     guard let secondaryAsNavController = secondaryViewController as? UINavigationController,
       let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else {
         return false
