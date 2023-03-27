@@ -1,7 +1,10 @@
 //
 //  dsc_extractor.swift
 //  swiftc dsc_extractor.swift
+// Pre-Ventura
 //  usage dsc_extractor /S*/L*/dyld/dyld_shared_cache_arm64e /tmp/dsc_payload
+// Ventura
+// usage dsc_extractor /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e /tmp/dsc_payload
 
 import Foundation
 
