@@ -28,9 +28,52 @@
  * THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-@interface NSValue (siginfo_t)
-+ (instancetype)valuewithSiginfo:(siginfo_t)value;
-- (siginfo_t)siginfoValue;
-@end
+class MainContainerViewController: UIViewController {
+  
+  // MARK: - Properties
+  var suggestedBottomContentInset: CGFloat {
+    get { return bottomImageView.bounds.height }
+  }
+
+  // MARK: - IBOutlets
+  @IBOutlet weak var bottomImageView: UIImageView!
+
+  // MARK: - Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    title = "Quarterback"
+  }
+}
+
+// MARK: - IBActions
+extension MainContainerViewController {
+
+  @IBAction func stopButtonTapped(_ sender: UIBarButtonItem) {
+    raise(SIGSTOP)
+  }
+
+  @IBAction func callPlayButtonTapped(_ sender: UIButton) {
+    let alertController = UIAlertController(title: "Signals",
+                                            message: "Select a signal to raise",
+                                            preferredStyle: .actionSheet)
+
+    for signalName in GetAllSignals() where signalName != "SIGSTOP" {
+      let alertAction = UIAlertAction(title: signalName, style: .default) { _ in
+        let signal = signalNameToInt(signalName)
+        raise(signal)
+      }
+      alertController.addAction(alertAction)
+    }
+
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    alertController.addAction(cancelAction)
+
+    alertController.popoverPresentationController?.sourceView = sender
+    alertController.popoverPresentationController?.sourceRect = sender.bounds
+
+    present(alertController, animated: true)
+  }
+}
