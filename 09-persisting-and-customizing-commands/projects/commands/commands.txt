@@ -1,21 +1,33 @@
 LLDB Commands
 ******************************
-
+command alias -- Yay_Autolayout expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]
+===
 (lldb) Yay_Autolayout
 ===
 (lldb) help Yay_Autolayout
 ===
+command alias -H "Yay_Autolayout will get the root view and recursively dump all the subviews and their frames" -h "Recursively dump views" -- Yay_Autolayout expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]
+===
+(lldb) help
+===
+(lldb) command alias cpo expression -l objc -O --
+===
 (lldb) po self
 ===
-(lldb) po 0x7fc8295071a0
+(lldb) po 0x15210c180
 ===
-(lldb) cpo 0x7fc8295071a0
+(lldb) cpo 0x15210c180
 ===
+(lldb) command alias lpo expression -l %1 -O --
+===
+(lldb) lpo swift self
+===
+(lldb) lpo objc 0x152b0bc20
+
 
 
 
 Shell Commands
 ******************************
-
 nano ~/.lldbinit
-===
+
