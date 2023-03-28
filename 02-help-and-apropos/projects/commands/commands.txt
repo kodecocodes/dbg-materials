@@ -18,3 +18,27 @@ The following commands may relate to 'reference count':
 
 Shell Commands
 ******************************
+brew install cmake
+===
+cd code
+===
+git clone --depth 1 --branch "release/16.x" https://github.com/llvm/llvm-project.git  
+cd llvm-project
+===
+mkdir build-lldb-xcode
+cd build-lldb-xcode
+cmake -G Xcode -DLLVM_ENABLE_PROJECTS="clang;lldb;libcxx" -DLLVM_BUILD_RUNTIME=Off -DLLVM_INCLUDE_TESTS=Off  -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_INCLUDE_EXAMPLES=Off ../llvm
+===
+xcodebuild -list | wc -l
+===
+xcodebuild -scheme lldb
+===
+brew install ninja
+===
+mkdir build-lldb-ninja
+cd build-lldb-ninja
+cmake -G Ninja -DLLVM_ENABLE_PROJECTS="clang;lldb;libcxx" -DLLVM_BUILD_RUNTIME=Off -DLLVM_INCLUDE_TESTS=Off  -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_INCLUDE_EXAMPLES=Off ../llvm
+===
+ninja lldb
+===
+
