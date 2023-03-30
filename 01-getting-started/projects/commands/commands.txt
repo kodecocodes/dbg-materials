@@ -1,37 +1,38 @@
 LLDB Commands
 ******************************
 
-(lldb) file /Applications/Xcode.app/Contents/MacOS/Xcode
+(lldb) file /System/Applications/Notes.app
 ===
 (lldb) process launch -e /dev/ttys027 --
 ===
 (lldb) sys echo "$(dclass -t swift)" | grep -v _ | grep "\." | cut -d. -f1 | uniq | wc -l
 ===
 (lldb) b -[NSView hitTest:]
-Breakpoint 1: where = AppKit`-[NSView hitTest:], address = 0x000000010338277b
 ===
 (lldb) continue
 ===
-(lldb) po $rdi
+(lldb) po $arg1
 ===
 (lldb) continue
+===
+(lldb) c
 ===
 (lldb) breakpoint delete
 ===
-(lldb) breakpoint set -n  "-[NSView hitTest:]" -C "po $rdi" -G1
+(lldb) breakpoint set -n  "-[NSView hitTest:]" -C "po $arg1" -G1
 ===
 (lldb) continue
 ===
-(lldb) breakpoint modify -c '(BOOL)[NSStringFromClass((id)[$rdi class]) containsString:@"IDESourceEditorView"]' -G0
+(lldb) breakpoint modify -c '(BOOL)[NSStringFromClass((id)[$rdi class]) containsString:@"ICMacTextView"]' -G0
 ===
-(lldb) po $rdi
+(lldb) po $arg1
 ===
-(lldb) p/x $rdi
+(lldb) p/x $arg1
 ===
 (lldb) po 0x0000000110a42600
 ===
 ===
-(lldb) po [$rdi string]
+(lldb) po [$arg1 string]
 ===
 (lldb) ex -l swift -- import Foundation
 (lldb) ex -l swift -- import AppKit
@@ -59,4 +60,6 @@ lldb
 tty
 ===
 echo "hello debugger" 1>/dev/ttys027
+===
+csrutil enable && reboot
 ===
