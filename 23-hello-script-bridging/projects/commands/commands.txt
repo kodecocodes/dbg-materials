@@ -3,7 +3,6 @@ LLDB Commands
 
 (lldb) command script import lldb.macosx.heap
 ===
-(lldb) script import sys
 (lldb) script print (sys.version)
 ===
 (lldb) command script import ~/lldb/helloworld.py
@@ -28,21 +27,21 @@ Shell Commands
 
 lldb
 ===
-python --version 
+python3 --version 
 ===
-python
+python3
 ===
-python2.7
+python3.9.6
 ===
 >>> import sys
 >>> print (sys.version)
 ===
-python
+python3
 ===
 >>> h = "hello world"
 >>> h
 ===
->>> h.split(" ")
+>>> h.split()
 ['hello', 'world']
 ===
 >>> h.split(" ").__class__ 
