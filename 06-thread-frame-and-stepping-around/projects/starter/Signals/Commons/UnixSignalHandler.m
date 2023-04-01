@@ -205,6 +205,6 @@ NSString * signalIntToName(int sig) {
   }
 }
 
-NSArray<NSString *> * GetAllSignals() {
+NSArray<NSString *> * GetAllSignals(void) {
   return @[@"SIGWINCH", @"SIGPROF", @"SIGVTALRM", @"SIGIO", @"SIGCHLD", @"SIGSTOP", @"SIGALRM", @"SIGCONT"];
 }
