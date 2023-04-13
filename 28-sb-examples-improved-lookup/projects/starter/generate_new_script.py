@@ -164,7 +164,7 @@ def handle_command(debugger, command, result, internal_dict):
     # clean_command = shlex.split(args[0])[0]
     '''
 
-    script += "result.AppendMessage('Hello! the " + resolved_name + " command is working!')"
+    script += "result.AppendMessage('Hello! The " + resolved_name + " command is working!')"
     script += r'''
 
 
