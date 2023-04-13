@@ -47,21 +47,21 @@ def search(debugger, command, result, internal_dict):
     (aka inherit from a NSObject class). Currently doesn't work 
     with NSString or NSNumber (tagged pointer objects). 
 
-    NOTE: This script will leak memory
+    NOTE: This script leaks memory
 
 Examples:
 
     # Find all UIViews and subclasses of UIViews
-    find UIView
+    search UIView
 
     # Find all UIStatusBar instances
-    find UIStatusBar
+    search UIStatusBar
 
     # Find all UIViews, ignore subclasses
-    find UIView  -e
+    search UIView  -e
 
     # Find all instances of UIViews (and subclasses) where tag == 5
-    find UIView -c "[obj tag] == 5"
+    search UIView -c "[obj tag] == 5"
     '''
 
     command_args = shlex.split(command)

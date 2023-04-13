@@ -21,21 +21,21 @@ RayView * [0x00007fa83860c000]
 ===
 (lldb) image lookup -a 4533269637
 ===
-(lldb) script print lldb.SBAddress(4454012240, lldb.target)
+(lldb) script print (lldb.SBAddress(4454012240, lldb.target))
 ===
 (lldb) e -lobjc++ -O -i0 -- trace_address(0x00007fa838414330)
 ===
-(lldb) script print lldb.frame.FindVariable('stackaddress')
+(lldb) script print (lldb.frame.FindVariable('stackaddress'))
 ===
 (lldb) script a = lldb.value(lldb.frame.FindVariable('stackaddress'))
 ===
-(lldb) script print a
+(lldb) script print (a)
 ===
-(lldb) script print a.count
+(lldb) script print (a.count)
 ===
-(lldb) script print a.addresses[0]
+(lldb) script print (a.addresses[0])
 ===
-(lldb) script print a.addresses[3]
+(lldb) script print (a.addresses[3])
 ===
 (lldb) reload_script
 ===
@@ -67,8 +67,3 @@ RayView * [0x00007fa83860c000]
 ===
 (lldb) msl 0x00007f8250f0a170 -r
 ===
-
-
-
-Shell Commands
-******************************
