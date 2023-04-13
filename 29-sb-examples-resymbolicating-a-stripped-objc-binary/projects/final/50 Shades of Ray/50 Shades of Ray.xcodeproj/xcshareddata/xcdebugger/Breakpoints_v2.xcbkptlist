@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "27F350C3-1823-4DE1-BB74-2D1C52F9164C"
    type = "4"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
+            uuid = "9C3007F8-50BE-4E8A-B53B-C6D0D67DA6CD"
+            shouldBeEnabled = "Yes"
             condition = "(BOOL)[$arg1 isKindOfClass:(id)objc_getClass(&quot;RayView&quot;)]"
+            ignoreCount = "0"
             continueAfterRunningActions = "No"
             symbolName = "-[UIView initWithFrame:]"
             moduleName = "">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  uuid = "9C3007F8-50BE-4E8A-B53B-C6D0D67DA6CD - dc1a659ffb4f7093"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[UIView initWithFrame:]"
-                  moduleName = "UIKit"
+                  moduleName = "UIKitCore"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
