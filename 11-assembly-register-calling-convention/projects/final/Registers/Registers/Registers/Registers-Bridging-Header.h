@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,27 +30,4 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-#ifndef RegValues_h
-#define RegValues_h
-
-#include <stdio.h>
-
-uintptr_t RIP_register();
-uintptr_t RSP_register();
-uintptr_t RBP_register();
-uintptr_t RSI_register();
-uintptr_t RDI_register();
-uintptr_t RAX_register();
-uintptr_t RBX_register();
-uintptr_t RCX_register();
-uintptr_t RDX_register();
-uintptr_t R8_register();
-uintptr_t R9_register();
-uintptr_t R10_register();
-uintptr_t R11_register();
-uintptr_t R12_register();
-uintptr_t R13_register();
-uintptr_t R14_register();
-uintptr_t R15_register();
-
-#endif /* RegValues_h */
+#import "RegisterValues.h"

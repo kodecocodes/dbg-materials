@@ -42,8 +42,20 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var signalTitleLabel: UILabel!
 
   // MARK: - View Life Cycle
+  fileprivate func extractedFunc(me: String, place: String) -> String {
+    let fName = "Zoltan"
+    let age = 30
+    let location = place
+    return "Hello world, I am \(fName). I'm \(age), and I live in \(location)."
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    let hello = extractedFunc(me: "Zoltan", place: "basement")
+    print(hello)
+ 
+
 
     setupViews()
   }

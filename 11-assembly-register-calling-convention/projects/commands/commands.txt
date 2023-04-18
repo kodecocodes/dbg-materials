@@ -3,27 +3,27 @@ LLDB Commands
 
 (lldb) register read
 ===
-(lldb) po $rdi 
+(lldb) po $x0 
 ===
-(lldb) po $rsi 
+(lldb) po $x1 
 ===
-(lldb) po (char *)$rsi 
+(lldb) po (char *)$x1 
 ===
-(lldb) po (SEL)$rsi
+(lldb) po (SEL)$x1
 ===
 (lldb) b -[NSResponder mouseUp:]
 (lldb) continue
 ===
-(lldb) po $rdi 
+(lldb) po $x0
 ===
-(lldb) po $rdx 
+(lldb) po $x2 
 ===
-(lldb) po [$rdx class]
+(lldb) po [$x2 class]
 ===
 (lldb) breakpoint delete
 About to delete all breakpoints, do you want to do that?: [Y/n] 
 ===
-(lldb) breakpoint set -o true -S "-[NSWindow mouseDown:]"
+(lldb) b -[NSWindow mouseDown:]
 (lldb) continue
 ===
 (lldb) po [$rdi setBackgroundColor:[NSColor redColor]]
@@ -33,11 +33,11 @@ About to delete all breakpoints, do you want to do that?: [Y/n]
 ===
 (lldb) finish
 ===
-(lldb) re re rax -fd 
+(lldb) re re x0 -fd 
 ===
 (lldb) p/x @"Yay! Debugging"
 ===
-(lldb) br set -n  "-[UILabel setText:]" -C "po $rdx = 0x0000618000644080" -G1
+(lldb) br set -n  "-[UILabel setText:]" -C "po $x2 = 0x0000618000644080" -G1
 ===
 (lldb) continue
 ===
