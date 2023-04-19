@@ -27,15 +27,17 @@
 /// THE SOFTWARE.
 
 .globl _StackWalkthrough
-
+.balign 4
 
 _StackWalkthrough:
-      push  %rbp
-      movq  %rsp, %rbp
-      movq  $0x0, %rdx
-      movq  %rdi, %rdx
-      push  %rdx
-      movq  $0x0, %rdx
-      pop   %rdx
-      pop   %rbp
+      sub sp, sp, #0x20
+      stp x29, x30, [sp, #0x10]
+      add x29, sp, #0x10
+      str xzr, [sp, #0x8]
+      str xzr, [sp]
+      str x0, [sp]
+      mov x0, #0xF0
+      ldr x0, [sp]
+      ldp x29, x30, [sp, #0x10]
+      add sp, sp, #0x20
       ret
