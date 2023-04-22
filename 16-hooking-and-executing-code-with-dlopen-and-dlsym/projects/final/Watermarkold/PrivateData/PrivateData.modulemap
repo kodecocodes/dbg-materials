@@ -1,0 +1,8 @@
+framework module PrivateData {
+  export *
+  
+  explicit module Private {
+     header "privatedatagenerator.h"
+  }
+}
+
