@@ -43,7 +43,7 @@ def handle_command(debugger, command, result, internal_dict):
             return
 
     source = '\n'.join(['# '+ format(idx + 1, '2') +': ' + line for idx, line in enumerate(script.split('\n'))]) + '\n' if options.debug_with_clipboard else ''
-    copycommand = 'echo -e \"{} {} \" | pbcopy'.format(source.replace('$', '\$'), cmd)
+    copycommand = 'echo \"{} {} \" | pbcopy'.format(source.replace('$', '\$'), cmd)
     os.system(copycommand)
     if options.debug_with_clipboard:
         result.AppendMessage("Copied dryrun script to clipboard... paste in Terminal. Will ensure it compiles then exit")
