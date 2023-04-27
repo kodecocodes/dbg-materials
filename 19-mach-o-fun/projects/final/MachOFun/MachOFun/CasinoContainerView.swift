@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -96,20 +100,19 @@ typealias SpinCompletionCallbackClosure = ((SlotMachineIcon, SlotMachineIcon, Sl
       self?.animateRow(index: 0)
       notifyDispatchGroup.leave()
     }
-  
+
     notifyDispatchGroup.enter()
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
       self?.animateRow(index: 1)
       notifyDispatchGroup.leave()
     }
-  
+
     notifyDispatchGroup.enter()
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
       self?.animateRow(index: 2)
       notifyDispatchGroup.leave()
     }
-    
-    
+
     DispatchQueue.global(qos: .userInitiated).async { [weak self] in
       _ = notifyDispatchGroup.wait(timeout: .now() + 2)
       
@@ -117,7 +120,7 @@ typealias SpinCompletionCallbackClosure = ((SlotMachineIcon, SlotMachineIcon, Sl
         guard let self = self else {
           return
         }
-
+        
         let col0 = casinoDataSource[self.picker.selectedRow(inComponent: 0) % casinoDataSource.count]
         let col1 = casinoDataSource[self.picker.selectedRow(inComponent: 1) % casinoDataSource.count]
         let col2 = casinoDataSource[self.picker.selectedRow(inComponent: 2) % casinoDataSource.count]
@@ -167,7 +170,7 @@ extension CasinoContainerView: UIPickerViewDataSource {
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 3
   }
-  
+
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     return totalPickerViews
   }

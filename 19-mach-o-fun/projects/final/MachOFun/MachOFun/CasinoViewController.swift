@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -39,14 +43,13 @@ class CasinoViewController: UIViewController {
   @IBAction func randomNumberToConsoleTapped(_ sender: Any) {
     SomeClassInAFramework.printARandomNumber()
   }
-  
+
   @IBAction func spinTapped(_ sender: UIButton) {
     sender.isEnabled = false
-    
+
     self.casinoContainerView.spin { [weak self] col0, col1, col2  in
 
-      if col0.slotCharacter == col1.slotCharacter,
-        col0.slotCharacter == col2.slotCharacter {
+      if col0.slotCharacter == col1.slotCharacter && col0.slotCharacter == col2.slotCharacter {
         
         let string = "\(col0.slotCharacter)x3, WINNER!!"
         let attributedString = NSMutableAttributedString(string:string)
@@ -55,6 +58,7 @@ class CasinoViewController: UIViewController {
                                       range: NSRange(location: 0, length: attributedString.length))
         self?.winLoseLabel.attributedText = attributedString
       } else {
+        
         let string = "Try Again!"
         let attributedString = NSMutableAttributedString(string:string)
         attributedString.addAttribute(.foregroundColor,

@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -40,10 +44,10 @@ class InsecureNetworkRequestsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.setupDataSource()
-
     let _ = "https://www.google.com"
     let _ = "http://www.altavista.com"
+    
+    self.setupDataSource()
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,6 +60,7 @@ class InsecureNetworkRequestsTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    
     let httpString = dataSource[indexPath.section].strings[indexPath.row]
     cell.textLabel?.text = httpString
     return cell
@@ -70,42 +75,32 @@ class InsecureNetworkRequestsTableViewController: UITableViewController {
   }
   
   private func setupDataSource() {
-//    let element = InsecureHTTPRequestsData("HTTP hardcoded strings coming soon",
-//                                           ["placeholder 1", "placeholder 2"])
-//    dataSource.append(element)
-//    return
-    
     for i in 0..<_dyld_image_count() {
-      
       let imagePath = _dyld_get_image_name(i)!
-      let name = String(validatingUTF8:  imagePath)!
+      let name = String(validatingUTF8: imagePath)!
       let basenameString = (name as NSString).lastPathComponent
-      
-      var module : InsecureHTTPRequestsData = (basenameString, [])
+
+      var module: InsecureHTTPRequestsData = (basenameString, [])
       var rawDataSize: UInt = 0
-      guard let rawData = getsectdatafromFramework(basenameString, "__TEXT", "__cstring", &rawDataSize) else {
-        continue
-      }
-      
+      guard let rawData = getsectdatafromFramework(basenameString, "__TEXT", "__cstring", &rawDataSize) else { continue }
+
       var index = 0
       while index < rawDataSize {
         let cur = rawData.advanced(by: index)
         let length = strlen(cur)
         index = index + length + 1
-        
-        guard let str = String(utf8String: cur),
-          length > 0 else {
-            continue
-        }
-        
-        if str.hasPrefix("http:") {
+
+        guard let str = String(utf8String: cur), length > 0 else {continue}
+
+        if str.contains("www.") {
           module.strings.append(str)
         }
       }
-      
-      if module.strings.count > 0 {
-        dataSource.append(module)
-      }
+        if module.strings.count > 0 {
+          dataSource.append(module)
+        }
+
+
     }
   }
 }
