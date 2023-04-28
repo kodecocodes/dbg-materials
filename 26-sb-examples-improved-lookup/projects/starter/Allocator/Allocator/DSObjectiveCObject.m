@@ -37,9 +37,6 @@
     self.eyeColor = [UIColor brownColor];
     self.firstName = @"Derek";
     self.lastName = @"Selander";
-
-    NSString *name = @"Zoltan";
-    NSLog(@"Hello world, I am %@. I’m %d, and I live in %@.", name, 30, @"my father’s basement");
   }
   
   return self;
