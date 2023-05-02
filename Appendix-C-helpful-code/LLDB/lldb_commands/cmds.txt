@@ -1,0 +1,81 @@
+command alias -H "Reload ~/.lldbinit" -h "Reload ~/.lldbinit" -- reload_lldbinit command source ~/.lldbinit
+
+command regex -h "Regex search" -s "rlook UIViewController.viewDidLoad" -- rlook 's/(.+)/image lookup -rn %1/'
+
+command regex -h "List a directory from the process's perspective. Useful when working on an actual device." -s "ls /System/Library" -- ls 's/(.+)/po @import Foundation; NSError *err = nil; NSArray *arr = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"%1" error:&err]; id retValue = err ? [err localizedDescription] : [arr description]; retValue/
+
+command regex -h "List a directory from the process's perspective. Useful when working on an actual device." -s "la /System/Library" -- la 's/(.+)/po @import Foundation; NSError *err = nil; NSDictionary *arr = [[NSFileManager defaultManager] attributesOfItemAtPath:@"%1" error:&err]; id retValue = err ? [err localizedDescription] : [arr debugDescription]; retValue/
+
+command regex -h "Toggle view. Hides/Shows a view depending on it's current state. You don't need to resume LLDB to see changes" -s "tv 0xUIViewAddress" -- tv 's/(.+)/expression -l objc -O -- @import QuartzCore; [%1 setHidden:!(BOOL)[%1 isHidden]]; (void)[CATransaction flush];/'
+
+command regex  pprotocol 's/(.+)/expression -lobjc -O -- @import Foundation; NSMutableString *string = [NSMutableString string]; Protocol * prot = objc_getProtocol("%1"); [string appendFormat:@"\nProtocol: %s, %@\n", (char *)[prot name], (id)prot]; [string appendString:@"==========================================\n"]; for (int isRequired = 1; isRequired > -1; isRequired--) { [string appendFormat:@" (%@)\n", isRequired ? @"Required" : @"Optional"]; for (int isInstanceMethod = 0; isInstanceMethod < 2; isInstanceMethod++) { unsigned int ds_count = 0; struct objc_method_description * methods = (struct objc_method_description *)protocol_copyMethodDescriptionList(prot, (BOOL)isRequired, (BOOL)isInstanceMethod, &ds_count); for (int i = 0; i < ds_count; i++) { struct objc_method_description method = methods[i]; [string appendFormat:@"%@ %@, %s\n", isInstanceMethod ? @"-": @"+", NSStringFromSelector(method.name), method.types]; }}} string;/'
+
+command regex ivars -h "Dumps all ivars for an instance of a particular class which inherits from NSObject (iOS, NSObject subclass only)" -s "ivars [UIView new]" -- 's/(.+)/expression -lobjc -O -- [%1 _ivarDescription]/'
+
+command regex pcvc  -- 's/(.+)/expression -lobjc -O -- id currentView = (id)\`%1\`; while (currentView && !(id)[currentView _viewDelegate]) { currentView = (id)[currentView superview]; } [currentView _viewDelegate]; /'
+
+command regex retcount  -- 's/(.+)/expression -lobjc -O -- (int)[\`%1\` retainCount]; /'
+
+command regex methods -h "Dumps all methods implemented by the NSObject subclass (iOS, NSObject subclass only)" -s "methods UIView" -- 's/(.+)/expression -lobjc -O -- [%1 _shortMethodDescription]/'
+
+command alias gg process int
+
+command alias pexecutable exp -lobjc -O --  char a[1024]; uint32_t s = 1024; _NSGetExecutablePath(a, &s); (char *)a
+
+command alias plocalmodulelist script print '\n'.join([i.file.basename for i in lldb.target.modules if i.file.dirname and lldb.target.executable.basename in i.file.dirname])
+
+command alias cpo expression -l objc++ -O --
+
+command alias cp expression -l objc++  --
+
+command alias spo expression -l swift -O --
+
+command alias bpo expression -i0 -O --
+
+command alias sp expression -l swift  --
+
+command alias iheap command script import lldb.macosx.heap
+
+command regex xo 's/(.+)/exp -l objc -O -- *(id *)(\`%1\`)/'
+
+command alias ff expression -l objc++ -- (void)[CATransaction flush]
+
+command alias dump_app_contents e -l objc++ -O -- NSError *err = nil; id manager = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:((id)[[NSBundle mainBundle] bundlePath]) error:&err]; id retval = err ? (id)[err localizedDescription] : [[[NSBundle mainBundle] bundlePath] stringByAppendingString:(id)[manager description]]; retval
+
+command regex mload 's/(.+)/expression -lobjc -O -- void *handle = (void *)dlopen("%1", 2); id retVal = handle ? @"Success" : (NSString *)[[NSString alloc] initWithUTF8String:(char *)dlerror()]; retVal/'
+
+command alias lnetwork expression -lobjc -O --   const char *className = (const char *)[[@"URLProtocolObserver" stringByAppendingString: [@((uint32_t)arc4random()) stringValue]] UTF8String];  Class cls = objc_allocateClassPair((Class)NSClassFromString(@"NSURLProtocol"), className, 0);  objc_registerClassPair(cls);    Method m = (Method)class_getClassMethod((Class)NSClassFromString(@"NSURLProtocol"), @selector(canInitWithRequest:));    class_addMethod((Class)objc_getMetaClass(className), @selector(canInitWithRequest:), (id (*)(__strong id, SEL, ...))imp_implementationWithBlock(^(id cls, id request){        id url = [request URL];    id path = [url absoluteString];        printf("%s\n\n", (char *)[[request debugDescription] UTF8String]);        return NO;  }) , (char *)method_getTypeEncoding(m));    [cls performSelector:@selector(registerClass:) withObject:cls];
+
+command regex gdocumentation 's/(.+)/script from compat import unichr; import os; os.system("open https:" + unichr(47) + unichr(47) + "lldb.llvm.org" + unichr(47) + "python_reference" + unichr(47) + "lldb.%1-class.html")/'
+
+command regex pbpaste 's/(.+)/expression -l objc -O -- [[UIPasteboard generalPasteboard] setString:@"%1"]/'
+
+command regex px 's/(.+)/script print(hex(lldb.frame.var("%1".rstrip()).AddressOf().unsigned))/'
+
+command regex bdel 's/(.+)/script junk = [i.FindLocationByAddress(%1).SetEnabled(False) for i in lldb.target.breakpoint_iter() if i.FindLocationByAddress(%1).IsValid()]/'
+
+command alias enable_logging expression -lobjc -O -- extern void turn_on_stack_logging(int); turn_on_stack_logging(1);
+
+command regex jj 's/(.*)/frame var %1/'
+
+command alias args register read arg1 arg2 arg3 arg4 arg5 arg6
+
+command regex data 's/(.+)/mem read  `(void *)[$1 bytes]` -c `(long)[$1 length]`/'
+
+command alias plibrary exp -l objc -O -- [(id)NSSearchPathForDirectoriesInDomains(5, 1, YES) objectAtIndex:0]
+
+command alias avoid_step_libraries settings set target.process.thread.step-avoid-libraries libswiftCore.dylib libobjc.A.dylib
+
+command regex dumpmoduledata 's|(.+)|script import time; _t = time.time(); m = [i for i in lldb.target.modules if i.file.GetFilename() == "%1"][0];  s = [i for i in m.sections if i.GetName() == "__DATA" ][0]; f = m.file.GetFilename(); print("xxd -c 8 -g 8 -e -o {} /tmp/{}.{}.mem".format(s.GetFileAddress(), f, _t)); lldb.debugger.HandleCommand("mem read --force -b -o /tmp/{}.{}.mem -c {} -- {}".format(f, _t, s.GetByteSize(), s.GetLoadAddress(lldb.target))); |'
+
+command regex msg_header_b -h "Dump the mach_msg_header_t in raw bytes" -- 's/(.+)/mem read -fY -c \`((mach_msg_header_t*)%1)->msgh_size\` -- \`%1\`/'
+command regex msg_header_w -h "Dump the mach_msg_header_t in raw bytes" -- 's|(.+)|x/\`((mach_msg_header_t*)%1)->msgh_size / 4\`wx %1|' 
+
+# Jailbreak stuff
+
+command alias qqq process connect connect://localhost:1234
+
+
+
+
+
