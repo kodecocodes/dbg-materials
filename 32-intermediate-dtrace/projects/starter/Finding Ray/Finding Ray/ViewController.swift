@@ -71,6 +71,8 @@ class ViewController: UIViewController {
       break
     case .failed:
       break
+    @unknown default:
+      fatalError()
     }
   }
   
