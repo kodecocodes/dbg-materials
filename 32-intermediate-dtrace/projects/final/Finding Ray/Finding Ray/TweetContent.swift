@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -44,6 +48,7 @@ struct TweetContent {
     "I just watched Disney's Frozen 20 times and just wanted to tell you",
     "I am looking right at you! Turn around!"
   ]
+
   static func generate() -> String {
     return "@rwenderlich, " + content[Int(arc4random_uniform(UInt32(content.count)))]
   }

@@ -20,12 +20,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+<<<<<<< HEAD
+=======
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Ray is watching you. Do you accept?</string>
+>>>>>>> 19c3d67... Add back final project
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+<<<<<<< HEAD
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Ray is watching you. Do you accept?</string>
+=======
+>>>>>>> 19c3d67... Add back final project
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -122,13 +126,15 @@ import UIKit
 
     for view in subviews {
       if let view = view as? MotionView {
-        view.recursivelyTransformByAmount(distance: distance, baseView: baseView)
+        view.recursivelyTransformByAmount(distance: distance,
+                                          baseView: baseView)
       } 
     }
   }
 
   public override func willMove(toSuperview newSuperview: UIView?) {
     super.willMove(toSuperview: newSuperview)
+
     self.layer.shouldRasterize = true
     self.isUserInteractionEnabled = false
   }
