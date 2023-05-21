@@ -19,19 +19,19 @@ LLDB Commands
 ===
 (lldb) script k[0]
 ===
-(lldb) script print k[0]
+(lldb) script print (k[0])
 ===
-(lldb) script print k[0].symbol.name
-===
-(lldb) reload_script
-===
-(lldb) lookup DSObjectiveCObject
+(lldb) script print (k[0].symbol.name)
 ===
 (lldb) reload_script
 ===
 (lldb) lookup DSObjectiveCObject
 ===
-(lldb) lookup initWith(\w+\:){2,2}\]
+(lldb) reload_script
+===
+(lldb) lookup DSObjectiveCObject
+===
+(lldb) lookup initWith(\w+\:){2}\]
 ===
 (lldb) reload_script
 ===
@@ -49,3 +49,5 @@ Breakpoint 3: where = Allocator`-[DSObjectiveCObject setLastName:] at DSObjectiv
 
 Shell Commands
 ******************************
+% lldb
+===
