@@ -5,13 +5,13 @@ LLDB Commands
 ===
 (lldb) script lldb.target
 ===
-(lldb) script print lldb.target
+(lldb) script print (lldb.target)
 ===
-(lldb) script print lldb.process
+(lldb) script print (lldb.process)
 ===
-(lldb) script print lldb.thread
+(lldb) script print (lldb.thread)
 ===
-(lldb) script print lldb.frame
+(lldb) script print (lldb.frame)
 ===
 (lldb) script help(lldb.target)
 ===
@@ -35,7 +35,7 @@ LLDB Commands
 ===
 (lldb) finish
 ===
-(lldb) po $rax
+(lldb) po $arg1
 ===
 (lldb) br del
 About to delete all breakpoints, do you want to do that?: [Y/n] Y
