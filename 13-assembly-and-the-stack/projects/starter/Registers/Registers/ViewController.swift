@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -34,41 +38,29 @@ class ViewController: NSViewController {
   @IBOutlet weak var tableView: NSTableView!
   
   let dataSource = [
-    ("RAX", RAX_register),
-    ("RBX", RBX_register),
-    ("RCX", RCX_register),
-    ("RDX", RDX_register),
-    ("RDI", RDI_register),
-    ("RSI", RSI_register),
-    ("RBP", RBP_register),
-    ("RSP", RSP_register),
-    ("R8", R8_register),
-    ("R9", R9_register),
-    ("R10", R10_register),
-    ("R11", R11_register),
-    ("R12", R12_register),
-    ("R13", R13_register),
-    ("R14", R14_register),
-    ("R15", R15_register)
+    ("x0", x0_register),
+    ("x1", x1_register),
+    ("x2", x2_register),
+    ("x3", x3_register),
+    ("x4", x4_register),
+    ("x5", x5_register),
+    ("x6", x6_register),
+    ("x7", x7_register),
+    ("x8", x8_register),
+    ("x9", x9_register),
+    ("x10", x10_register),
+    ("x11", x11_register),
+    ("x12", x12_register),
+    ("x13", x13_register),
+    ("x14", x14_register),
+    ("x15", x15_register),
+    ("sp", sp_register)
   ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
-  func executeLotsOfArguments(one: Int,
-                              two: Int,
-                              three: Int,
-                              four: Int,
-                              five: Int,
-                              six: Int,
-                              seven: Int,
-                              eight: Int,
-                              nine: Int,
-                              ten: Int) -> String {
-    print("arguments are: \(one), \(two), \(three), \(four), \(five), \(six), \(seven), \(eight), \(nine), \(ten)")
-    return "Mom, what happened to the cat?"
-  }
   
   @IBAction func reloadAssemblyClicked(_ sender: AnyObject) {
     tableView.reloadData()
@@ -76,7 +68,6 @@ class ViewController: NSViewController {
 }
 
 extension ViewController: NSTableViewDataSource {
-
   func numberOfRows(in tableView: NSTableView) -> Int {
     return dataSource.count
   }
@@ -88,8 +79,12 @@ extension ViewController: NSTableViewDataSource {
     } else {
       let register = closure()
       let formattedString = "0x" + String(register, radix:16)
-      
       return formattedString
     }
+  }
+
+  func executeLotsOfArguments(one: Int, two: Int, three: Int, four: Int, five: Int, six: Int, seven: Int, eight: Int, nine: Int, ten: Int) -> Int {
+    print("arguments are: \(one), \(two), \(three), \(four), \(five), \(six), \(seven), \(eight), \(nine), \(ten)")
+    return 100
   }
 }

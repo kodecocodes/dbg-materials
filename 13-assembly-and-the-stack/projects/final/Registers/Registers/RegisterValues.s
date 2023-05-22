@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,83 +30,90 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-	.globl _RDX_register
-	.globl _RBX_register
-	.globl _RDI_register
-	.globl _RAX_register
-	.globl _RCX_register
-	.globl _RSI_register
-	.globl _RBP_register
-	.globl _RSP_register
-	.globl _R8_register
-	.globl _R9_register
-	.globl _R10_register
-	.globl _R11_register
-	.globl _R12_register
-	.globl _R13_register
-	.globl _R14_register
-	.globl _R15_register
+	.globl _x0_register
+	.globl _x1_register
+	.globl _x2_register
+	.globl _x3_register
+	.globl _x4_register
+	.globl _x5_register
+	.globl _x6_register
+	.globl _x7_register
+	.globl _x8_register
+	.globl _x9_register
+	.globl _x10_register
+	.globl _x11_register
+	.globl _x12_register
+	.globl _x13_register
+	.globl _x14_register
+	.globl _x15_register
+  .globl _sp_register
 
+.balign 4
 
-_RDX_register:
-    movq %rdx, %rax
-    ret
+_x0_register:
+  mov x0, x0
+  ret
 
-_RBX_register:
-    movq %rbx, %rax
-    ret
+_x1_register:
+  mov x0, x1
+  ret
 
-_RAX_register:
-    movq %rax, %rax
-    ret
-_RCX_register:
-    movq %rcx, %rax
-    ret
+_x2_register:
+  mov x0, x2
+  ret
 
-_RSI_register:
-    movq %rsi, %rax
-    ret
+_x3_register:
+  mov x0, x3
+  ret
 
-_RDI_register:
-    movq %rdi, %rax
-    ret
+_x4_register:
+  mov x0, x4
+  ret
 
-_RBP_register:
-    movq %rbp, %rax
-    ret
+_x5_register:
+  mov x0, x5
+  ret
 
-_RSP_register:
-    movq %rsp, %rax
-    ret
+_x6_register:
+  mov x0, x6
+  ret
 
-_R8_register:
-    movq %r8, %rax
-    ret
+_x7_register:
+  mov x0, x7
+  ret
 
-_R9_register:
-    movq %r9, %rax
-    ret
+_x8_register:
+  mov x0, x8
+  ret
 
-_R10_register:
-    movq %r10, %rax
-    ret
+_x9_register:
+  mov x0, x9
+  ret
 
-_R11_register:
-    movq %r11, %rax
-    ret
+_x10_register:
+  mov x0, x10
+  ret
 
-_R12_register:
-    movq %r12, %rax
-    ret
+_x11_register:
+  mov x0, x11
+  ret
 
-_R13_register:
-    movq %r13, %rax
-    ret
+_x12_register:
+  mov x0, x12
+  ret
 
-_R14_register:
-    movq %r14, %rax
-    ret
+_x13_register:
+  mov x0, x13
+  ret
 
-_R15_register:
-    movq %r15, %rax
-    ret
+_x14_register:
+  mov x0, x14
+  ret
+
+_x15_register:
+  mov x0, x15
+  ret
+
+_sp_register:
+  mov x0, sp
+  ret

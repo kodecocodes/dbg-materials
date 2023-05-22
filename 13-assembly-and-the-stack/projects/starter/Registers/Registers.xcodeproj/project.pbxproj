@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		A6214F1F1DB58A430012114E /* RegisterValues.s in Sources */ = {isa = PBXBuildFile; fileRef = A6214F1E1DB58A430012114E /* RegisterValues.s */; };
-		A6214F281DB9638F0012114E /* StackWalkthrough.s in Sources */ = {isa = PBXBuildFile; fileRef = A6214F271DB9638F0012114E /* StackWalkthrough.s */; };
 		A630D4441D9D7CCB007EDFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A630D4431D9D7CCB007EDFC3 /* AppDelegate.swift */; };
 		A630D4461D9D7CCB007EDFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A630D4451D9D7CCB007EDFC3 /* ViewController.swift */; };
 		A630D4481D9D7CCB007EDFC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A630D4471D9D7CCB007EDFC3 /* Assets.xcassets */; };
 		A630D44B1D9D7CCB007EDFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A630D4491D9D7CCB007EDFC3 /* Main.storyboard */; };
+		D4590C3329EF625C00855A3C /* StackWalkthrough.s in Sources */ = {isa = PBXBuildFile; fileRef = D4590C3129EF625C00855A3C /* StackWalkthrough.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A61236111DB56EDA00E5E709 /* Registers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Registers-Bridging-Header.h"; sourceTree = "<group>"; };
 		A61236131DB56EDB00E5E709 /* RegisterValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterValues.h; sourceTree = "<group>"; };
 		A6214F1E1DB58A430012114E /* RegisterValues.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = RegisterValues.s; sourceTree = "<group>"; };
-		A6214F271DB9638F0012114E /* StackWalkthrough.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = StackWalkthrough.s; sourceTree = "<group>"; };
-		A6214F291DB963F10012114E /* StackWalkthrough.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackWalkthrough.h; sourceTree = "<group>"; };
 		A630D4401D9D7CCB007EDFC3 /* Registers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A630D4431D9D7CCB007EDFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A630D4451D9D7CCB007EDFC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A630D4471D9D7CCB007EDFC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A630D44A1D9D7CCB007EDFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A630D44C1D9D7CCB007EDFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4590C3129EF625C00855A3C /* StackWalkthrough.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = StackWalkthrough.s; sourceTree = "<group>"; };
+		D4590C3229EF625C00855A3C /* StackWalkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackWalkthrough.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +45,9 @@
 			children = (
 				A61236111DB56EDA00E5E709 /* Registers-Bridging-Header.h */,
 				A6214F1E1DB58A430012114E /* RegisterValues.s */,
-				A6214F291DB963F10012114E /* StackWalkthrough.h */,
-				A6214F271DB9638F0012114E /* StackWalkthrough.s */,
 				A61236131DB56EDB00E5E709 /* RegisterValues.h */,
+				D4590C3229EF625C00855A3C /* StackWalkthrough.h */,
+				D4590C3129EF625C00855A3C /* StackWalkthrough.s */,
 			);
 			name = "C Bridging";
 			sourceTree = "<group>";
@@ -110,19 +110,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
 					A630D43F1D9D7CCB007EDFC3 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = A630D43B1D9D7CCB007EDFC3 /* Build configuration list for PBXProject "Registers" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A630D4461D9D7CCB007EDFC3 /* ViewController.swift in Sources */,
-				A6214F281DB9638F0012114E /* StackWalkthrough.s in Sources */,
+				D4590C3329EF625C00855A3C /* StackWalkthrough.s in Sources */,
 				A6214F1F1DB58A430012114E /* RegisterValues.s in Sources */,
 				A630D4441D9D7CCB007EDFC3 /* AppDelegate.swift in Sources */,
 			);
@@ -180,6 +180,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -200,6 +201,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -208,6 +210,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -231,7 +234,6 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -239,6 +241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -259,6 +262,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -267,6 +271,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -282,7 +287,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -291,16 +295,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = Registers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Registers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Registers/Registers-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -309,15 +315,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = Registers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Registers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Registers/Registers-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

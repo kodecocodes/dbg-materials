@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,15 +31,17 @@
 /// THE SOFTWARE.
 
 .globl _StackWalkthrough
-
+.balign 4
 
 _StackWalkthrough:
-      push  %rbp
-      movq  %rsp, %rbp
-      movq  $0x0, %rdx
-      movq  %rdi, %rdx
-      push  %rdx
-      movq  $0x0, %rdx
-      pop   %rdx
-      pop   %rbp
+      sub sp, sp, #0x20
+      stp x29, x30, [sp, #0x10]
+      add x29, sp, #0x10
+      str xzr, [sp, #0x8]
+      str xzr, [sp]
+      str x0, [sp]
+      mov x0, #0xF0
+      ldr x0, [sp]
+      ldp x29, x30, [sp, #0x10]
+      add sp, sp, #0x20
       ret
