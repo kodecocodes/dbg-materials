@@ -1,16 +1,12 @@
 LLDB Commands
 ******************************
-
-(lldb) process launch
-===
-(lldb) target create "/bin/ls"
-Current executable set to '/bin/ls' (x86_64).
+(lldb) q
 ===
 (lldb) process launch
 ===
-(lldb) process launch -w /Applications
+(lldb) process launch -w /Applicaitons
 ===
-(lldb) process launch -- /Applications
+(lldb) process launch -- /Applicaitons
 ===
 (lldb) process launch -- ~/Desktop
 ===
@@ -22,9 +18,9 @@ Current executable set to '/bin/ls' (x86_64).
 ===
 (lldb) env
 ===
-(lldb) process launch -v LSCOLORS=Ab -v CLICOLOR=1  -- /Applications/
+(lldb) process launch -E LSCOLORS=Ab -E CLICOLOR=1 -- /Applicaitons
 ===
-(lldb) process launch -v LSCOLORS=Af -v CLICOLOR=1  -- /Applications/
+(lldb) process launch -E LSCOLORS=Af -E CLICOLOR=1 -- /Applications
 ===
 (lldb) process launch -o /tmp/ls_output.txt -- /Applications
 ===
@@ -37,33 +33,40 @@ Current executable set to '/bin/ls' (x86_64).
 (lldb) run
 ===
 (lldb) process launch -n
-===
-
-
 
 Shell Commands
 ******************************
-
-pgrep -x Xcode
+$ cd /tmp
 ===
-lldb -p 89944
+$ nano hello_world.swift
 ===
-lldb -n Finder -w 
+$ swiftc hello_world.swift
 ===
-pkill Finder
+$ ./hello_world
 ===
-lldb -f /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+$ ./hello_world &
 ===
-lldb -f /bin/ls
+$ lldb -n hello_world
 ===
-$ cd /Applications
-$ ls
+$ pgrep -x hello_world
 ===
-$ ls /Applications
+$ lldb -p 57096
 ===
-cat /tmp/ls_output.txt
+$ pkill hello_world
 ===
-echo "hello world" > /tmp/wc_input.txt
+$ lldb -n hello_world -w
+===
+$ /tmp/hello_world
+===
+$ lldb -f /tmp/hello_world
+===
+$ lldb -f /bin/ls
+===
+$ cat /tmp/ls_output.txt
+===
+$ echo "hello world" > /tmp/wc_input.txt
 ===
 $ wc < /tmp/wc_input.txt
-===
+
+
+
