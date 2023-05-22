@@ -94,7 +94,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = Razeware;
+				ORGANIZATIONNAME = Kodeco;
 				TargetAttributes = {
 					A69930721DE2C6E20019C855 = {
 						CreatedOnToolsVersion = 8.1;
@@ -108,6 +108,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A699306A1DE2C6E20019C855;
@@ -244,6 +245,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "helloptrace/helloptrace-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -257,6 +259,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "helloptrace/helloptrace-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
