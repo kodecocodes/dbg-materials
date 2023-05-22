@@ -115,13 +115,13 @@
 		7BBE333D1C3EC11E000C7B04 /* Proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; tabWidth = 2; };
 		7BBE33441C3EC30C000C7B04 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7BBE33461C3EC318000C7B04 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		831B32EE1E56C9D800A6D59A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Shared/Gloss/Sources/Operators.swift; sourceTree = SOURCE_ROOT; };
-		831B32F01E56C9E400A6D59A /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decoder.swift; path = Shared/Gloss/Sources/Decoder.swift; sourceTree = SOURCE_ROOT; };
-		831B32F11E56C9E400A6D59A /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = Shared/Gloss/Sources/Encoder.swift; sourceTree = SOURCE_ROOT; };
-		831B32F21E56C9E400A6D59A /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionArray.swift; path = Shared/Gloss/Sources/ExtensionArray.swift; sourceTree = SOURCE_ROOT; };
-		831B32F31E56C9E400A6D59A /* ExtensionDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionDecodable.swift; path = Shared/Gloss/Sources/ExtensionDecodable.swift; sourceTree = SOURCE_ROOT; };
-		831B32F41E56C9E400A6D59A /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionDictionary.swift; path = Shared/Gloss/Sources/ExtensionDictionary.swift; sourceTree = SOURCE_ROOT; };
-		831B32F51E56C9E400A6D59A /* Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gloss.swift; path = Shared/Gloss/Sources/Gloss.swift; sourceTree = SOURCE_ROOT; };
+		831B32EE1E56C9D800A6D59A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Shared/Gloss/Sources/Operators.swift; sourceTree = "<group>"; };
+		831B32F01E56C9E400A6D59A /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Decoder.swift; path = Shared/Gloss/Sources/Decoder.swift; sourceTree = "<group>"; };
+		831B32F11E56C9E400A6D59A /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = Shared/Gloss/Sources/Encoder.swift; sourceTree = "<group>"; };
+		831B32F21E56C9E400A6D59A /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionArray.swift; path = Shared/Gloss/Sources/ExtensionArray.swift; sourceTree = "<group>"; };
+		831B32F31E56C9E400A6D59A /* ExtensionDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionDecodable.swift; path = Shared/Gloss/Sources/ExtensionDecodable.swift; sourceTree = "<group>"; };
+		831B32F41E56C9E400A6D59A /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionDictionary.swift; path = Shared/Gloss/Sources/ExtensionDictionary.swift; sourceTree = "<group>"; };
+		831B32F51E56C9E400A6D59A /* Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gloss.swift; path = Shared/Gloss/Sources/Gloss.swift; sourceTree = "<group>"; };
 		831B33031E56CF5800A6D59A /* RWDevCon2017.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RWDevCon2017.plist; path = RWDevCon/RWDevCon2017.plist; sourceTree = "<group>"; };
 		833F7EB01E842D7000B256E4 /* RWDevcon_Map_2017_v1.3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RWDevcon_Map_2017_v1.3.pdf; sourceTree = "<group>"; };
 		833F7EB21E842EDD00B256E4 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
@@ -327,7 +327,6 @@
 				831B32EE1E56C9D800A6D59A /* Operators.swift */,
 			);
 			name = Gloss;
-			path = Shared/Gloss/Sources/Gloss;
 			sourceTree = "<group>";
 		};
 		7BBE33341C3EA6B0000C7B04 /* Shared */ = {
@@ -427,6 +426,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
