@@ -33,8 +33,7 @@ def handle_command(debugger, command, result, internal_dict):
     '''
     Symbolicate backtrace. Will symbolicate a stripped backtrace
     from an executable if the backtrace is using Objective-C 
-    code. Currently doesn't work on aarch64 stripped executables
-    but works great on x64 :]
+    code.
     '''
     target = debugger.GetSelectedTarget()
     process = target.GetProcess()
@@ -60,6 +59,8 @@ def processStackTraceStringFromAddresses(frameAddresses, target):
     script = generateExecutableMethodsScript(startAddresses)
 
     # New content start 1
+    methods = target.EvaluateExpression(script, generateOptions())
+    methodsVal = lldb.value(methods.deref)
     # New content end 1
 
 
@@ -69,7 +70,19 @@ def processStackTraceStringFromAddresses(frameAddresses, target):
         symbol = addr.symbol
 
         # New content start 2
-        name = symbol.name
+        if symbol.synthetic:
+            children = methodsVal.sbvalue.GetNumChildren()
+            name = symbol.name + r'... unresolved womp womp'
+
+            loadAddr = symbol.addr.GetLoadAddress(target)
+
+            for i in range(children):
+                key = int(methodsVal[i].key.sbvalue.description)
+                if key == loadAddr:
+                    name = methodsVal[i].value.sbvalue.description
+                    break
+        else:
+          name = symbol.name
         # New content end 2
 
         offset_str = ''
@@ -135,17 +148,6 @@ def generateExecutableMethodsScript(frame_addresses):
   '''
     command_script += frame_addr_str
     command_script += r'''
-
-  NSMutableDictionary *stackDict = [NSMutableDictionary dictionary];
-  [retdict keysOfEntriesPassingTest:^BOOL(id key, id obj, BOOL *stop) {
-    
-    if ([ar containsObject:key]) {
-      [stackDict setObject:obj forKey:key];
-      return YES;
-    }
-    
-    return NO;
-  }];
-  stackDict;
+  retdict;
   '''
     return command_script
