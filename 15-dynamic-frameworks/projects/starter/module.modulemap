@@ -1,0 +1,4 @@
+module YayModule {
+  header "Private.h"
+  export *
+}

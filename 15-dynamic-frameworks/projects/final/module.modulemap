@@ -1,0 +1,5 @@
+module YayModule {
+  header "Private.h"
+  header "dyld_priv.h"
+  export *
+}
