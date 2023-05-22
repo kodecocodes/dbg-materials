@@ -28,9 +28,16 @@
  * THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSValue (siginfo_t)
-+ (instancetype)valuewithSiginfo:(siginfo_t)value;
-- (siginfo_t)siginfoValue;
-@end
+//! Project version number for Commons.
+FOUNDATION_EXPORT double CommonsVersionNumber;
+
+//! Project version string for Commons.
+FOUNDATION_EXPORT const unsigned char CommonsVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <Commons/PublicHeader.h>
+
+#import <Commons/NSValue+siginfo_t.h>
+#import <Commons/UnixSignalHandler.h>
+
