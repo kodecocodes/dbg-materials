@@ -3,6 +3,17 @@ LLDB Commands
 
 (lldb) yay woot
 ===
+(Pdb) command
+===
+(Pdb) result
+===
+(Pdb) result.AppendMessage("2nd hello world!")
+===
+(Pdb) debugger
+===
+(Pdb) continue
+===
+
 (lldb) command script import ~/lldb/findclass.py
 ===
 (lldb) help findclass
