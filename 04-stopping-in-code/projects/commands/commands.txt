@@ -27,7 +27,7 @@ LLDB Commands
 ===
 (lldb) breakpoint delete
 ===
-(lldb) rb '\-\[UIViewController(\(\w+\))?\ '
+(lldb) rb '\-\[UIViewController(\ |\()'
 ===
 (lldb) rb . -f DetailViewController.swift
 ===
@@ -80,3 +80,5 @@ LLDB Commands
 
 Shell Commands
 ******************************
+% xcrun swift-demangle s7Signals14SwiftTestClassC4nameSSSgvs  # note the dollar sign is removed from function
+
