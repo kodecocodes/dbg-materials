@@ -7,54 +7,37 @@ LLDB Commands
 ===
 (lldb) p/x 'A'
 ===
-(lldb) cpx $rip
+(lldb) cpx $pc
 ===
 (lldb) image lookup -vrn ^Registers.*aGoodMethod
 ===
-(lldb) register write rip 0x0000000100003a10
+(lldb) register write $pc 0x0000000100003a10
 ===
-(lldb) register write rdx 0x0123456789ABCDEF
+(lldb) register write $x0 0x0123456789ABCDEF
 ===
-(lldb) p/x $rdx 
+(lldb) p/x $x0 
 ===
-(lldb) p/x $edx 
+(lldb) p/x $w0 
 ===
-(lldb) p/x $dx
+(lldb) cpx $x0
 ===
+(lldb) memory read -fi -c1 0x100685a78
 ===
-(lldb) p/x $dh  
+(lldb) expression -f i -l objc -- 0xd10383ff
 ===
-(lldb) register write $r9 0x0123456789abcdef
+(lldb) p/i 0xd10383ff
 ===
-(lldb) p/x $r9
+(lldb) memory read -fi -c4 0x1005eda78
 ===
-(lldb) p/x $r9d
+(lldb) x/4i 0x1005eda78
 ===
-(lldb) p/x $r9w
+(lldb) p/i 0xff8303d1
 ===
-(lldb) p/x $r9l
+(lldb) memory read -s1 -c20 -fx 0x1005eda78
 ===
-(lldb) cpx $rip
+(lldb) memory read -s2 -c10 -fx 0x1005eda78
 ===
-(lldb) memory read -fi -c1 0x100007c20
-===
-(lldb) expression -f i -l objc -- 0x55
-===
-(lldb) p/i 0x55
-===
-(lldb) memory read -fi -c4 0x100007c20
-===
-(lldb) x/4i 0x100007c20
-===
-(lldb) p/i 0x4889e5
-===
-(lldb) p/i 0xe58948
-===
-(lldb) memory read -s1 -c20 -fx 0x100003840
-===
-(lldb) memory read -s2 -c10 -fx 0x100003840
-===
-(lldb) memory read -s4 -c5 -fx 0x100003840
+(lldb) memory read -s4 -c5 -fx 0x1005eda78
 ===
 
 
