@@ -1,4 +1,4 @@
-/// Copyright (c) 2018 Razeware LLC
+/// Copyright (c) 2023 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,26 +30,25 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-#import <dlfcn.h>
-#import <assert.h>
-#import <stdio.h>
-#import <dispatch/dispatch.h>
-#import <string.h>
+#include <stdio.h>
+#include <dlfcn.h>
+#include <assert.h>
+#include <dispatch/dispatch.h>
+#include <string.h>
 
 char * getenv(const char *name) {
   static void *handle;
   static char * (*real_getenv)(const char *);
-  
+
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     handle = dlopen("/usr/lib/system/libsystem_c.dylib", RTLD_NOW);
     assert(handle);
     real_getenv = dlsym(handle, "getenv");
   });
-  
+
   if (strcmp(name, "HOME") == 0) {
-    return "/";
+    return "/W00T";
   }
-  
   return real_getenv(name);
 }

@@ -12,10 +12,6 @@
 		A616AFF21E09B4CB00F5FDE2 /* HookingSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A616AFEA1E09B4CB00F5FDE2 /* HookingSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A616AFF81E09B4E500F5FDE2 /* CopyrightImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616AFF71E09B4E500F5FDE2 /* CopyrightImageGenerator.swift */; };
 		A61E678B1E0C91C100B50306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A61E678A1E0C91C100B50306 /* Assets.xcassets */; };
-		A61E67D01E0D8F2200B50306 /* HookingC.h in Headers */ = {isa = PBXBuildFile; fileRef = A61E67CE1E0D8F2200B50306 /* HookingC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A61E67D31E0D8F2200B50306 /* HookingC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61E67CC1E0D8F2200B50306 /* HookingC.framework */; };
-		A61E67D41E0D8F2200B50306 /* HookingC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A61E67CC1E0D8F2200B50306 /* HookingC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A61E67D91E0D8F3B00B50306 /* getenvhook.c in Sources */ = {isa = PBXBuildFile; fileRef = A61E67D81E0D8F3B00B50306 /* getenvhook.c */; };
 		A677BA011E0C72B1009C4783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677B9F91E0C72B1009C4783 /* AppDelegate.swift */; };
 		A677BA021E0C72B1009C4783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A677B9FA1E0C72B1009C4783 /* Assets.xcassets */; };
 		A677BA061E0C72B1009C4783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677BA001E0C72B1009C4783 /* ViewController.swift */; };
@@ -26,6 +22,10 @@
 		A6D0D5761E09F2BE00338BF5 /* PrivateData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D0D56A1E09F2AA00338BF5 /* PrivateData.framework */; };
 		A6D0D5791E09F2FD00338BF5 /* privatedatagenerator.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D0D5771E09F2FD00338BF5 /* privatedatagenerator.c */; };
 		A6D0D57A1E09F2FD00338BF5 /* privatedatagenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D0D5781E09F2FD00338BF5 /* privatedatagenerator.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D4FF259529F40860000C3227 /* HookingC.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FF259429F40860000C3227 /* HookingC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FF259829F40860000C3227 /* HookingC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FF259229F40860000C3227 /* HookingC.framework */; };
+		D4FF259929F40860000C3227 /* HookingC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4FF259229F40860000C3227 /* HookingC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4FF259E29F4090D000C3227 /* getenvhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D4FF259D29F4090D000C3227 /* getenvhook.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +36,19 @@
 			remoteGlobalIDString = A616AFE91E09B4CB00F5FDE2;
 			remoteInfo = HookingSwift;
 		};
-		A61E67D11E0D8F2200B50306 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A616AFC81E09B4B000F5FDE2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A61E67CB1E0D8F2200B50306;
-			remoteInfo = HookingC;
-		};
 		A696AAAC1E09F3E50075F767 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A616AFC81E09B4B000F5FDE2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A6D0D5691E09F2AA00338BF5;
 			remoteInfo = PrivateData;
+		};
+		D4FF259629F40860000C3227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A616AFC81E09B4B000F5FDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FF259129F40860000C3227;
+			remoteInfo = HookingC;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,7 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A61E67D41E0D8F2200B50306 /* HookingC.framework in Embed Frameworks */,
+				D4FF259929F40860000C3227 /* HookingC.framework in Embed Frameworks */,
 				A6D0D5721E09F2AA00338BF5 /* PrivateData.framework in Embed Frameworks */,
 				A616AFF21E09B4CB00F5FDE2 /* HookingSwift.framework in Embed Frameworks */,
 			);
@@ -75,22 +75,21 @@
 		A616AFED1E09B4CB00F5FDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A616AFF71E09B4E500F5FDE2 /* CopyrightImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyrightImageGenerator.swift; sourceTree = "<group>"; };
 		A61E678A1E0C91C100B50306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A61E67CC1E0D8F2200B50306 /* HookingC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HookingC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A61E67CE1E0D8F2200B50306 /* HookingC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookingC.h; sourceTree = "<group>"; };
-		A61E67CF1E0D8F2200B50306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A61E67D81E0D8F3B00B50306 /* getenvhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getenvhook.c; sourceTree = "<group>"; };
 		A677B9F91E0C72B1009C4783 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A677B9FA1E0C72B1009C4783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A677B9FF1E0C72B1009C4783 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A677BA001E0C72B1009C4783 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A677BA081E0C7559009C4783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A677BA0A1E0C7559009C4783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A68408B42162C29300F2573F /* PrivateData.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = PrivateData.modulemap; sourceTree = "<group>"; };
+		A68408B52162C2D300F2573F /* PrivateData.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = PrivateData.modulemap; sourceTree = "<group>"; };
 		A6D0D56A1E09F2AA00338BF5 /* PrivateData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrivateData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D0D56C1E09F2AA00338BF5 /* PrivateData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateData.h; sourceTree = "<group>"; };
 		A6D0D56D1E09F2AA00338BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6D0D5771E09F2FD00338BF5 /* privatedatagenerator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = privatedatagenerator.c; sourceTree = "<group>"; };
 		A6D0D5781E09F2FD00338BF5 /* privatedatagenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privatedatagenerator.h; sourceTree = "<group>"; };
+		D4FF259229F40860000C3227 /* HookingC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HookingC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FF259429F40860000C3227 /* HookingC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookingC.h; sourceTree = "<group>"; };
+		D4FF259D29F4090D000C3227 /* getenvhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getenvhook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A61E67D31E0D8F2200B50306 /* HookingC.framework in Frameworks */,
+				D4FF259829F40860000C3227 /* HookingC.framework in Frameworks */,
 				A616AFF11E09B4CB00F5FDE2 /* HookingSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,14 +110,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A61E67C81E0D8F2200B50306 /* Frameworks */ = {
+		A6D0D5661E09F2AA00338BF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6D0D5661E09F2AA00338BF5 /* Frameworks */ = {
+		D4FF258F29F40860000C3227 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -134,7 +133,7 @@
 				A677B9F81E0C72B1009C4783 /* Watermark */,
 				A616AFEB1E09B4CB00F5FDE2 /* HookingSwift */,
 				A6D0D56B1E09F2AA00338BF5 /* PrivateData */,
-				A61E67CD1E0D8F2200B50306 /* HookingC */,
+				D4FF259329F40860000C3227 /* HookingC */,
 				A616AFD11E09B4B000F5FDE2 /* Products */,
 			);
 			indentWidth = 2;
@@ -147,7 +146,7 @@
 				A616AFD01E09B4B000F5FDE2 /* Watermark.app */,
 				A616AFEA1E09B4CB00F5FDE2 /* HookingSwift.framework */,
 				A6D0D56A1E09F2AA00338BF5 /* PrivateData.framework */,
-				A61E67CC1E0D8F2200B50306 /* HookingC.framework */,
+				D4FF259229F40860000C3227 /* HookingC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,16 +160,6 @@
 				A61E678A1E0C91C100B50306 /* Assets.xcassets */,
 			);
 			path = HookingSwift;
-			sourceTree = "<group>";
-		};
-		A61E67CD1E0D8F2200B50306 /* HookingC */ = {
-			isa = PBXGroup;
-			children = (
-				A61E67CE1E0D8F2200B50306 /* HookingC.h */,
-				A61E67D81E0D8F3B00B50306 /* getenvhook.c */,
-				A61E67CF1E0D8F2200B50306 /* Info.plist */,
-			);
-			path = HookingC;
 			sourceTree = "<group>";
 		};
 		A677B9F81E0C72B1009C4783 /* Watermark */ = {
@@ -190,12 +179,21 @@
 			isa = PBXGroup;
 			children = (
 				A6D0D56C1E09F2AA00338BF5 /* PrivateData.h */,
-				A68408B42162C29300F2573F /* PrivateData.modulemap */,
+				A68408B52162C2D300F2573F /* PrivateData.modulemap */,
 				A6D0D5771E09F2FD00338BF5 /* privatedatagenerator.c */,
 				A6D0D5781E09F2FD00338BF5 /* privatedatagenerator.h */,
 				A6D0D56D1E09F2AA00338BF5 /* Info.plist */,
 			);
 			path = PrivateData;
+			sourceTree = "<group>";
+		};
+		D4FF259329F40860000C3227 /* HookingC */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF259429F40860000C3227 /* HookingC.h */,
+				D4FF259D29F4090D000C3227 /* getenvhook.c */,
+			);
+			path = HookingC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,20 +207,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A61E67C91E0D8F2200B50306 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A61E67D01E0D8F2200B50306 /* HookingC.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A6D0D5671E09F2AA00338BF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6D0D57A1E09F2FD00338BF5 /* privatedatagenerator.h in Headers */,
 				A6D0D56E1E09F2AA00338BF5 /* PrivateData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FF258D29F40860000C3227 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FF259529F40860000C3227 /* HookingC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +240,7 @@
 			);
 			dependencies = (
 				A616AFF01E09B4CB00F5FDE2 /* PBXTargetDependency */,
-				A61E67D21E0D8F2200B50306 /* PBXTargetDependency */,
+				D4FF259729F40860000C3227 /* PBXTargetDependency */,
 			);
 			name = Watermark;
 			productName = Mr.Hook;
@@ -268,24 +266,6 @@
 			productReference = A616AFEA1E09B4CB00F5FDE2 /* HookingSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A61E67CB1E0D8F2200B50306 /* HookingC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A61E67D71E0D8F2200B50306 /* Build configuration list for PBXNativeTarget "HookingC" */;
-			buildPhases = (
-				A61E67C71E0D8F2200B50306 /* Sources */,
-				A61E67C81E0D8F2200B50306 /* Frameworks */,
-				A61E67C91E0D8F2200B50306 /* Headers */,
-				A61E67CA1E0D8F2200B50306 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HookingC;
-			productName = HookingC;
-			productReference = A61E67CC1E0D8F2200B50306 /* HookingC.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		A6D0D5691E09F2AA00338BF5 /* PrivateData */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6D0D5751E09F2AA00338BF5 /* Build configuration list for PBXNativeTarget "PrivateData" */;
@@ -304,6 +284,24 @@
 			productReference = A6D0D56A1E09F2AA00338BF5 /* PrivateData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D4FF259129F40860000C3227 /* HookingC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FF259C29F40860000C3227 /* Build configuration list for PBXNativeTarget "HookingC" */;
+			buildPhases = (
+				D4FF258D29F40860000C3227 /* Headers */,
+				D4FF258E29F40860000C3227 /* Sources */,
+				D4FF258F29F40860000C3227 /* Frameworks */,
+				D4FF259029F40860000C3227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HookingC;
+			productName = HookingC;
+			productReference = D4FF259229F40860000C3227 /* HookingC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -311,32 +309,32 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = Razeware;
+				LastUpgradeCheck = 1420;
+				ORGANIZATIONNAME = Kodeco;
 				TargetAttributes = {
 					A616AFCF1E09B4B000F5FDE2 = {
 						CreatedOnToolsVersion = 8.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 					A616AFE91E09B4CB00F5FDE2 = {
 						CreatedOnToolsVersion = 8.2;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					A61E67CB1E0D8F2200B50306 = {
-						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 					A6D0D5691E09F2AA00338BF5 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
+					D4FF259129F40860000C3227 = {
+						CreatedOnToolsVersion = 14.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A616AFCB1E09B4B000F5FDE2 /* Build configuration list for PBXProject "Watermark" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -350,7 +348,7 @@
 				A616AFCF1E09B4B000F5FDE2 /* Watermark */,
 				A616AFE91E09B4CB00F5FDE2 /* HookingSwift */,
 				A6D0D5691E09F2AA00338BF5 /* PrivateData */,
-				A61E67CB1E0D8F2200B50306 /* HookingC */,
+				D4FF259129F40860000C3227 /* HookingC */,
 			);
 		};
 /* End PBXProject section */
@@ -374,14 +372,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A61E67CA1E0D8F2200B50306 /* Resources */ = {
+		A6D0D5681E09F2AA00338BF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6D0D5681E09F2AA00338BF5 /* Resources */ = {
+		D4FF259029F40860000C3227 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,19 +406,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A61E67C71E0D8F2200B50306 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A61E67D91E0D8F3B00B50306 /* getenvhook.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A6D0D5651E09F2AA00338BF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6D0D5791E09F2FD00338BF5 /* privatedatagenerator.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FF258E29F40860000C3227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FF259E29F4090D000C3227 /* getenvhook.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,15 +430,15 @@
 			target = A616AFE91E09B4CB00F5FDE2 /* HookingSwift */;
 			targetProxy = A616AFEF1E09B4CB00F5FDE2 /* PBXContainerItemProxy */;
 		};
-		A61E67D21E0D8F2200B50306 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A61E67CB1E0D8F2200B50306 /* HookingC */;
-			targetProxy = A61E67D11E0D8F2200B50306 /* PBXContainerItemProxy */;
-		};
 		A696AAAD1E09F3E50075F767 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6D0D5691E09F2AA00338BF5 /* PrivateData */;
 			targetProxy = A696AAAC1E09F3E50075F767 /* PBXContainerItemProxy */;
+		};
+		D4FF259729F40860000C3227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FF259129F40860000C3227 /* HookingC */;
+			targetProxy = D4FF259629F40860000C3227 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -468,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -488,6 +487,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -512,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -527,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -547,6 +548,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -565,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -582,12 +584,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Watermark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Watermark;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Watermark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -598,11 +600,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Watermark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Watermark;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Watermark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -618,13 +620,16 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HookingSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HookingSwift;
+				MODULEMAP_PRIVATE_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.HookingSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -642,54 +647,15 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HookingSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HookingSwift;
+				MODULEMAP_PRIVATE_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.HookingSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A61E67D51E0D8F2200B50306 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HookingC/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HookingC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A61E67D61E0D8F2200B50306 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HookingC/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HookingC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -704,12 +670,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PrivateData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "$(SRCROOT)/PrivateData/PrivateData.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.PrivateData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PrivateData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -726,14 +693,78 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PrivateData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "$(SRCROOT)/PrivateData/PrivateData.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.PrivateData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PrivateData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4FF259A29F40860000C3227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Kodeco. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.HookingC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4FF259B29F40860000C3227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Kodeco. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.HookingC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -769,20 +800,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A61E67D71E0D8F2200B50306 /* Build configuration list for PBXNativeTarget "HookingC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A61E67D51E0D8F2200B50306 /* Debug */,
-				A61E67D61E0D8F2200B50306 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A6D0D5751E09F2AA00338BF5 /* Build configuration list for PBXNativeTarget "PrivateData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A6D0D5731E09F2AA00338BF5 /* Debug */,
 				A6D0D5741E09F2AA00338BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FF259C29F40860000C3227 /* Build configuration list for PBXNativeTarget "HookingC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FF259A29F40860000C3227 /* Debug */,
+				D4FF259B29F40860000C3227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
